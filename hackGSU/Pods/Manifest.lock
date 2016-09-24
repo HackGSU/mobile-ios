@@ -1,0 +1,15 @@
+PODS:
+  - BATabBarController (0.1.2):
+    - Masonry
+  - Masonry (1.0.1)
+
+DEPENDENCIES:
+  - BATabBarController
+
+SPEC CHECKSUMS:
+  BATabBarController: 4e4f7841f20fe516cee97d349a94c185a489cd6e
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+
+PODFILE CHECKSUM: a23567bd576765406460aea6cc3a5e752abe6b84
+
+COCOAPODS: 1.0.1
