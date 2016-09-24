@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>HackGSU.xcscheme</key>
+		<key>hackGSU.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>C1D9BF9C1D8DA6E400A4A949</key>
+		<key>C136B9281D963E8C0047D23F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

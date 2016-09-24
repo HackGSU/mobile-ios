@@ -7,27 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C1D9BFA11D8DA6E400A4A949 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D9BFA01D8DA6E400A4A949 /* AppDelegate.swift */; };
-		C1D9BFA31D8DA6E400A4A949 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D9BFA21D8DA6E400A4A949 /* ViewController.swift */; };
-		C1D9BFA61D8DA6E400A4A949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1D9BFA41D8DA6E400A4A949 /* Main.storyboard */; };
-		C1D9BFA91D8DA6E500A4A949 /* HackGSU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C1D9BFA71D8DA6E500A4A949 /* HackGSU.xcdatamodeld */; };
-		C1D9BFAB1D8DA6E500A4A949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1D9BFAA1D8DA6E500A4A949 /* Assets.xcassets */; };
-		C1D9BFAE1D8DA6E500A4A949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1D9BFAC1D8DA6E500A4A949 /* LaunchScreen.storyboard */; };
+		C136B92D1D963E8C0047D23F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136B92C1D963E8C0047D23F /* AppDelegate.swift */; };
+		C136B92F1D963E8C0047D23F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136B92E1D963E8C0047D23F /* ViewController.swift */; };
+		C136B9321D963E8C0047D23F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C136B9301D963E8C0047D23F /* Main.storyboard */; };
+		C136B9341D963E8C0047D23F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C136B9331D963E8C0047D23F /* Assets.xcassets */; };
+		C136B9371D963E8C0047D23F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C136B9351D963E8C0047D23F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C1D9BF9D1D8DA6E400A4A949 /* HackGSU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackGSU.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1D9BFA01D8DA6E400A4A949 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C1D9BFA21D8DA6E400A4A949 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C1D9BFA51D8DA6E400A4A949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C1D9BFA81D8DA6E500A4A949 /* HackGSU.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HackGSU.xcdatamodel; sourceTree = "<group>"; };
-		C1D9BFAA1D8DA6E500A4A949 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C1D9BFAD1D8DA6E500A4A949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C1D9BFAF1D8DA6E500A4A949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C136B9291D963E8C0047D23F /* hackGSU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackGSU.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C136B92C1D963E8C0047D23F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C136B92E1D963E8C0047D23F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C136B9311D963E8C0047D23F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C136B9331D963E8C0047D23F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C136B9361D963E8C0047D23F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C136B9381D963E8C0047D23F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C1D9BF9A1D8DA6E400A4A949 /* Frameworks */ = {
+		C136B9261D963E8C0047D23F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,73 +35,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C1D9BF941D8DA6E400A4A949 = {
+		C136B9201D963E8C0047D23F = {
 			isa = PBXGroup;
 			children = (
-				C1D9BF9F1D8DA6E400A4A949 /* HackGSU */,
-				C1D9BF9E1D8DA6E400A4A949 /* Products */,
+				C136B92B1D963E8C0047D23F /* hackGSU */,
+				C136B92A1D963E8C0047D23F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C1D9BF9E1D8DA6E400A4A949 /* Products */ = {
+		C136B92A1D963E8C0047D23F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C1D9BF9D1D8DA6E400A4A949 /* HackGSU.app */,
+				C136B9291D963E8C0047D23F /* hackGSU.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C1D9BF9F1D8DA6E400A4A949 /* HackGSU */ = {
+		C136B92B1D963E8C0047D23F /* hackGSU */ = {
 			isa = PBXGroup;
 			children = (
-				C1D9BFA01D8DA6E400A4A949 /* AppDelegate.swift */,
-				C1D9BFA21D8DA6E400A4A949 /* ViewController.swift */,
-				C1D9BFA41D8DA6E400A4A949 /* Main.storyboard */,
-				C1D9BFAA1D8DA6E500A4A949 /* Assets.xcassets */,
-				C1D9BFAC1D8DA6E500A4A949 /* LaunchScreen.storyboard */,
-				C1D9BFAF1D8DA6E500A4A949 /* Info.plist */,
-				C1D9BFA71D8DA6E500A4A949 /* HackGSU.xcdatamodeld */,
+				C136B92C1D963E8C0047D23F /* AppDelegate.swift */,
+				C136B92E1D963E8C0047D23F /* ViewController.swift */,
+				C136B9301D963E8C0047D23F /* Main.storyboard */,
+				C136B9331D963E8C0047D23F /* Assets.xcassets */,
+				C136B9351D963E8C0047D23F /* LaunchScreen.storyboard */,
+				C136B9381D963E8C0047D23F /* Info.plist */,
 			);
-			path = HackGSU;
+			path = hackGSU;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C1D9BF9C1D8DA6E400A4A949 /* HackGSU */ = {
+		C136B9281D963E8C0047D23F /* hackGSU */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C1D9BFB21D8DA6E500A4A949 /* Build configuration list for PBXNativeTarget "HackGSU" */;
+			buildConfigurationList = C136B93B1D963E8C0047D23F /* Build configuration list for PBXNativeTarget "hackGSU" */;
 			buildPhases = (
-				C1D9BF991D8DA6E400A4A949 /* Sources */,
-				C1D9BF9A1D8DA6E400A4A949 /* Frameworks */,
-				C1D9BF9B1D8DA6E400A4A949 /* Resources */,
+				C136B9251D963E8C0047D23F /* Sources */,
+				C136B9261D963E8C0047D23F /* Frameworks */,
+				C136B9271D963E8C0047D23F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = HackGSU;
-			productName = HackGSU;
-			productReference = C1D9BF9D1D8DA6E400A4A949 /* HackGSU.app */;
+			name = hackGSU;
+			productName = hackGSU;
+			productReference = C136B9291D963E8C0047D23F /* hackGSU.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C1D9BF951D8DA6E400A4A949 /* Project object */ = {
+		C136B9211D963E8C0047D23F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = "Harsha Goli";
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = hackGSU;
 				TargetAttributes = {
-					C1D9BF9C1D8DA6E400A4A949 = {
-						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = H92DSG4GWJ;
+					C136B9281D963E8C0047D23F = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = C1D9BF981D8DA6E400A4A949 /* Build configuration list for PBXProject "HackGSU" */;
+			buildConfigurationList = C136B9241D963E8C0047D23F /* Build configuration list for PBXProject "hackGSU" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -111,55 +108,54 @@
 				en,
 				Base,
 			);
-			mainGroup = C1D9BF941D8DA6E400A4A949;
-			productRefGroup = C1D9BF9E1D8DA6E400A4A949 /* Products */;
+			mainGroup = C136B9201D963E8C0047D23F;
+			productRefGroup = C136B92A1D963E8C0047D23F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C1D9BF9C1D8DA6E400A4A949 /* HackGSU */,
+				C136B9281D963E8C0047D23F /* hackGSU */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C1D9BF9B1D8DA6E400A4A949 /* Resources */ = {
+		C136B9271D963E8C0047D23F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1D9BFAE1D8DA6E500A4A949 /* LaunchScreen.storyboard in Resources */,
-				C1D9BFAB1D8DA6E500A4A949 /* Assets.xcassets in Resources */,
-				C1D9BFA61D8DA6E400A4A949 /* Main.storyboard in Resources */,
+				C136B9371D963E8C0047D23F /* LaunchScreen.storyboard in Resources */,
+				C136B9341D963E8C0047D23F /* Assets.xcassets in Resources */,
+				C136B9321D963E8C0047D23F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C1D9BF991D8DA6E400A4A949 /* Sources */ = {
+		C136B9251D963E8C0047D23F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1D9BFA31D8DA6E400A4A949 /* ViewController.swift in Sources */,
-				C1D9BFA11D8DA6E400A4A949 /* AppDelegate.swift in Sources */,
-				C1D9BFA91D8DA6E500A4A949 /* HackGSU.xcdatamodeld in Sources */,
+				C136B92F1D963E8C0047D23F /* ViewController.swift in Sources */,
+				C136B92D1D963E8C0047D23F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C1D9BFA41D8DA6E400A4A949 /* Main.storyboard */ = {
+		C136B9301D963E8C0047D23F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C1D9BFA51D8DA6E400A4A949 /* Base */,
+				C136B9311D963E8C0047D23F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		C1D9BFAC1D8DA6E500A4A949 /* LaunchScreen.storyboard */ = {
+		C136B9351D963E8C0047D23F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C1D9BFAD1D8DA6E500A4A949 /* Base */,
+				C136B9361D963E8C0047D23F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -167,7 +163,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		C1D9BFB01D8DA6E500A4A949 /* Debug */ = {
+		C136B9391D963E8C0047D23F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -179,10 +175,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -204,16 +203,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		C1D9BFB11D8DA6E500A4A949 /* Release */ = {
+		C136B93A1D963E8C0047D23F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -225,10 +224,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -244,76 +246,59 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		C1D9BFB31D8DA6E500A4A949 /* Debug */ = {
+		C136B93C1D963E8C0047D23F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = HackGSU/Info.plist;
+				INFOPLIST_FILE = hackGSU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hackGSU.iOS.HackGSU;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackGSU.fall2016.iOS.hackGSU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		C1D9BFB41D8DA6E500A4A949 /* Release */ = {
+		C136B93D1D963E8C0047D23F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = HackGSU/Info.plist;
+				INFOPLIST_FILE = hackGSU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hackGSU.iOS.HackGSU;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackGSU.fall2016.iOS.hackGSU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C1D9BF981D8DA6E400A4A949 /* Build configuration list for PBXProject "HackGSU" */ = {
+		C136B9241D963E8C0047D23F /* Build configuration list for PBXProject "hackGSU" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C1D9BFB01D8DA6E500A4A949 /* Debug */,
-				C1D9BFB11D8DA6E500A4A949 /* Release */,
+				C136B9391D963E8C0047D23F /* Debug */,
+				C136B93A1D963E8C0047D23F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C1D9BFB21D8DA6E500A4A949 /* Build configuration list for PBXNativeTarget "HackGSU" */ = {
+		C136B93B1D963E8C0047D23F /* Build configuration list for PBXNativeTarget "hackGSU" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C1D9BFB31D8DA6E500A4A949 /* Debug */,
-				C1D9BFB41D8DA6E500A4A949 /* Release */,
+				C136B93C1D963E8C0047D23F /* Debug */,
+				C136B93D1D963E8C0047D23F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		C1D9BFA71D8DA6E500A4A949 /* HackGSU.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				C1D9BFA81D8DA6E500A4A949 /* HackGSU.xcdatamodel */,
-			);
-			currentVersion = C1D9BFA81D8DA6E500A4A949 /* HackGSU.xcdatamodel */;
-			path = HackGSU.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
-	rootObject = C1D9BF951D8DA6E400A4A949 /* Project object */;
+	rootObject = C136B9211D963E8C0047D23F /* Project object */;
 }

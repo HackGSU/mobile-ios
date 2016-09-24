@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0800"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C1D9BF9C1D8DA6E400A4A949"
-               BuildableName = "HackGSU.app"
-               BlueprintName = "HackGSU"
-               ReferencedContainer = "container:HackGSU.xcodeproj">
+               BlueprintIdentifier = "C136B9281D963E8C0047D23F"
+               BuildableName = "hackGSU.app"
+               BlueprintName = "hackGSU"
+               ReferencedContainer = "container:hackGSU.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C1D9BF9C1D8DA6E400A4A949"
-            BuildableName = "HackGSU.app"
-            BlueprintName = "HackGSU"
-            ReferencedContainer = "container:HackGSU.xcodeproj">
+            BlueprintIdentifier = "C136B9281D963E8C0047D23F"
+            BuildableName = "hackGSU.app"
+            BlueprintName = "hackGSU"
+            ReferencedContainer = "container:hackGSU.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C1D9BF9C1D8DA6E400A4A949"
-            BuildableName = "HackGSU.app"
-            BlueprintName = "HackGSU"
-            ReferencedContainer = "container:HackGSU.xcodeproj">
+            BlueprintIdentifier = "C136B9281D963E8C0047D23F"
+            BuildableName = "hackGSU.app"
+            BlueprintName = "hackGSU"
+            ReferencedContainer = "container:hackGSU.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C1D9BF9C1D8DA6E400A4A949"
-            BuildableName = "HackGSU.app"
-            BlueprintName = "HackGSU"
-            ReferencedContainer = "container:HackGSU.xcodeproj">
+            BlueprintIdentifier = "C136B9281D963E8C0047D23F"
+            BuildableName = "hackGSU.app"
+            BlueprintName = "hackGSU"
+            ReferencedContainer = "container:hackGSU.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

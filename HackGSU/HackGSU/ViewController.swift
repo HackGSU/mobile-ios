@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  HackGSU
+//  hackGSU
 //
-//  Created by Harsha Goli on 9/17/16.
-//  Copyright © 2016 Harsha Goli. All rights reserved.
+//  Created by Harsha Goli on 9/24/16.
+//  Copyright © 2016 hackGSU. All rights reserved.
 //
 
 import UIKit
