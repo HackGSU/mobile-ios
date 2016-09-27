@@ -1,6 +1,0 @@
-framework module Pods_hackGSU {
-  umbrella header "Pods-hackGSU-umbrella.h"
-
-  export *
-  module * { export * }
-}
