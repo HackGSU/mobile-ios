@@ -7,25 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1248442A150D1D787DE56EB3 /* Pods_hackGSU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 625E710EA130E7169FFFDE6E /* Pods_hackGSU.framework */; };
+		4966E34A969B15D550CB80AD /* Pods_hackGSU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729CFDBB8BFC0FC92718D9F3 /* Pods_hackGSU.framework */; };
 		C136B92D1D963E8C0047D23F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136B92C1D963E8C0047D23F /* AppDelegate.swift */; };
-		C136B92F1D963E8C0047D23F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136B92E1D963E8C0047D23F /* ViewController.swift */; };
+		C136B92F1D963E8C0047D23F /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136B92E1D963E8C0047D23F /* TabBarViewController.swift */; };
 		C136B9321D963E8C0047D23F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C136B9301D963E8C0047D23F /* Main.storyboard */; };
 		C136B9341D963E8C0047D23F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C136B9331D963E8C0047D23F /* Assets.xcassets */; };
 		C136B9371D963E8C0047D23F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C136B9351D963E8C0047D23F /* LaunchScreen.storyboard */; };
+		C157D7F31D96E0FD004CB7AB /* AnnouncementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C157D7F21D96E0FD004CB7AB /* AnnouncementsViewController.swift */; };
+		C157D7F51D96E113004CB7AB /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C157D7F41D96E113004CB7AB /* ScheduleViewController.swift */; };
+		C157D7F71D96E12E004CB7AB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C157D7F61D96E12E004CB7AB /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C297B6B357E18E528044324 /* Pods-hackGSU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackGSU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackGSU/Pods-hackGSU.debug.xcconfig"; sourceTree = "<group>"; };
-		625E710EA130E7169FFFDE6E /* Pods_hackGSU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackGSU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		99D11FA41139939A0DA9B66F /* Pods-hackGSU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackGSU.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackGSU/Pods-hackGSU.release.xcconfig"; sourceTree = "<group>"; };
+		1AE809A60F806AF98607F44D /* Pods-hackGSU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackGSU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackGSU/Pods-hackGSU.debug.xcconfig"; sourceTree = "<group>"; };
+		729CFDBB8BFC0FC92718D9F3 /* Pods_hackGSU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackGSU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C136B9291D963E8C0047D23F /* hackGSU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackGSU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C136B92C1D963E8C0047D23F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C136B92E1D963E8C0047D23F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C136B92E1D963E8C0047D23F /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		C136B9311D963E8C0047D23F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C136B9331D963E8C0047D23F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C136B9361D963E8C0047D23F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C136B9381D963E8C0047D23F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C157D7F21D96E0FD004CB7AB /* AnnouncementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementsViewController.swift; sourceTree = "<group>"; };
+		C157D7F41D96E113004CB7AB /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		C157D7F61D96E12E004CB7AB /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		E2CF806EA3A0948ABD3F20E7 /* Pods-hackGSU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackGSU.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackGSU/Pods-hackGSU.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,20 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1248442A150D1D787DE56EB3 /* Pods_hackGSU.framework in Frameworks */,
+				4966E34A969B15D550CB80AD /* Pods_hackGSU.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24B4A5DF58ECDA8FC7EAB236 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				729CFDBB8BFC0FC92718D9F3 /* Pods_hackGSU.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABC0A97A1F9C0E865E637132 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1AE809A60F806AF98607F44D /* Pods-hackGSU.debug.xcconfig */,
+				E2CF806EA3A0948ABD3F20E7 /* Pods-hackGSU.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C136B9201D963E8C0047D23F = {
 			isa = PBXGroup;
 			children = (
 				C136B92B1D963E8C0047D23F /* hackGSU */,
 				C136B92A1D963E8C0047D23F /* Products */,
-				F6DBA9B4DA1764572924EF63 /* Pods */,
-				C154AFFD181017602F2BA2B7 /* Frameworks */,
+				ABC0A97A1F9C0E865E637132 /* Pods */,
+				24B4A5DF58ECDA8FC7EAB236 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,8 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				C136B9301D963E8C0047D23F /* Main.storyboard */,
+				C157D7F81D96E146004CB7AB /* View Controllers */,
 				C136B92C1D963E8C0047D23F /* AppDelegate.swift */,
-				C136B92E1D963E8C0047D23F /* ViewController.swift */,
 				C136B9331D963E8C0047D23F /* Assets.xcassets */,
 				C136B9351D963E8C0047D23F /* LaunchScreen.storyboard */,
 				C136B9381D963E8C0047D23F /* Info.plist */,
@@ -71,21 +94,15 @@
 			path = hackGSU;
 			sourceTree = "<group>";
 		};
-		C154AFFD181017602F2BA2B7 /* Frameworks */ = {
+		C157D7F81D96E146004CB7AB /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				625E710EA130E7169FFFDE6E /* Pods_hackGSU.framework */,
+				C136B92E1D963E8C0047D23F /* TabBarViewController.swift */,
+				C157D7F21D96E0FD004CB7AB /* AnnouncementsViewController.swift */,
+				C157D7F41D96E113004CB7AB /* ScheduleViewController.swift */,
+				C157D7F61D96E12E004CB7AB /* MapViewController.swift */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F6DBA9B4DA1764572924EF63 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0C297B6B357E18E528044324 /* Pods-hackGSU.debug.xcconfig */,
-				99D11FA41139939A0DA9B66F /* Pods-hackGSU.release.xcconfig */,
-			);
-			name = Pods;
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,12 +112,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C136B93B1D963E8C0047D23F /* Build configuration list for PBXNativeTarget "hackGSU" */;
 			buildPhases = (
-				3D2A3728631309C07EE27BA1 /* [CP] Check Pods Manifest.lock */,
+				AE25A41CE62DF27CE3F4947A /* [CP] Check Pods Manifest.lock */,
 				C136B9251D963E8C0047D23F /* Sources */,
 				C136B9261D963E8C0047D23F /* Frameworks */,
 				C136B9271D963E8C0047D23F /* Resources */,
-				E18C7FDE9A977089E1D892E4 /* [CP] Embed Pods Frameworks */,
-				7952191CE954256469165217 /* [CP] Copy Pods Resources */,
+				90DEB36122C7B9E1202BEDA5 /* [CP] Embed Pods Frameworks */,
+				488E2BB53A2E38F31969B865 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,22 +176,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3D2A3728631309C07EE27BA1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		7952191CE954256469165217 /* [CP] Copy Pods Resources */ = {
+		488E2BB53A2E38F31969B865 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -189,7 +191,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hackGSU/Pods-hackGSU-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E18C7FDE9A977089E1D892E4 /* [CP] Embed Pods Frameworks */ = {
+		90DEB36122C7B9E1202BEDA5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -204,6 +206,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hackGSU/Pods-hackGSU-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AE25A41CE62DF27CE3F4947A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -211,8 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C136B92F1D963E8C0047D23F /* ViewController.swift in Sources */,
+				C136B92F1D963E8C0047D23F /* TabBarViewController.swift in Sources */,
+				C157D7F31D96E0FD004CB7AB /* AnnouncementsViewController.swift in Sources */,
 				C136B92D1D963E8C0047D23F /* AppDelegate.swift in Sources */,
+				C157D7F71D96E12E004CB7AB /* MapViewController.swift in Sources */,
+				C157D7F51D96E113004CB7AB /* ScheduleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,7 +351,7 @@
 		};
 		C136B93C1D963E8C0047D23F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C297B6B357E18E528044324 /* Pods-hackGSU.debug.xcconfig */;
+			baseConfigurationReference = 1AE809A60F806AF98607F44D /* Pods-hackGSU.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = hackGSU/Info.plist;
@@ -344,7 +364,7 @@
 		};
 		C136B93D1D963E8C0047D23F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99D11FA41139939A0DA9B66F /* Pods-hackGSU.release.xcconfig */;
+			baseConfigurationReference = E2CF806EA3A0948ABD3F20E7 /* Pods-hackGSU.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = hackGSU/Info.plist;
