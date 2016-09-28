@@ -11,7 +11,9 @@ import BATabBarController
 
 class TabBarViewController: UIViewController, BATabBarControllerDelegate {
     
-    var vc: BATabBarController!
+    @IBOutlet weak var topBar: UIView!
+    @IBOutlet weak var topBarLabel: UILabel!
+    var tabBar: BATabBarController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,18 +30,19 @@ class TabBarViewController: UIViewController, BATabBarControllerDelegate {
         let tabBarItem2 = BATabBarItem(image: UIImage(named: "ic_Request_unselected"), selectedImage: UIImage(named: "ic_Request"))
         let tabBarItem3 = BATabBarItem(image: UIImage(named: "ic_Profile_unselected"), selectedImage: UIImage(named: "ic_Profile"))
         
-        self.vc = BATabBarController()
+        self.tabBar = BATabBarController()
         //tab bar background color
-        self.vc.tabBarBackgroundColor = UIColor.black;
+        self.tabBar.tabBarBackgroundColor = UIColor.black;
         //tab bar item stroke color
-        self.vc.tabBarItemStrokeColor = UIColor.red;
+        self.tabBar.tabBarItemStrokeColor = UIColor.red;
         //Tab bar line width example
         //self.vc.tabBarItemLineWidth = 1.0;
-        self.vc.viewControllers = [vc1!, vc2!, vc3!]
-        self.vc.tabBarItems = [tabBarItem1!, tabBarItem2!, tabBarItem3!]
-        self.vc.setSelectedView(vc2, animated: false)
-        self.vc.delegate = self
-        self.view.addSubview(self.vc.view)
+        self.tabBar.viewControllers = [vc1!, vc2!, vc3!]
+        self.tabBar.tabBarItems = [tabBarItem1!, tabBarItem2!, tabBarItem3!]
+        self.tabBar.setSelectedView(vc2, animated: false)
+        self.tabBar.delegate = self
+        self.view.addSubview(self.tabBar.view)
+        topBar.layer.zPosition = 1
     
     }
     
@@ -49,17 +52,26 @@ class TabBarViewController: UIViewController, BATabBarControllerDelegate {
         switch viewController.restorationIdentifier! {
             case "Announcements":
                 UIView.animate(withDuration: 1.0, animations: { () -> Void in
-                    self.vc.tabBarBackgroundColor = UIColor.blue
+                    self.tabBar.tabBarBackgroundColor = UIColor.blue
+                    self.topBar.backgroundColor = UIColor.blue
+                    //self.tabBar.tabBarItemStrokeColor = UIColor.white;
+                    self.topBarLabel.text = "Announcements"
                 })
             break
             case "Schedule":
                 UIView.animate(withDuration: 1.0, animations: { () -> Void in
-                    self.vc.tabBarBackgroundColor = UIColor.red
+                    self.tabBar.tabBarBackgroundColor = UIColor.white
+                    self.topBar.backgroundColor = UIColor.white
+                    //self.tabBar.tabBarItemStrokeColor = UIColor.blue
+                    self.topBarLabel.text = "Schedule"
                 })
             break
             case "Maps":
                 UIView.animate(withDuration: 1.0, animations: { () -> Void in
-                    self.vc.tabBarBackgroundColor = UIColor.green
+                    self.tabBar.tabBarBackgroundColor = UIColor.lightGray
+                    self.topBar.backgroundColor = UIColor.lightGray
+                    //self.tabBar.tabBarItemStrokeColor = UIColor.white
+                    self.topBarLabel.text = "Maps"
                 })
             break
         default:
