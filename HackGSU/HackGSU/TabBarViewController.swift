@@ -39,14 +39,35 @@ class TabBarViewController: UIViewController, BATabBarControllerDelegate {
         self.vc.tabBarItems = [tabBarItem1!, tabBarItem2!, tabBarItem3!]
         self.vc.setSelectedView(vc2, animated: false)
         self.vc.delegate = self
-        self.view.addSubview(vc.view)
+        self.view.addSubview(self.vc.view)
     
     }
     
     func tabBarController(_ tabBarController: BATabBarController, didSelect viewController: UIViewController) {
         print("Delegate success!")
-    }
         
+        switch viewController.restorationIdentifier! {
+            case "Announcements":
+                UIView.animate(withDuration: 1.0, animations: { () -> Void in
+                    self.vc.tabBarBackgroundColor = UIColor.blue
+                })
+            break
+            case "Schedule":
+                UIView.animate(withDuration: 1.0, animations: { () -> Void in
+                    self.vc.tabBarBackgroundColor = UIColor.red
+                })
+            break
+            case "Maps":
+                UIView.animate(withDuration: 1.0, animations: { () -> Void in
+                    self.vc.tabBarBackgroundColor = UIColor.green
+                })
+            break
+        default:
+            //We really shouldn't be here
+            break
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

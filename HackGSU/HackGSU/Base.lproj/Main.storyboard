@@ -9,7 +9,7 @@
         <!--Announcements View Controller-->
         <scene sceneID="P1r-mY-7nY">
             <objects>
-                <viewController storyboardIdentifier="Announcements" id="cCY-bB-C0T" customClass="AnnouncementsViewController" customModule="hackGSU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Announcements" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cCY-bB-C0T" customClass="AnnouncementsViewController" customModule="hackGSU" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QtC-eg-8ma"/>
                         <viewControllerLayoutGuide type="bottom" id="azs-vq-29J"/>
@@ -36,7 +36,7 @@
         <!--Schedule View Controller-->
         <scene sceneID="Q8p-0w-m9j">
             <objects>
-                <viewController storyboardIdentifier="Schedule" id="UEQ-1R-rB8" customClass="ScheduleViewController" customModule="hackGSU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Schedule" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UEQ-1R-rB8" customClass="ScheduleViewController" customModule="hackGSU" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4F7-RW-9xq"/>
                         <viewControllerLayoutGuide type="bottom" id="mJ4-GB-d0G"/>
@@ -63,7 +63,7 @@
         <!--Map View Controller-->
         <scene sceneID="ptV-h0-bZC">
             <objects>
-                <viewController storyboardIdentifier="Maps" id="zLS-Gg-Xwx" customClass="MapViewController" customModule="hackGSU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Maps" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zLS-Gg-Xwx" customClass="MapViewController" customModule="hackGSU" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L6t-td-Xff"/>
                         <viewControllerLayoutGuide type="bottom" id="IAF-AE-fga"/>
