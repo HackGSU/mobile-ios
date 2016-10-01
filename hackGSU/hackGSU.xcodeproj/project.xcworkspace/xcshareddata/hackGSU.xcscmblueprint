@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2F801B584D78B036E496E56C0EB60F6C6C10F542",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2F801B584D78B036E496E56C0EB60F6C6C10F542" : 9223372036854775807,
+    "A55F5926B7BBB9DBC2D30F9A373540A1AC376358" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "69BDC4EA-780A-441F-B543-EF571260A510",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2F801B584D78B036E496E56C0EB60F6C6C10F542" : "hackGSU\/",
+    "A55F5926B7BBB9DBC2D30F9A373540A1AC376358" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "hackGSU",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "hackGSU.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/youngvz\/hackGSU.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2F801B584D78B036E496E56C0EB60F6C6C10F542"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/HackGSU\/mobile-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A55F5926B7BBB9DBC2D30F9A373540A1AC376358"
+    }
+  ]
+}
