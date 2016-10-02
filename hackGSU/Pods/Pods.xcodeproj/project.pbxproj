@@ -7,149 +7,358 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C8F166C2D1FEA4C8DC17BE5F0EB20DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		49CE07B4750E7CACB16E4B519210E4E6 /* Pods-hackGSU-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FF951E02C774ED79B6E7D06396CCEF4 /* Pods-hackGSU-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B7E8D12E3C4268805E4AA5B504CD734E /* Pods-hackGSU-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 416460A31275CDA2FFF932A7972AD49C /* Pods-hackGSU-dummy.m */; };
+		00A21B4E3C1D84B2F0996D8738E94479 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 24AFF7495104F604451971AFCD04D030 /* MASUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05C294DB6B9010F3124586CDD30635B1 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DBFE972D69B3604892962B02AAC9CE /* MASViewConstraint.m */; };
+		06CCE2A0F0714634159B8828A21E2812 /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 34F8539F0228A1C1CF219A316F28591B /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0862192F4A0E72745488C1E3B5903E7C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D3EDE8803C2444E24055A5375E9B9B /* UIKit.framework */; };
+		14AD91FF9F6547C300E8B171CADF724F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D18823C024AED1F2C64F6757FBB3D16 /* Foundation.framework */; };
+		1638344215A47938BEA9EE9FE3806516 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C4DC9DCDF1F7B29EDF4D8851C9F9C2 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16A6772DBAEE626D01D3149AB73D0058 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 68BE8B744B46CEE966C45E5BBA44A757 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AD8E270D30C224D3A4AF85D3758AC3B /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = F6F70ECDCB63CB9EC2B39AF3A75E2A0B /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B36F486C414B66EB4A36368FAAE6520 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E057C0A28DFEA32652CDE18C07F3A62E /* Masonry-dummy.m */; };
+		2025B3C779078E0217A480A07DF55DB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D3EDE8803C2444E24055A5375E9B9B /* UIKit.framework */; };
+		23BFBBEC8E18959066CAAFC218998362 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8100B7B0A1654D92ECE5F93C0233F479 /* View+MASAdditions.m */; };
+		269344EEDDD985E65C17666C31BB8F88 /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 640109A02282BD093D3C994F6A7A055C /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2705A0427DBEB6F62C70A14211432CE3 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 8338F872257E03D3E9DA151269C90B41 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2EF35F8E676A307E7D2A3EEDCDC21CF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D18823C024AED1F2C64F6757FBB3D16 /* Foundation.framework */; };
+		3897C908076499C4E8D290BAB5B4B9FE /* UIColor+ColorWithHex.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEBB322551E28A584ED61E1FEEB0C86 /* UIColor+ColorWithHex.m */; };
+		3AB1744BF9E4816D463F551DE43A16D6 /* BATabBarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 125F7A750810E15170B42E1186217EFF /* BATabBarItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BE642822C4067C56246283E1B47AE06 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 7967091F9A7AF7CABCB4FB4F92E4558D /* MASViewAttribute.m */; };
+		3CBE233110C5A678F236DE41218B7109 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E951812E09ED97F40DBE7B4652D22D8A /* ViewController+MASAdditions.m */; };
+		4727E76D5FC0CF7CD6F90A2F4B12607F /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E5DE3E61B5FE8709492D3F3D36038CC /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C4768CFFCCB7FAF2ABB04C0212057FC /* Pods-hackGSU-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 416460A31275CDA2FFF932A7972AD49C /* Pods-hackGSU-dummy.m */; };
+		4EDF37F828E1E07BC887A8D1ABE20EDF /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 62935E36EAA67F5B5298DB88AC9CA55A /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		51E310A5D31B168481B1C59D077DF99E /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 15795119CFC4BABB57D9717BD0E96CD9 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		522D7E73EE9CAF882BB50534A83DC4F2 /* BATabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A0319E9D121A21935EB4BCB9F7BBEE5B /* BATabBarItem.m */; };
+		6859505DFD96211CEA03032032A472F9 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE83CF589172A9A94F735CBBF91965B /* NSArray+MASAdditions.m */; };
+		6BEDE5375C9CFA966A60C53A3B10C49D /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = AD19C353B349EC2A857ABE79500F494F /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73983CFCC076607E987DB4FB8A6E2D89 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = FDB3BC997836878A48FE5A4592CE46D5 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BB79D134363D8AE50E784E39BD37526 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4E4097197ED187090EDA21FE6ED7B2 /* MASCompositeConstraint.m */; };
+		86BC1A235C33ED9DD1CB212E3A086221 /* BATabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 488A754DEB70EF7D20ADC7CCF46B53F0 /* BATabBar.m */; };
+		89767819B1A6E5115AFBC4A3E743BD71 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = EA3D400F52F5278C46C2DDC2B3F2A3A6 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97E6FDE0271817A8F578CDA3F0ED70AF /* BATabBarController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 64175B97D0FFFC5084F30D59D24E32A0 /* BATabBarController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A0A762D64756A7122038074881A423E /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD1F47571A15AAE59CD1F73803B7AD /* MASConstraint.m */; };
+		9FC0E56EC557C6FC0B023E1F3F04AF09 /* BATabBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 3428200562764EBBF66F0F266615258E /* BATabBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A279E7C74A756B0D8556D807BE8D9426 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D18823C024AED1F2C64F6757FBB3D16 /* Foundation.framework */; };
+		A3431BFA009E9D5A6996B46F1EA2DA6B /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D6705EA2C36D64561E09AFC766E6E5EA /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A35E775A8C0C71E890A2D6F79C1FC499 /* UIColor+ColorWithHex.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FFAE703F42AA5DEFADA4C816981F206 /* UIColor+ColorWithHex.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A36088D2F598143081E11A867E852FA0 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = C093737111A61A9B5DF21523469BE0F8 /* MASConstraintMaker.m */; };
+		A5555AE462912ACD56CD1DFB657C3B29 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A34864EEEDD66FFC407FBB7313FE75E2 /* MASLayoutConstraint.m */; };
+		A779B3DBEF2A7B3FEB44A0F214F36AA9 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF35C23E029BF10AE1D3595169AFBCF /* Masonry.framework */; };
+		ACFD53767C680241F3EE4E3A201CFFE7 /* Pods-hackGSU-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FF951E02C774ED79B6E7D06396CCEF4 /* Pods-hackGSU-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B10198EA3DF2D18E1B58344F90011D09 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C8EF77483C71063E0207BD925354AA3 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B76691B3184CB882E59B38D21346E392 /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 217CED9B0FE0C71E8AF77415A551B585 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC336D1510BBB9BFA3A829A6D0D09097 /* BATabBarController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC917DFD8C0274B0A07CDC616E854ED /* BATabBarController-dummy.m */; };
+		F1B03606F7C65EE03725AE79AE681857 /* BATabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC4770FA8DBBB8E8FA029541654A9D /* BATabBarController.m */; };
+		F2562443FF85F99F87948DA40A0875F0 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = F83CC504E57A5E62B5C806FDA38787D6 /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F429636C5437961AC382A2EAD2E8B7E5 /* BATabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = 266CBC259C41E767C6CCD23F84AAF154 /* BATabBarController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BB1D733E9D86C6F4FA4D73B0582A2E0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2568DA4D26DBB9C8B18E2A9FC3BFCAE0;
+			remoteInfo = BATabBarController;
+		};
+		E67CFD73E03AA22834BB42FDC0DB67F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B296A0A12B5C666462542F1D37FE3BD;
+			remoteInfo = Masonry;
+		};
+		FFB5D180402C3B541A4CEC7CBB36DBEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B296A0A12B5C666462542F1D37FE3BD;
+			remoteInfo = Masonry;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		05B308C23855208D70A960D192BD614C /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
-		137CF42E995BC84118386EE649D0D426 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		009D4287A4C3885FA81A0B411AAC6388 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
+		017DEBA37837DB79DDA7F00C5EFCF1F4 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		11DBFE972D69B3604892962B02AAC9CE /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
+		125F7A750810E15170B42E1186217EFF /* BATabBarItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BATabBarItem.h; path = BATabBarController/Classes/BATabBarItem.h; sourceTree = "<group>"; };
+		126B35D3FBAAEF59EDD72937DE0B3E2B /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		15795119CFC4BABB57D9717BD0E96CD9 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		165BC3DA6C99541DD1A4E889C3812FA3 /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Frameworks/FirebaseAuth.framework; sourceTree = "<group>"; };
 		181163347EB741443F26524DE647E547 /* Pods-hackGSU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hackGSU.debug.xcconfig"; sourceTree = "<group>"; };
 		1A4FEFA549260FADA6F124DF9A3736FD /* Pods-hackGSU-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-hackGSU-resources.sh"; sourceTree = "<group>"; };
 		1FDCEE6900889A8A25F12E56256886C4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FF951E02C774ED79B6E7D06396CCEF4 /* Pods-hackGSU-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-hackGSU-umbrella.h"; sourceTree = "<group>"; };
+		1FFAE703F42AA5DEFADA4C816981F206 /* UIColor+ColorWithHex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+ColorWithHex.h"; path = "BATabBarController/Classes/UIColor+ColorWithHex.h"; sourceTree = "<group>"; };
+		217CED9B0FE0C71E8AF77415A551B585 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
 		2316CDAE837B4EC83D6AFBB4ADF2C6A0 /* Pods-hackGSU-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-hackGSU-frameworks.sh"; sourceTree = "<group>"; };
-		3500FC19551BCA658E33AC1D9725648E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
+		24AFF7495104F604451971AFCD04D030 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
+		24D3EDE8803C2444E24055A5375E9B9B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		2612709F15E533B69833FBF48AB94E25 /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = Frameworks/GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
+		266CBC259C41E767C6CCD23F84AAF154 /* BATabBarController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BATabBarController.h; path = BATabBarController/Classes/BATabBarController.h; sourceTree = "<group>"; };
+		2E5DE3E61B5FE8709492D3F3D36038CC /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		327D917D3EBF35F17BD92A8F8226E17E /* BATabBarController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BATabBarController-prefix.pch"; sourceTree = "<group>"; };
+		334EC5644A3AE11869E6DB9536B59CEA /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		3428200562764EBBF66F0F266615258E /* BATabBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BATabBar.h; path = BATabBarController/Classes/BATabBar.h; sourceTree = "<group>"; };
+		34F8539F0228A1C1CF219A316F28591B /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
+		35C7AE50ADE489CF677F13782192B4B5 /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
+		410B34FF462D8295823005A21E27C394 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
 		416460A31275CDA2FFF932A7972AD49C /* Pods-hackGSU-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-hackGSU-dummy.m"; sourceTree = "<group>"; };
+		488A754DEB70EF7D20ADC7CCF46B53F0 /* BATabBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BATabBar.m; path = BATabBarController/Classes/BATabBar.m; sourceTree = "<group>"; };
 		497AF332C1BBA27CEDD4A8D9A90E8827 /* Pods-hackGSU.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-hackGSU.modulemap"; sourceTree = "<group>"; };
-		512BDD103AB691D9E00DE5A12D7F9514 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Headers/Public/FIRInstanceID.h; sourceTree = "<group>"; };
-		6ECBA8DF1C225B1F16BB33D051DC6B1B /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
-		780AD2AF081E7890166A9EF67A71AFDD /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = Frameworks/GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
-		7882260259CDA37CCD1207D8E8127E2C /* FirebaseStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseStorage.framework; path = Frameworks/FirebaseStorage.framework; sourceTree = "<group>"; };
-		822E455267B7794DC85CDE91181BA814 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Headers/Firebase.h; sourceTree = "<group>"; };
-		8635A112F70CACCE67DC3866401F3A55 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		4CBC4770FA8DBBB8E8FA029541654A9D /* BATabBarController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BATabBarController.m; path = BATabBarController/Classes/BATabBarController.m; sourceTree = "<group>"; };
+		50C4DC9DCDF1F7B29EDF4D8851C9F9C2 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
+		51F7460893D45DC6411D8B31BCECAEB2 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		5D18823C024AED1F2C64F6757FBB3D16 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5F2C9D4DE1AE54A0A1D10790647B57A5 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		62935E36EAA67F5B5298DB88AC9CA55A /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		640109A02282BD093D3C994F6A7A055C /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
+		64175B97D0FFFC5084F30D59D24E32A0 /* BATabBarController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BATabBarController-umbrella.h"; sourceTree = "<group>"; };
+		6543A40BB4D1C397F0E94D5B69423CC3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68BE8B744B46CEE966C45E5BBA44A757 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
+		6BF35C23E029BF10AE1D3595169AFBCF /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7967091F9A7AF7CABCB4FB4F92E4558D /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
+		7C8EF77483C71063E0207BD925354AA3 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
+		7DAD1F47571A15AAE59CD1F73803B7AD /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
+		7EE4128E3EB9913AD50C812B95B18C3B /* BATabBarController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BATabBarController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8100B7B0A1654D92ECE5F93C0233F479 /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
+		82514DC43120AD15D1B78D5740DB5F27 /* Masonry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Masonry.modulemap; sourceTree = "<group>"; };
+		8338F872257E03D3E9DA151269C90B41 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
+		8339DFF227973494FFC2D3F8FDD92E7C /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = iOS/TwitterCore.framework; sourceTree = "<group>"; };
+		8416F00CE43B01C7286CC998172270E3 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
 		8ACBA4B4372D6578FDD8636466F77526 /* Pods-hackGSU-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-hackGSU-acknowledgements.plist"; sourceTree = "<group>"; };
+		8B1C7959B03C4842F27B850408A33EEB /* Pods_hackGSU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackGSU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DAB719DA8E1D9C42518020A9F0C7F97 /* Pods-hackGSU-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-hackGSU-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8E0C7E073B577D3FAF36AD098EE14C99 /* BATabBarController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = BATabBarController.modulemap; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F50F6DDB6AA3960F9D18D8AA65F693D /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = iOS/TwitterCore.framework; sourceTree = "<group>"; };
+		9B74686B33F6C22E4444E29D86028855 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		A0319E9D121A21935EB4BCB9F7BBEE5B /* BATabBarItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BATabBarItem.m; path = BATabBarController/Classes/BATabBarItem.m; sourceTree = "<group>"; };
+		A34864EEEDD66FFC407FBB7313FE75E2 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
+		AB9D75A1B3C3A4AF46E809950906E782 /* BATabBarController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BATabBarController.xcconfig; sourceTree = "<group>"; };
+		AD19C353B349EC2A857ABE79500F494F /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
+		ADC917DFD8C0274B0A07CDC616E854ED /* BATabBarController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BATabBarController-dummy.m"; sourceTree = "<group>"; };
 		B1D310D11AFB08E14AD992C22723FFC2 /* Pods-hackGSU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hackGSU.release.xcconfig"; sourceTree = "<group>"; };
-		C67AA9EFC97D9C7B1D9A6EBE17722428 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
-		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D0144FCCCDBD22D77160D93AB284F812 /* Pods_hackGSU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackGSU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E30F4B31DA51329CE44F36A2737277A2 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
-		E9BC801950B12E10FF391BC5E9FD1BB7 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
-		F2C9A2ED78B566A6C481A37F12F2233B /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Frameworks/FirebaseAuth.framework; sourceTree = "<group>"; };
-		FC881FB56F0D4CB3CC371F142F3D4C17 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		B61AD1A31C3CADD3AB13EBC82BF7FB8A /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Headers/Firebase.h; sourceTree = "<group>"; };
+		B81B7ADD93C883F51C380DF00B5A8F28 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		BA4E4097197ED187090EDA21FE6ED7B2 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
+		C093737111A61A9B5DF21523469BE0F8 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
+		C750049E34BE104E286D7B3683B9E125 /* FirebaseStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseStorage.framework; path = Frameworks/FirebaseStorage.framework; sourceTree = "<group>"; };
+		C9A671D69E42FB6E00B78F5E66C00C15 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Headers/Public/FIRInstanceID.h; sourceTree = "<group>"; };
+		CBD696205945DAD5CBECFFDF8801517F /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D01836305B29E99CD7B945DFDD3B8339 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6705EA2C36D64561E09AFC766E6E5EA /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		E057C0A28DFEA32652CDE18C07F3A62E /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
+		E951812E09ED97F40DBE7B4652D22D8A /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		EA3D400F52F5278C46C2DDC2B3F2A3A6 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
+		ECEBB322551E28A584ED61E1FEEB0C86 /* UIColor+ColorWithHex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ColorWithHex.m"; path = "BATabBarController/Classes/UIColor+ColorWithHex.m"; sourceTree = "<group>"; };
+		EDE83CF589172A9A94F735CBBF91965B /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		F6F70ECDCB63CB9EC2B39AF3A75E2A0B /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
+		F83CC504E57A5E62B5C806FDA38787D6 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
+		FDB3BC997836878A48FE5A4592CE46D5 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AFC2B570E74B413405435B07143B38EB /* Frameworks */ = {
+		0763BA4CD875A0EB094F23253C1FE756 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C8F166C2D1FEA4C8DC17BE5F0EB20DA /* Foundation.framework in Frameworks */,
+				2EF35F8E676A307E7D2A3EEDCDC21CF5 /* Foundation.framework in Frameworks */,
+				A779B3DBEF2A7B3FEB44A0F214F36AA9 /* Masonry.framework in Frameworks */,
+				2025B3C779078E0217A480A07DF55DB1 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FAB014E978732AB7E009DB4083870CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14AD91FF9F6547C300E8B171CADF724F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB2AF8199C6B6057CDA2EA804313F930 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A279E7C74A756B0D8556D807BE8D9426 /* Foundation.framework in Frameworks */,
+				0862192F4A0E72745488C1E3B5903E7C /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		004CF53126FA064E82CE34E863E72C26 /* Frameworks */ = {
+		0026CDD5EF8217C11EB74FB8D506F945 /* FirebaseInstanceID */ = {
 			isa = PBXGroup;
 			children = (
-				E30F4B31DA51329CE44F36A2737277A2 /* GoogleUtilities.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1F40F1DDE88C57E5B1F2287C1705CB87 /* FirebaseInstanceID */ = {
-			isa = PBXGroup;
-			children = (
-				512BDD103AB691D9E00DE5A12D7F9514 /* FIRInstanceID.h */,
-				F6526FB2E1A3B3D1FB1F872462E34543 /* Frameworks */,
+				C9A671D69E42FB6E00B78F5E66C00C15 /* FIRInstanceID.h */,
+				0B83F8699266853E1DC16A3F34B2718D /* Frameworks */,
 			);
 			path = FirebaseInstanceID;
 			sourceTree = "<group>";
 		};
-		1FCC69C132D45B7A8E281195BC3B588B /* Fabric */ = {
+		04684CFC9301AD94DF12BF7C2678BA2F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				42A912E2BE8D2799F7500ADF2A779CEB /* Frameworks */,
-			);
-			path = Fabric;
-			sourceTree = "<group>";
-		};
-		28F3F02D802FEA67534D3C42C32E93CF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				780AD2AF081E7890166A9EF67A71AFDD /* GoogleNetworkingUtilities.framework */,
+				C750049E34BE104E286D7B3683B9E125 /* FirebaseStorage.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3A8EA24E99F4ADAF3343251744245102 /* Analytics */ = {
+		04ADA33420752ACDD765A3A134EBE20C /* TwitterKit */ = {
 			isa = PBXGroup;
 			children = (
-				822E455267B7794DC85CDE91181BA814 /* Firebase.h */,
+				6664083713DA09E8E01E1DB9FB145926 /* Frameworks */,
+				FEDE5CE434F9F01BCE033E87F358A30F /* Resources */,
+			);
+			path = TwitterKit;
+			sourceTree = "<group>";
+		};
+		0B83F8699266853E1DC16A3F34B2718D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				334EC5644A3AE11869E6DB9536B59CEA /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		11D686AFC7A20CFE24E2798DEE3BA503 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				7C8EF77483C71063E0207BD925354AA3 /* MASCompositeConstraint.h */,
+				BA4E4097197ED187090EDA21FE6ED7B2 /* MASCompositeConstraint.m */,
+				F83CC504E57A5E62B5C806FDA38787D6 /* MASConstraint.h */,
+				7DAD1F47571A15AAE59CD1F73803B7AD /* MASConstraint.m */,
+				50C4DC9DCDF1F7B29EDF4D8851C9F9C2 /* MASConstraint+Private.h */,
+				EA3D400F52F5278C46C2DDC2B3F2A3A6 /* MASConstraintMaker.h */,
+				C093737111A61A9B5DF21523469BE0F8 /* MASConstraintMaker.m */,
+				640109A02282BD093D3C994F6A7A055C /* MASLayoutConstraint.h */,
+				A34864EEEDD66FFC407FBB7313FE75E2 /* MASLayoutConstraint.m */,
+				AD19C353B349EC2A857ABE79500F494F /* Masonry.h */,
+				24AFF7495104F604451971AFCD04D030 /* MASUtilities.h */,
+				F6F70ECDCB63CB9EC2B39AF3A75E2A0B /* MASViewAttribute.h */,
+				7967091F9A7AF7CABCB4FB4F92E4558D /* MASViewAttribute.m */,
+				8338F872257E03D3E9DA151269C90B41 /* MASViewConstraint.h */,
+				11DBFE972D69B3604892962B02AAC9CE /* MASViewConstraint.m */,
+				217CED9B0FE0C71E8AF77415A551B585 /* NSArray+MASAdditions.h */,
+				EDE83CF589172A9A94F735CBBF91965B /* NSArray+MASAdditions.m */,
+				2E5DE3E61B5FE8709492D3F3D36038CC /* NSArray+MASShorthandAdditions.h */,
+				15795119CFC4BABB57D9717BD0E96CD9 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				62935E36EAA67F5B5298DB88AC9CA55A /* NSLayoutConstraint+MASDebugAdditions.m */,
+				68BE8B744B46CEE966C45E5BBA44A757 /* View+MASAdditions.h */,
+				8100B7B0A1654D92ECE5F93C0233F479 /* View+MASAdditions.m */,
+				FDB3BC997836878A48FE5A4592CE46D5 /* View+MASShorthandAdditions.h */,
+				D6705EA2C36D64561E09AFC766E6E5EA /* ViewController+MASAdditions.h */,
+				E951812E09ED97F40DBE7B4652D22D8A /* ViewController+MASAdditions.m */,
+				A4285EE2DE4BE12D96B71D7FBC8D8376 /* Support Files */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		1289E99F080338B1EB39CFBC9B97CB73 /* GoogleUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				80C5E814E39CED7141B8FD01B420A402 /* Frameworks */,
+			);
+			path = GoogleUtilities;
+			sourceTree = "<group>";
+		};
+		1DF0A878475349E69A1DB740E5A2D447 /* GoogleInterchangeUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				6B222CCED460308404331250E76555E3 /* Frameworks */,
+			);
+			path = GoogleInterchangeUtilities;
+			sourceTree = "<group>";
+		};
+		1E3CAED3B64918D704FA53FC8689D8D3 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				4F439F2F55891B32A542A1B03A631AB3 /* Analytics */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		20094C9E650147F7A695D4EEC231FC40 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D17BACFB424BD19960E1C6911FC0B2BE /* BATabBarController */,
+				778A0E1D389146921B322A935C14E302 /* Fabric */,
+				1E3CAED3B64918D704FA53FC8689D8D3 /* Firebase */,
+				531AC03C4D5E010B58465632456C4072 /* FirebaseAnalytics */,
+				FA11F67B636BD81B006E6C68B34B5E3F /* FirebaseAuth */,
+				B8F9AFD9372F55C448C0F82A3E9C1353 /* FirebaseDatabase */,
+				0026CDD5EF8217C11EB74FB8D506F945 /* FirebaseInstanceID */,
+				6417B1CB77ED62580CBA40AE65CBD4DB /* FirebaseStorage */,
+				1DF0A878475349E69A1DB740E5A2D447 /* GoogleInterchangeUtilities */,
+				A627E8AAAB2434D8A95815FEA6F79084 /* GoogleNetworkingUtilities */,
+				890A99F2083C394CD5624FFACF52D3F9 /* GoogleSymbolUtilities */,
+				1289E99F080338B1EB39CFBC9B97CB73 /* GoogleUtilities */,
+				11D686AFC7A20CFE24E2798DEE3BA503 /* Masonry */,
+				E32D0F1F76141F8C8D745C3EAA15E956 /* TwitterCore */,
+				04ADA33420752ACDD765A3A134EBE20C /* TwitterKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4EE5F5ABB0C984D026CEC28EE9B7D02F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				165BC3DA6C99541DD1A4E889C3812FA3 /* FirebaseAuth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F439F2F55891B32A542A1B03A631AB3 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				B61AD1A31C3CADD3AB13EBC82BF7FB8A /* Firebase.h */,
 			);
 			name = Analytics;
 			sourceTree = "<group>";
 		};
-		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+		52EC239342AB63FF02C910B95CC6E172 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		42A912E2BE8D2799F7500ADF2A779CEB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3500FC19551BCA658E33AC1D9725648E /* Fabric.framework */,
+				8339DFF227973494FFC2D3F8FDD92E7C /* TwitterCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		42B6D88BE6F4DF66498F4CF588032C96 /* Resources */ = {
+		531AC03C4D5E010B58465632456C4072 /* FirebaseAnalytics */ = {
 			isa = PBXGroup;
 			children = (
-				C67AA9EFC97D9C7B1D9A6EBE17722428 /* TwitterKitResources.bundle */,
+				CD5745D63F0318F226DDBECC507EE74B /* Frameworks */,
 			);
-			name = Resources;
+			path = FirebaseAnalytics;
 			sourceTree = "<group>";
 		};
-		5207FA1147AAE00753D953D5E266D2D2 /* FirebaseStorage */ = {
+		59511511C2B4BC905C933DCC67E365C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				62B66D4F2486D4FFB69818D98E568556 /* Frameworks */,
+				6BF35C23E029BF10AE1D3595169AFBCF /* Masonry.framework */,
+				DD823825D4B08E2AE7068B31500D9229 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		59B34C66E9D0473664DCF6951E2392A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EE4128E3EB9913AD50C812B95B18C3B /* BATabBarController.framework */,
+				CBD696205945DAD5CBECFFDF8801517F /* Masonry.framework */,
+				8B1C7959B03C4842F27B850408A33EEB /* Pods_hackGSU.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6417B1CB77ED62580CBA40AE65CBD4DB /* FirebaseStorage */ = {
+			isa = PBXGroup;
+			children = (
+				04684CFC9301AD94DF12BF7C2678BA2F /* Frameworks */,
 			);
 			path = FirebaseStorage;
-			sourceTree = "<group>";
-		};
-		5B3CCA7C70430772A691EEA8AE9AA77C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				05B308C23855208D70A960D192BD614C /* GoogleInterchangeUtilities.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		61A474B255D092D15413203C633BA953 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9F50F6DDB6AA3960F9D18D8AA65F693D /* TwitterCore.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		62B66D4F2486D4FFB69818D98E568556 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7882260259CDA37CCD1207D8E8127E2C /* FirebaseStorage.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		650F418A916D2C3E2AFA849FD687BE8E /* Pods-hackGSU */ = {
@@ -170,164 +379,172 @@
 			path = "Target Support Files/Pods-hackGSU";
 			sourceTree = "<group>";
 		};
-		6C79B00DE97C3D154B1342BA7A372794 /* FirebaseAnalytics */ = {
+		6664083713DA09E8E01E1DB9FB145926 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B8F93EC0D5AFED43B111D0BB9AFCE736 /* Frameworks */,
-			);
-			path = FirebaseAnalytics;
-			sourceTree = "<group>";
-		};
-		722A5E857B3541033370956FB1AAAFF4 /* FirebaseAuth */ = {
-			isa = PBXGroup;
-			children = (
-				737BBD4046DF7A8686D5FF42FC4194E9 /* Frameworks */,
-			);
-			path = FirebaseAuth;
-			sourceTree = "<group>";
-		};
-		737BBD4046DF7A8686D5FF42FC4194E9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F2C9A2ED78B566A6C481A37F12F2233B /* FirebaseAuth.framework */,
+				51F7460893D45DC6411D8B31BCECAEB2 /* TwitterKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7559AB3D016BD1F3F21C83A4CDD7A6CA /* Frameworks */ = {
+		668C6A119C8C259D594AD1BDB28ECA11 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8635A112F70CACCE67DC3866401F3A55 /* FirebaseDatabase.framework */,
+				8416F00CE43B01C7286CC998172270E3 /* Fabric.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		764C59F2A11FB3C52BA71E8641278DB0 /* Products */ = {
+		6B222CCED460308404331250E76555E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D0144FCCCDBD22D77160D93AB284F812 /* Pods_hackGSU.framework */,
+				B81B7ADD93C883F51C380DF00B5A8F28 /* GoogleInterchangeUtilities.framework */,
 			);
-			name = Products;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7A6B8703E132A95F3A10CED57A9297AB /* GoogleUtilities */ = {
+		6E93CAAB68D79065E3BAB6F388E63307 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				004CF53126FA064E82CE34E863E72C26 /* Frameworks */,
+				2612709F15E533B69833FBF48AB94E25 /* GoogleNetworkingUtilities.framework */,
 			);
-			path = GoogleUtilities;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		778A0E1D389146921B322A935C14E302 /* Fabric */ = {
+			isa = PBXGroup;
+			children = (
+				668C6A119C8C259D594AD1BDB28ECA11 /* Frameworks */,
+			);
+			path = Fabric;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				B78077B4B7E814E0AA68C6519939C4CB /* Pods */,
-				764C59F2A11FB3C52BA71E8641278DB0 /* Products */,
+				59511511C2B4BC905C933DCC67E365C4 /* Frameworks */,
+				20094C9E650147F7A695D4EEC231FC40 /* Pods */,
+				59B34C66E9D0473664DCF6951E2392A5 /* Products */,
 				F30F713C59B910650E794460AE0EFD0F /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		81594931EA99111CC1846D455D766248 /* FirebaseDatabase */ = {
+		80C5E814E39CED7141B8FD01B420A402 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7559AB3D016BD1F3F21C83A4CDD7A6CA /* Frameworks */,
+				410B34FF462D8295823005A21E27C394 /* GoogleUtilities.framework */,
 			);
-			path = FirebaseDatabase;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		92227B4CCC501559B7F5FA9B0315B1C9 /* GoogleSymbolUtilities */ = {
+		8105C838A61A3BD51224202364B0D1DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F889800CA445ECD7943D42D4C57389CE /* Frameworks */,
+				017DEBA37837DB79DDA7F00C5EFCF1F4 /* GoogleSymbolUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		890A99F2083C394CD5624FFACF52D3F9 /* GoogleSymbolUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				8105C838A61A3BD51224202364B0D1DE /* Frameworks */,
 			);
 			path = GoogleSymbolUtilities;
 			sourceTree = "<group>";
 		};
-		9461044560292F2EF826235D6D3328C9 /* TwitterKit */ = {
+		9A9852486A6F73286C294FA3E6126EF1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EB2B2ABB47C495B91F1B7763E370F33E /* Frameworks */,
-				42B6D88BE6F4DF66498F4CF588032C96 /* Resources */,
-			);
-			path = TwitterKit;
-			sourceTree = "<group>";
-		};
-		98486E0EA6486F323EB76BAB2342D30C /* Firebase */ = {
-			isa = PBXGroup;
-			children = (
-				3A8EA24E99F4ADAF3343251744245102 /* Analytics */,
-			);
-			path = Firebase;
-			sourceTree = "<group>";
-		};
-		B78077B4B7E814E0AA68C6519939C4CB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1FCC69C132D45B7A8E281195BC3B588B /* Fabric */,
-				98486E0EA6486F323EB76BAB2342D30C /* Firebase */,
-				6C79B00DE97C3D154B1342BA7A372794 /* FirebaseAnalytics */,
-				722A5E857B3541033370956FB1AAAFF4 /* FirebaseAuth */,
-				81594931EA99111CC1846D455D766248 /* FirebaseDatabase */,
-				1F40F1DDE88C57E5B1F2287C1705CB87 /* FirebaseInstanceID */,
-				5207FA1147AAE00753D953D5E266D2D2 /* FirebaseStorage */,
-				DB9AA83746676E2A6269CD9E851BBB11 /* GoogleInterchangeUtilities */,
-				BCD896EE68C3FCC2E612B6C72E273B13 /* GoogleNetworkingUtilities */,
-				92227B4CCC501559B7F5FA9B0315B1C9 /* GoogleSymbolUtilities */,
-				7A6B8703E132A95F3A10CED57A9297AB /* GoogleUtilities */,
-				CF71A184BDFB9422975EFBB95FA8F856 /* TwitterCore */,
-				9461044560292F2EF826235D6D3328C9 /* TwitterKit */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		B8F93EC0D5AFED43B111D0BB9AFCE736 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FC881FB56F0D4CB3CC371F142F3D4C17 /* FirebaseAnalytics.framework */,
+				126B35D3FBAAEF59EDD72937DE0B3E2B /* FirebaseDatabase.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		A4285EE2DE4BE12D96B71D7FBC8D8376 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+				D01836305B29E99CD7B945DFDD3B8339 /* Info.plist */,
+				82514DC43120AD15D1B78D5740DB5F27 /* Masonry.modulemap */,
+				35C7AE50ADE489CF677F13782192B4B5 /* Masonry.xcconfig */,
+				E057C0A28DFEA32652CDE18C07F3A62E /* Masonry-dummy.m */,
+				009D4287A4C3885FA81A0B411AAC6388 /* Masonry-prefix.pch */,
+				34F8539F0228A1C1CF219A316F28591B /* Masonry-umbrella.h */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/Masonry";
 			sourceTree = "<group>";
 		};
-		BCD896EE68C3FCC2E612B6C72E273B13 /* GoogleNetworkingUtilities */ = {
+		A627E8AAAB2434D8A95815FEA6F79084 /* GoogleNetworkingUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				28F3F02D802FEA67534D3C42C32E93CF /* Frameworks */,
+				6E93CAAB68D79065E3BAB6F388E63307 /* Frameworks */,
 			);
 			path = GoogleNetworkingUtilities;
 			sourceTree = "<group>";
 		};
-		CF71A184BDFB9422975EFBB95FA8F856 /* TwitterCore */ = {
+		B8F9AFD9372F55C448C0F82A3E9C1353 /* FirebaseDatabase */ = {
 			isa = PBXGroup;
 			children = (
-				61A474B255D092D15413203C633BA953 /* Frameworks */,
+				9A9852486A6F73286C294FA3E6126EF1 /* Frameworks */,
 			);
-			path = TwitterCore;
+			path = FirebaseDatabase;
 			sourceTree = "<group>";
 		};
-		DB9AA83746676E2A6269CD9E851BBB11 /* GoogleInterchangeUtilities */ = {
+		BD82228B0430D79548D78ADFDD5E320B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5B3CCA7C70430772A691EEA8AE9AA77C /* Frameworks */,
+				8E0C7E073B577D3FAF36AD098EE14C99 /* BATabBarController.modulemap */,
+				AB9D75A1B3C3A4AF46E809950906E782 /* BATabBarController.xcconfig */,
+				ADC917DFD8C0274B0A07CDC616E854ED /* BATabBarController-dummy.m */,
+				327D917D3EBF35F17BD92A8F8226E17E /* BATabBarController-prefix.pch */,
+				64175B97D0FFFC5084F30D59D24E32A0 /* BATabBarController-umbrella.h */,
+				6543A40BB4D1C397F0E94D5B69423CC3 /* Info.plist */,
 			);
-			path = GoogleInterchangeUtilities;
+			name = "Support Files";
+			path = "../Target Support Files/BATabBarController";
 			sourceTree = "<group>";
 		};
-		EB2B2ABB47C495B91F1B7763E370F33E /* Frameworks */ = {
+		CD5745D63F0318F226DDBECC507EE74B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				137CF42E995BC84118386EE649D0D426 /* TwitterKit.framework */,
+				5F2C9D4DE1AE54A0A1D10790647B57A5 /* FirebaseAnalytics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D17BACFB424BD19960E1C6911FC0B2BE /* BATabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				3428200562764EBBF66F0F266615258E /* BATabBar.h */,
+				488A754DEB70EF7D20ADC7CCF46B53F0 /* BATabBar.m */,
+				266CBC259C41E767C6CCD23F84AAF154 /* BATabBarController.h */,
+				4CBC4770FA8DBBB8E8FA029541654A9D /* BATabBarController.m */,
+				125F7A750810E15170B42E1186217EFF /* BATabBarItem.h */,
+				A0319E9D121A21935EB4BCB9F7BBEE5B /* BATabBarItem.m */,
+				1FFAE703F42AA5DEFADA4C816981F206 /* UIColor+ColorWithHex.h */,
+				ECEBB322551E28A584ED61E1FEEB0C86 /* UIColor+ColorWithHex.m */,
+				BD82228B0430D79548D78ADFDD5E320B /* Support Files */,
+			);
+			path = BATabBarController;
+			sourceTree = "<group>";
+		};
+		DD823825D4B08E2AE7068B31500D9229 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5D18823C024AED1F2C64F6757FBB3D16 /* Foundation.framework */,
+				24D3EDE8803C2444E24055A5375E9B9B /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E32D0F1F76141F8C8D745C3EAA15E956 /* TwitterCore */ = {
+			isa = PBXGroup;
+			children = (
+				52EC239342AB63FF02C910B95CC6E172 /* Frameworks */,
+			);
+			path = TwitterCore;
 			sourceTree = "<group>";
 		};
 		F30F713C59B910650E794460AE0EFD0F /* Targets Support Files */ = {
@@ -338,51 +555,123 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		F6526FB2E1A3B3D1FB1F872462E34543 /* Frameworks */ = {
+		FA11F67B636BD81B006E6C68B34B5E3F /* FirebaseAuth */ = {
 			isa = PBXGroup;
 			children = (
-				E9BC801950B12E10FF391BC5E9FD1BB7 /* FirebaseInstanceID.framework */,
+				4EE5F5ABB0C984D026CEC28EE9B7D02F /* Frameworks */,
 			);
-			name = Frameworks;
+			path = FirebaseAuth;
 			sourceTree = "<group>";
 		};
-		F889800CA445ECD7943D42D4C57389CE /* Frameworks */ = {
+		FEDE5CE434F9F01BCE033E87F358A30F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6ECBA8DF1C225B1F16BB33D051DC6B1B /* GoogleSymbolUtilities.framework */,
+				9B74686B33F6C22E4444E29D86028855 /* TwitterKitResources.bundle */,
 			);
-			name = Frameworks;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		EB27623C0E71CEF99E5A0C763D3B5064 /* Headers */ = {
+		0FD3EE462CAFF20D730E298C04278131 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49CE07B4750E7CACB16E4B519210E4E6 /* Pods-hackGSU-umbrella.h in Headers */,
+				ACFD53767C680241F3EE4E3A201CFFE7 /* Pods-hackGSU-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13162F79FD396343D8A958DDD10A3078 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FC0E56EC557C6FC0B023E1F3F04AF09 /* BATabBar.h in Headers */,
+				97E6FDE0271817A8F578CDA3F0ED70AF /* BATabBarController-umbrella.h in Headers */,
+				F429636C5437961AC382A2EAD2E8B7E5 /* BATabBarController.h in Headers */,
+				3AB1744BF9E4816D463F551DE43A16D6 /* BATabBarItem.h in Headers */,
+				A35E775A8C0C71E890A2D6F79C1FC499 /* UIColor+ColorWithHex.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74ABC5F90F89E92C9D51D92C08DF22E0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10198EA3DF2D18E1B58344F90011D09 /* MASCompositeConstraint.h in Headers */,
+				1638344215A47938BEA9EE9FE3806516 /* MASConstraint+Private.h in Headers */,
+				F2562443FF85F99F87948DA40A0875F0 /* MASConstraint.h in Headers */,
+				89767819B1A6E5115AFBC4A3E743BD71 /* MASConstraintMaker.h in Headers */,
+				269344EEDDD985E65C17666C31BB8F88 /* MASLayoutConstraint.h in Headers */,
+				06CCE2A0F0714634159B8828A21E2812 /* Masonry-umbrella.h in Headers */,
+				6BEDE5375C9CFA966A60C53A3B10C49D /* Masonry.h in Headers */,
+				00A21B4E3C1D84B2F0996D8738E94479 /* MASUtilities.h in Headers */,
+				1AD8E270D30C224D3A4AF85D3758AC3B /* MASViewAttribute.h in Headers */,
+				2705A0427DBEB6F62C70A14211432CE3 /* MASViewConstraint.h in Headers */,
+				B76691B3184CB882E59B38D21346E392 /* NSArray+MASAdditions.h in Headers */,
+				4727E76D5FC0CF7CD6F90A2F4B12607F /* NSArray+MASShorthandAdditions.h in Headers */,
+				51E310A5D31B168481B1C59D077DF99E /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
+				16A6772DBAEE626D01D3149AB73D0058 /* View+MASAdditions.h in Headers */,
+				73983CFCC076607E987DB4FB8A6E2D89 /* View+MASShorthandAdditions.h in Headers */,
+				A3431BFA009E9D5A6996B46F1EA2DA6B /* ViewController+MASAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C8E349C4B53AE570BA5CE8E625B35BBF /* Pods-hackGSU */ = {
+		2568DA4D26DBB9C8B18E2A9FC3BFCAE0 /* BATabBarController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7DD8437263273DC3DF1B6D8CAA270E8E /* Build configuration list for PBXNativeTarget "Pods-hackGSU" */;
+			buildConfigurationList = 8F9FCDE465C235ED52A30AC198E98605 /* Build configuration list for PBXNativeTarget "BATabBarController" */;
 			buildPhases = (
-				DDC432213BD54218BEA52750D7ABACBE /* Sources */,
-				AFC2B570E74B413405435B07143B38EB /* Frameworks */,
-				EB27623C0E71CEF99E5A0C763D3B5064 /* Headers */,
+				ED05960A96B95C8F1C674FE4F7DA3BAE /* Sources */,
+				0763BA4CD875A0EB094F23253C1FE756 /* Frameworks */,
+				13162F79FD396343D8A958DDD10A3078 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				962C14F0BCDC6E78EB0C5EAF18152AE7 /* PBXTargetDependency */,
+			);
+			name = BATabBarController;
+			productName = BATabBarController;
+			productReference = 7EE4128E3EB9913AD50C812B95B18C3B /* BATabBarController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3B296A0A12B5C666462542F1D37FE3BD /* Masonry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3060248DE27699AF95BC76EECFBD4971 /* Build configuration list for PBXNativeTarget "Masonry" */;
+			buildPhases = (
+				15E54A90B4F89A601F6BE233E2402618 /* Sources */,
+				BB2AF8199C6B6057CDA2EA804313F930 /* Frameworks */,
+				74ABC5F90F89E92C9D51D92C08DF22E0 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = Masonry;
+			productName = Masonry;
+			productReference = CBD696205945DAD5CBECFFDF8801517F /* Masonry.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6169C99D0D8FF8422F5AD027FB10CC8D /* Pods-hackGSU */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77F03E7BDF59A3946891CDED50FD4243 /* Build configuration list for PBXNativeTarget "Pods-hackGSU" */;
+			buildPhases = (
+				9A8211A0F4DC7A758F2F4FEAAC15395B /* Sources */,
+				5FAB014E978732AB7E009DB4083870CF /* Frameworks */,
+				0FD3EE462CAFF20D730E298C04278131 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8BAF767316163F4BD2E0757DB627542C /* PBXTargetDependency */,
+				11C60D0C560F61212EBD85343360313D /* PBXTargetDependency */,
+			);
 			name = "Pods-hackGSU";
 			productName = "Pods-hackGSU";
-			productReference = D0144FCCCDBD22D77160D93AB284F812 /* Pods_hackGSU.framework */;
+			productReference = 8B1C7959B03C4842F27B850408A33EEB /* Pods_hackGSU.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -402,25 +691,78 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 764C59F2A11FB3C52BA71E8641278DB0 /* Products */;
+			productRefGroup = 59B34C66E9D0473664DCF6951E2392A5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C8E349C4B53AE570BA5CE8E625B35BBF /* Pods-hackGSU */,
+				2568DA4D26DBB9C8B18E2A9FC3BFCAE0 /* BATabBarController */,
+				3B296A0A12B5C666462542F1D37FE3BD /* Masonry */,
+				6169C99D0D8FF8422F5AD027FB10CC8D /* Pods-hackGSU */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DDC432213BD54218BEA52750D7ABACBE /* Sources */ = {
+		15E54A90B4F89A601F6BE233E2402618 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7E8D12E3C4268805E4AA5B504CD734E /* Pods-hackGSU-dummy.m in Sources */,
+				7BB79D134363D8AE50E784E39BD37526 /* MASCompositeConstraint.m in Sources */,
+				9A0A762D64756A7122038074881A423E /* MASConstraint.m in Sources */,
+				A36088D2F598143081E11A867E852FA0 /* MASConstraintMaker.m in Sources */,
+				A5555AE462912ACD56CD1DFB657C3B29 /* MASLayoutConstraint.m in Sources */,
+				1B36F486C414B66EB4A36368FAAE6520 /* Masonry-dummy.m in Sources */,
+				3BE642822C4067C56246283E1B47AE06 /* MASViewAttribute.m in Sources */,
+				05C294DB6B9010F3124586CDD30635B1 /* MASViewConstraint.m in Sources */,
+				6859505DFD96211CEA03032032A472F9 /* NSArray+MASAdditions.m in Sources */,
+				4EDF37F828E1E07BC887A8D1ABE20EDF /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				23BFBBEC8E18959066CAAFC218998362 /* View+MASAdditions.m in Sources */,
+				3CBE233110C5A678F236DE41218B7109 /* ViewController+MASAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A8211A0F4DC7A758F2F4FEAAC15395B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C4768CFFCCB7FAF2ABB04C0212057FC /* Pods-hackGSU-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED05960A96B95C8F1C674FE4F7DA3BAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86BC1A235C33ED9DD1CB212E3A086221 /* BATabBar.m in Sources */,
+				BC336D1510BBB9BFA3A829A6D0D09097 /* BATabBarController-dummy.m in Sources */,
+				F1B03606F7C65EE03725AE79AE681857 /* BATabBarController.m in Sources */,
+				522D7E73EE9CAF882BB50534A83DC4F2 /* BATabBarItem.m in Sources */,
+				3897C908076499C4E8D290BAB5B4B9FE /* UIColor+ColorWithHex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		11C60D0C560F61212EBD85343360313D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Masonry;
+			target = 3B296A0A12B5C666462542F1D37FE3BD /* Masonry */;
+			targetProxy = E67CFD73E03AA22834BB42FDC0DB67F8 /* PBXContainerItemProxy */;
+		};
+		8BAF767316163F4BD2E0757DB627542C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BATabBarController;
+			target = 2568DA4D26DBB9C8B18E2A9FC3BFCAE0 /* BATabBarController */;
+			targetProxy = BB1D733E9D86C6F4FA4D73B0582A2E0A /* PBXContainerItemProxy */;
+		};
+		962C14F0BCDC6E78EB0C5EAF18152AE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Masonry;
+			target = 3B296A0A12B5C666462542F1D37FE3BD /* Masonry */;
+			targetProxy = FFB5D180402C3B541A4CEC7CBB36DBEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		034014829C1E4434983CF3A690C12017 /* Debug */ = {
@@ -465,7 +807,69 @@
 			};
 			name = Debug;
 		};
-		455BE92C816C3DD101A80C09B2B42B79 /* Debug */ = {
+		740F09716E2572DFE97613113C10FE9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB9D75A1B3C3A4AF46E809950906E782 /* BATabBarController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BATabBarController/BATabBarController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BATabBarController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BATabBarController/BATabBarController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = BATabBarController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A5CBB535B9CAF459D26A0DD2C8E82046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1D310D11AFB08E14AD992C22723FFC2 /* Pods-hackGSU.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-hackGSU/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-hackGSU/Pods-hackGSU.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_hackGSU;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B0E86733851CBCF81ADDFE105264F738 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 181163347EB741443F26524DE647E547 /* Pods-hackGSU.debug.xcconfig */;
 			buildSettings = {
@@ -536,9 +940,9 @@
 			};
 			name = Release;
 		};
-		CD3FA14A2F70B20BA7B9210DD952CACF /* Release */ = {
+		E2B2AD7AEA98A1CB2DDA4B606B1A17FF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1D310D11AFB08E14AD992C22723FFC2 /* Pods-hackGSU.release.xcconfig */;
+			baseConfigurationReference = 35C7AE50ADE489CF677F13782192B4B5 /* Masonry.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -549,18 +953,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-hackGSU/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Masonry/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-hackGSU/Pods-hackGSU.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_hackGSU;
+				PRODUCT_NAME = Masonry;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -568,6 +968,64 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		E4F86036AD7246DC60320E395F939349 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB9D75A1B3C3A4AF46E809950906E782 /* BATabBarController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BATabBarController/BATabBarController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BATabBarController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BATabBarController/BATabBarController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BATabBarController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F492700B91A8818B6208ACD472BE0B6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35C7AE50ADE489CF677F13782192B4B5 /* Masonry.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Masonry/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Masonry;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -581,11 +1039,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7DD8437263273DC3DF1B6D8CAA270E8E /* Build configuration list for PBXNativeTarget "Pods-hackGSU" */ = {
+		3060248DE27699AF95BC76EECFBD4971 /* Build configuration list for PBXNativeTarget "Masonry" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				455BE92C816C3DD101A80C09B2B42B79 /* Debug */,
-				CD3FA14A2F70B20BA7B9210DD952CACF /* Release */,
+				F492700B91A8818B6208ACD472BE0B6C /* Debug */,
+				E2B2AD7AEA98A1CB2DDA4B606B1A17FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77F03E7BDF59A3946891CDED50FD4243 /* Build configuration list for PBXNativeTarget "Pods-hackGSU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0E86733851CBCF81ADDFE105264F738 /* Debug */,
+				A5CBB535B9CAF459D26A0DD2C8E82046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F9FCDE465C235ED52A30AC198E98605 /* Build configuration list for PBXNativeTarget "BATabBarController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4F86036AD7246DC60320E395F939349 /* Debug */,
+				740F09716E2572DFE97613113C10FE9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

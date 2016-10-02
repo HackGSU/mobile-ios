@@ -13,5 +13,6 @@ target 'hackGSU' do
   pod 'Firebase/Auth'
   pod 'TwitterKit'
   pod 'Fabric'
+  pod 'BATabBarController'
   
 end
