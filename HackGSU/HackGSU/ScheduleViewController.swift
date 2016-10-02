@@ -11,6 +11,7 @@ import UIKit
 
 class ScheduleViewController: UITableViewController {
 
+    var viraj = "Viraj"
     var time: [String] = ["2:00pm", "12:00am", "4:00pm"]
     var eventTitle: [String] = ["New Announcement", "Announcement 2", "Announcement 3"]
     var eventDescription: [String] = ["The event will take place in this location", "event description", "This event is cancelled"]
@@ -48,11 +49,11 @@ class ScheduleViewController: UITableViewController {
             break
         }
     }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        <#code#>
-    }
-    
+//    
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        <#code#>
+//    }
+//    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //given the index of the cell, return the cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleCell", for: indexPath) as! ScheduleCell
