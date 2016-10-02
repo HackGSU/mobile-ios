@@ -11,7 +11,8 @@ import UIKit
 
 class ScheduleViewController: UITableViewController {
 
-    var viraj = "Viraj"
+    let cellId = "cellId"
+    
     var time: [String] = ["2:00pm", "12:00am", "4:00pm"]
     var eventTitle: [String] = ["New Announcement", "Announcement 2", "Announcement 3"]
     var eventDescription: [String] = ["The event will take place in this location", "event description", "This event is cancelled"]
@@ -20,6 +21,9 @@ class ScheduleViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         var allowsSelection: Bool = false
+        
+        tableView.register(ScheduleTableCell.self, forCellReuseIdentifier: cellId)
+        
     }
     
     
@@ -49,18 +53,17 @@ class ScheduleViewController: UITableViewController {
             break
         }
     }
-//    
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        <#code#>
-//    }
-//    
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //given the index of the cell, return the cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleCell", for: indexPath) as! ScheduleCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ScheduleTableCell
         
-        cell.time.text = time[indexPath.row]
         cell.eventTitle.text = eventTitle[indexPath.row]
-        cell.eventDescription.text = eventDescription[indexPath.row]
+        cell.eventText.text = eventDescription[indexPath.row]
         
         return cell
     }
