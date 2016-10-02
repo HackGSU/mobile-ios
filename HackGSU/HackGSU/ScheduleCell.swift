@@ -14,7 +14,6 @@ class ScheduleTableCell: UITableViewCell{
     let timeContainer: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .red
         return view
     }()
     
@@ -30,7 +29,8 @@ class ScheduleTableCell: UITableViewCell{
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.text = "New Announcement"
         tv.font = UIFont.boldSystemFont(ofSize: 16)
-        tv.backgroundColor = .blue
+        tv.isEditable = false
+        tv.isSelectable = false
         return tv
     }()
     let eventText: UITextView = {
@@ -38,7 +38,8 @@ class ScheduleTableCell: UITableViewCell{
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.text = "The event will take place in this location"
         tv.font = UIFont.systemFont(ofSize: 16)
-        tv.backgroundColor = .yellow
+        tv.isEditable = false
+        tv.isSelectable = false
         return tv
     }()
     
