@@ -10,13 +10,13 @@
         <scene sceneID="eiA-VO-5uJ">
             <objects>
                 <tableViewController title="ScheduleViewController" id="BFF-AG-iGf" customClass="ScheduleViewController" customModule="hackGSU" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="99" sectionHeaderHeight="18" sectionFooterHeight="18" id="a3j-Bg-Ckj">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="99" sectionHeaderHeight="18" sectionFooterHeight="18" id="a3j-Bg-Ckj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ScheduleCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScheduleCell" rowHeight="99" id="gPB-13-FZW" customClass="ScheduleCell" customModule="hackGSU" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="120" width="375" height="99"/>
+                                <rect key="frame" x="0.0" y="119.5" width="375" height="99"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gPB-13-FZW" id="sxI-n0-GJ6">
                                     <frame key="frameInset" width="375" height="99"/>
