@@ -25,8 +25,6 @@
 		034D46DE1D9596EC0059266C /* hackGSUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D46DD1D9596EC0059266C /* hackGSUTests.swift */; };
 		034D46E91D9596EC0059266C /* hackGSUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D46E81D9596EC0059266C /* hackGSUUITests.swift */; };
 		034D46F71D9597290059266C /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D46F61D9597290059266C /* CustomTabBarController.swift */; };
-		0372140E1DA5BC52008053F4 /* AboutUsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0372140D1DA5BC52008053F4 /* AboutUsController.swift */; };
-		037214101DA5BCE4008053F4 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0372140F1DA5BCE4008053F4 /* TeamCell.swift */; };
 		AA85232C9242D7378DA4511D /* Pods_hackGSU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A866E192359F9C5D42F32FD4 /* Pods_hackGSU.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,8 +71,6 @@
 		034D46E81D9596EC0059266C /* hackGSUUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hackGSUUITests.swift; sourceTree = "<group>"; };
 		034D46EA1D9596EC0059266C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		034D46F61D9597290059266C /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
-		0372140D1DA5BC52008053F4 /* AboutUsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutUsController.swift; path = HackGSU/AboutUsController.swift; sourceTree = SOURCE_ROOT; };
-		0372140F1DA5BCE4008053F4 /* TeamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		85FFF7CAF179A2C43B0A0669 /* Pods-hackGSU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackGSU.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackGSU/Pods-hackGSU.release.xcconfig"; sourceTree = "<group>"; };
 		A866E192359F9C5D42F32FD4 /* Pods_hackGSU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackGSU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C062AE6C7EEDFB7831AEE1A4 /* Pods-hackGSU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackGSU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackGSU/Pods-hackGSU.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,7 +125,6 @@
 			children = (
 				034D46F61D9597290059266C /* CustomTabBarController.swift */,
 				0305149A1D9B58BE00CF4863 /* LoginController.swift */,
-				0372140D1DA5BC52008053F4 /* AboutUsController.swift */,
 				0316E0341D97227200E9160E /* AnnouncementController.swift */,
 				03484D3C1D9DB9EC0026FBB6 /* NewAnnouncementController.swift */,
 			);
@@ -140,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				0305147C1D9ACA2800CF4863 /* AnnouncementCell.swift */,
-				0372140F1DA5BCE4008053F4 /* TeamCell.swift */,
 				030514981D9B589C00CF4863 /* LoginCell.swift */,
 				030514921D9B584E00CF4863 /* PageCell.swift */,
 			);
@@ -414,7 +408,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0372140E1DA5BC52008053F4 /* AboutUsController.swift in Sources */,
 				03484D3D1D9DB9EC0026FBB6 /* NewAnnouncementController.swift in Sources */,
 				034D46C91D9596EC0059266C /* AppDelegate.swift in Sources */,
 				0316E0351D97227200E9160E /* AnnouncementController.swift in Sources */,
@@ -424,7 +417,6 @@
 				030514951D9B585E00CF4863 /* Page.swift in Sources */,
 				0305147B1D9ABD0E00CF4863 /* Announcement.swift in Sources */,
 				034D46F71D9597290059266C /* CustomTabBarController.swift in Sources */,
-				037214101DA5BCE4008053F4 /* TeamCell.swift in Sources */,
 				03484D391D9D9DCB0026FBB6 /* NewAnnouncementView.swift in Sources */,
 				0305149B1D9B58BE00CF4863 /* LoginController.swift in Sources */,
 				030514991D9B589C00CF4863 /* LoginCell.swift in Sources */,
