@@ -22,7 +22,13 @@ class CustomTabBarController: UITabBarController{
         //tabBarItem.imageInsets = UIEdgeInsets(top: 9, left: 0, bottom: -9, right: 0)
         feedController.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
         
-        viewControllers = [feedController, createDummyNavControllerWithTitle("Calendar", imageName: "calendar", filled: "calendar_filled"), createDummyNavControllerWithTitle("Map", imageName: "map", filled: "map_filled"), createDummyNavControllerWithTitle("Request Mentor", imageName: "mentor", filled: "mentor_filled")]
+        let aboutController = UINavigationController(rootViewController: AboutUsController(collectionViewLayout: layout))
+        
+        aboutController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "calendar"), selectedImage: UIImage(named: "calendar_filled"))
+        aboutController.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+        
+        
+        viewControllers = [feedController, aboutController, createDummyNavControllerWithTitle("Map", imageName: "map", filled: "map_filled"), createDummyNavControllerWithTitle("Request Mentor", imageName: "mentor", filled: "mentor_filled")]
         
         
     }
