@@ -14,6 +14,15 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     
     var firebaseAnnouncements = [Announcement]()
     
+    lazy var refresher: UIRefreshControl = {
+        let refresh = UIRefreshControl()
+        refresh.tintColor = .lightGray
+        refresh.addTarget(self, action: #selector(refreshFeed), for: .valueChanged)
+
+        return refresh
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBarAttributes()
@@ -21,11 +30,13 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         collectionView?.backgroundColor = UIColor(red:0.90, green:0.89, blue:0.90, alpha:1.00)
         collectionView?.register(AnnouncementCell.self, forCellWithReuseIdentifier: "cellId")
         collectionView?.indicatorStyle = .black
+        collectionView!.alwaysBounceVertical = true
+        collectionView?.addSubview(refresher)
     }
     
+    
     override func viewDidAppear(_ animated: Bool) {
-        firebaseAnnouncements.removeAll()
-        observeAnnouncements()
+        refreshFeed()
     }
     
     func logOut(){
@@ -44,7 +55,12 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         })
         
     }
-        
+    
+    func refreshFeed(){
+        firebaseAnnouncements.removeAll()
+        observeAnnouncements()
+    }
+    
     func observeAnnouncements(){
         let ref = FIRDatabase.database().reference().child("announcements")
         ref.observe(.childAdded, with: { (snapshot) in
@@ -87,11 +103,15 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
                 
                 
             }
-            
+            self.stopRefresher()
             }, withCancel: nil)
         
     }
     
+    func stopRefresher()
+    {
+        refresher.endRefreshing()
+    }
     
     func checkIfUserIsLoggedIn(){
         if FIRAuth.auth()?.currentUser?.uid == nil {
@@ -136,11 +156,13 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell( withReuseIdentifier: "cellId", for: indexPath) as! AnnouncementCell
+        
         cell.announcement = firebaseAnnouncements[(indexPath as NSIndexPath).item]
         cell.backgroundColor = .white
         
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 5
     }
