@@ -131,8 +131,7 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         //navigationController?.hidesBarsOnSwipe = true
         navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Avenir", size: 24)!, NSForegroundColorAttributeName : UIColor.white]
         
-        navigationController?.navigation
-        Bar.isTranslucent = false
+        navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.barTintColor = UIColor(red:0.07, green:0.45, blue:0.91, alpha:1.00)
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(nil, for: .default)
