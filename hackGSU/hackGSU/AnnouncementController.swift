@@ -16,7 +16,8 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     
     lazy var refresher: UIRefreshControl = {
         let refresh = UIRefreshControl()
-        refresh.tintColor = .lightGray
+        refresh.tintColor = .white
+        refresh.backgroundColor = UIColor(red:0.07, green:0.45, blue:0.91, alpha:1.00)
         refresh.addTarget(self, action: #selector(refreshFeed), for: .valueChanged)
 
         return refresh
@@ -31,8 +32,14 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         collectionView?.register(AnnouncementCell.self, forCellWithReuseIdentifier: "cellId")
         collectionView?.indicatorStyle = .black
         collectionView!.alwaysBounceVertical = true
-        collectionView?.addSubview(refresher)
+        collectionView?.refreshControl = refresher
     }
+    
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        
+//        self.collectionView?.sendSubview(toBack: refresher)
+//    }
     
     
     override func viewDidAppear(_ animated: Bool) {
@@ -59,6 +66,7 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     func refreshFeed(){
         firebaseAnnouncements.removeAll()
         observeAnnouncements()
+        stopRefresher()
     }
     
     func observeAnnouncements(){
@@ -103,7 +111,6 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
                 
                 
             }
-            self.stopRefresher()
             }, withCancel: nil)
         
     }
@@ -124,10 +131,11 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         //navigationController?.hidesBarsOnSwipe = true
         navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Avenir", size: 24)!, NSForegroundColorAttributeName : UIColor.white]
         
-        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigation
+        Bar.isTranslucent = false
         navigationController?.navigationBar.barTintColor = UIColor(red:0.07, green:0.45, blue:0.91, alpha:1.00)
         UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().setBackgroundImage(nil, for: .default)
         
         let moreButton = UIBarButtonItem(image: UIImage(named: "More"), style: .plain, target: self, action: #selector(menuTap))
         moreButton.tintColor = UIColor.white
