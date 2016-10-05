@@ -20,11 +20,28 @@ class AnnouncementCell: UICollectionViewCell {
             announcementTitle.text = announcement?.Title
             //announcementPoster.text = announcement?.fromId
             topicLabel.text = announcement?.topic
-            var currentTime = Int(NSDate().timeIntervalSince1970)
-            currentTime = (currentTime - (announcement?.timestamp?.intValue)!)/60
             
-            timestamp.text = currentTime.description + " minutes ago • "
+            timestamp.text =  setupTime((announcement?.timestamp?.intValue)!)
+            
+            
         }
+    }
+    
+    func setupTime(_ time: Int)->String {
+        var currentTime = Int(NSDate().timeIntervalSince1970)
+        currentTime = (currentTime - time )/60
+        if (currentTime == 1){
+            return (currentTime.description + " minute ago • ")
+        }
+        if (currentTime >= 60){
+        currentTime = currentTime/60
+            if (currentTime == 1){
+                return (currentTime.description + " hour ago • ")
+            }else{
+                return (currentTime.description + " hours ago • ")
+            }
+        }
+        return (currentTime.description + " minutes ago • ")
     }
     
     let announcementInfoContainer: UIView = {
