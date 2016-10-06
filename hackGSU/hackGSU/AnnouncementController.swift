@@ -32,7 +32,11 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         collectionView?.register(AnnouncementCell.self, forCellWithReuseIdentifier: "cellId")
         collectionView?.indicatorStyle = .black
         collectionView!.alwaysBounceVertical = true
-        collectionView?.refreshControl = refresher
+        if #available(iOS 10.0, *) {
+            collectionView?.refreshControl = refresher
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
 //    override func viewDidLayoutSubviews() {
