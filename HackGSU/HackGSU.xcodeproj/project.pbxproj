@@ -28,6 +28,10 @@
 		039E68751DA69960004FA963 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039E68741DA69960004FA963 /* MenuBar.swift */; };
 		039E68771DA69EFF004FA963 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039E68761DA69EFF004FA963 /* MenuCell.swift */; };
 		AA85232C9242D7378DA4511D /* Pods_hackGSU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A866E192359F9C5D42F32FD4 /* Pods_hackGSU.framework */; };
+		D2B806B61DA6DD11001CF43D /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B806B51DA6DD11001CF43D /* Maps.swift */; };
+		D2B806B81DA6DE1B001CF43D /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B806B71DA6DE1B001CF43D /* Schedule.swift */; };
+		D2B806BA1DA6DE43001CF43D /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B806B91DA6DE43001CF43D /* VC.swift */; };
+		D2D7B5661DA6DB4A000FDE81 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D7B5651DA6DB4A000FDE81 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,10 @@
 		85FFF7CAF179A2C43B0A0669 /* Pods-hackGSU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackGSU.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackGSU/Pods-hackGSU.release.xcconfig"; sourceTree = "<group>"; };
 		A866E192359F9C5D42F32FD4 /* Pods_hackGSU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackGSU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C062AE6C7EEDFB7831AEE1A4 /* Pods-hackGSU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackGSU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackGSU/Pods-hackGSU.debug.xcconfig"; sourceTree = "<group>"; };
+		D2B806B51DA6DD11001CF43D /* Maps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Maps.swift; sourceTree = "<group>"; };
+		D2B806B71DA6DE1B001CF43D /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		D2B806B91DA6DE43001CF43D /* VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
+		D2D7B5651DA6DB4A000FDE81 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,10 +135,14 @@
 		030514801D9AD9F800CF4863 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D2D7B5651DA6DB4A000FDE81 /* TabBarViewController.swift */,
 				034D46F61D9597290059266C /* CustomTabBarController.swift */,
 				0305149A1D9B58BE00CF4863 /* LoginController.swift */,
 				0316E0341D97227200E9160E /* AnnouncementController.swift */,
 				03484D3C1D9DB9EC0026FBB6 /* NewAnnouncementController.swift */,
+				D2B806B51DA6DD11001CF43D /* Maps.swift */,
+				D2B806B71DA6DE1B001CF43D /* Schedule.swift */,
+				D2B806B91DA6DE43001CF43D /* VC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -416,6 +428,8 @@
 			files = (
 				039E68771DA69EFF004FA963 /* MenuCell.swift in Sources */,
 				03484D3D1D9DB9EC0026FBB6 /* NewAnnouncementController.swift in Sources */,
+				D2B806BA1DA6DE43001CF43D /* VC.swift in Sources */,
+				D2B806B81DA6DE1B001CF43D /* Schedule.swift in Sources */,
 				034D46C91D9596EC0059266C /* AppDelegate.swift in Sources */,
 				0316E0351D97227200E9160E /* AnnouncementController.swift in Sources */,
 				030514931D9B584E00CF4863 /* PageCell.swift in Sources */,
@@ -423,10 +437,12 @@
 				0305147D1D9ACA2800CF4863 /* AnnouncementCell.swift in Sources */,
 				039E68751DA69960004FA963 /* MenuBar.swift in Sources */,
 				030514951D9B585E00CF4863 /* Page.swift in Sources */,
+				D2B806B61DA6DD11001CF43D /* Maps.swift in Sources */,
 				0305147B1D9ABD0E00CF4863 /* Announcement.swift in Sources */,
 				034D46F71D9597290059266C /* CustomTabBarController.swift in Sources */,
 				03484D391D9D9DCB0026FBB6 /* NewAnnouncementView.swift in Sources */,
 				0305149B1D9B58BE00CF4863 /* LoginController.swift in Sources */,
+				D2D7B5661DA6DB4A000FDE81 /* TabBarViewController.swift in Sources */,
 				030514991D9B589C00CF4863 /* LoginCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

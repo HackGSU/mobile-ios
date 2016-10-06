@@ -39,46 +39,47 @@ class TabBarViewController: UIViewController, BATabBarControllerDelegate {
         //self.vc.tabBarItemLineWidth = 1.0;
         self.tabBar.viewControllers = [vc1, vc2!, vc3!]
         self.tabBar.tabBarItems = [tabBarItem1!, tabBarItem2!, tabBarItem3!]
-        self.tabBar.setSelectedView(vc2, animated: false)
+        self.tabBar.setSelectedView(vc1, animated: false)
         self.tabBar.delegate = self
         self.view.addSubview(self.tabBar.view)
-        topBar.layer.zPosition = 1
+        //topBar.layer.zPosition = 1
     
     }
     
     func tabBarController(_ tabBarController: BATabBarController, didSelect viewController: UIViewController) {
         print("Delegate success!")
         
+        
         switch viewController.restorationIdentifier! {
             case "Announcements":
                 UIView.animate(withDuration: 1.0, animations: { () -> Void in
-                    self.tabBar.tabBarBackgroundColor = UIColor.blue
-                    self.topBar.backgroundColor = UIColor.blue
+                    self.tabBar.tabBarBackgroundColor = UIColor.white
+                    //self.topBar.backgroundColor = UIColor.blue
                     //self.tabBar.tabBarItemStrokeColor = UIColor.white;
-                    self.topBarLabel.text = "Announcements"
+                    //self.topBarLabel.text = "Announcements"
                 })
             break
             case "Schedule":
                 UIView.animate(withDuration: 1.0, animations: { () -> Void in
-                    self.tabBar.tabBarBackgroundColor = UIColor.white
-                    self.topBar.backgroundColor = UIColor.white
+                    self.tabBar.tabBarBackgroundColor = UIColor.cyan
+                    //self.topBar.backgroundColor = UIColor.white
                     //self.tabBar.tabBarItemStrokeColor = UIColor.blue
-                    self.topBarLabel.text = "Schedule"
+                    //self.topBarLabel.text = "Schedule"
                 })
             break
             case "Maps":
                 UIView.animate(withDuration: 1.0, animations: { () -> Void in
-                    self.tabBar.tabBarBackgroundColor = UIColor.lightGray
-                    self.topBar.backgroundColor = UIColor.lightGray
+                    self.tabBar.tabBarBackgroundColor = UIColor.red
+                    //self.topBar.backgroundColor = UIColor.lightGray
                     //self.tabBar.tabBarItemStrokeColor = UIColor.white
-                    self.topBarLabel.text = "Maps"
+                    //self.topBarLabel.text = "Maps"
                 })
             break
         default:
             //We really shouldn't be here
             break
         }
-    }
+}
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
