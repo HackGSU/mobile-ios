@@ -199,13 +199,13 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         
-//        let moreButton = UIBarButtonItem(image: UIImage(named: "More"), style: .plain, target: self, action: #selector(menuTap))
-//        moreButton.tintColor = UIColor.white
+        let moreButton = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action: #selector(menuTap))
+        moreButton.tintColor = UIColor.white
 //        navigationItem.rightBarButtonItem = moreButton
         
-        let plusButton = UIBarButtonItem(image: UIImage(named: "add"), style: .plain, target: self, action: #selector(addAnnouncement))
+        let plusButton = UIBarButtonItem(image: UIImage(named: "Edit"), style: .plain, target: self, action: #selector(addAnnouncement))
         plusButton.tintColor = .white
-        navigationItem.rightBarButtonItem = plusButton
+        navigationItem.rightBarButtonItems = [moreButton, plusButton]
         
     }
     
