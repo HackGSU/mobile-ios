@@ -53,20 +53,6 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     fileprivate func setupMenuBar(){
         view.addSubview(menuBar)
         
-        navigationController?.hidesBarsOnSwipe = true
-        
-        let blueView = UIView()
-        blueView.backgroundColor = UIColor(red:0.14, green:0.32, blue:0.95, alpha:1.00)
-        view.addSubview(blueView)
-        
-//        let window = UIApplication.shared.keyWindow!
-    
-        
-        blueView.topAnchor.constraint(equalTo: topLayoutGuide.topAnchor).isActive = true
-        blueView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        blueView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        blueView.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
         menuBar.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
         menuBar.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         menuBar.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
