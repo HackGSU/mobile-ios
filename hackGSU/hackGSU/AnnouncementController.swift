@@ -17,7 +17,7 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     lazy var refresher: UIRefreshControl = {
         let refresh = UIRefreshControl()
         refresh.tintColor = .white
-        refresh.backgroundColor = UIColor(red:0.07, green:0.45, blue:0.91, alpha:1.00)
+        refresh.backgroundColor = UIColor(red:0.14, green:0.32, blue:0.95, alpha:1.00)
         refresh.addTarget(self, action: #selector(refreshFeed), for: .valueChanged)
 
         return refresh
@@ -26,28 +26,71 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         setupNavBarAttributes()
         checkIfUserIsLoggedIn()
+        setupMenuBar()
+        setupStatusBar()
+        setupCollectionView()
+        refreshFeed()
+        collectionView?.addSubview(refresher)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        statusBar.removeFromSuperview()
+    }
+    
+    let menuBar: MenuBar = {
+        let mb = MenuBar()
+        mb.translatesAutoresizingMaskIntoConstraints = false
+        return mb
+    }()
+    
+    
+    fileprivate func setupMenuBar(){
+        view.addSubview(menuBar)
+        
+        menuBar.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
+        menuBar.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        menuBar.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        menuBar.heightAnchor.constraint(equalToConstant: 50).isActive = true
+    }
+    
+    func setupCollectionView(){
         collectionView?.backgroundColor = UIColor(red:0.90, green:0.89, blue:0.90, alpha:1.00)
         collectionView?.register(AnnouncementCell.self, forCellWithReuseIdentifier: "cellId")
         collectionView?.indicatorStyle = .black
         collectionView!.alwaysBounceVertical = true
-        if #available(iOS 10.0, *) {
-            collectionView?.refreshControl = refresher
-        } else {
-            // Fallback on earlier versions
-        }
+        collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
+        collectionView?.scrollIndicatorInsets  = UIEdgeInsetsMake(50, 0, 0, 0)
+
     }
     
-//    override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
-//        
-//        self.collectionView?.sendSubview(toBack: refresher)
-//    }
+    let statusBar: UIView = {
+        let view = UIView()
+        view.backgroundColor = .blue
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     
     
-    override func viewDidAppear(_ animated: Bool) {
-        refreshFeed()
+    func setupStatusBar(){
+        
+        let window = UIApplication.shared.keyWindow!
+        window.addSubview(statusBar)
+        
+        //UIApplication.shared.keyWindow?.addSubview(statusBar)
+        
+        statusBar.topAnchor.constraint(equalTo: window.topAnchor).isActive = true
+        statusBar.leftAnchor.constraint(equalTo: window.leftAnchor).isActive = true
+        statusBar.widthAnchor.constraint(equalTo: window.widthAnchor).isActive = true
+        statusBar.heightAnchor.constraint(equalToConstant: 20).isActive = true
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        self.collectionView?.sendSubview(toBack: refresher)
     }
     
     func logOut(){
@@ -131,18 +174,28 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     }
     
     func setupNavBarAttributes(){
-        navigationItem.title = "Announcements"
-        //navigationController?.hidesBarsOnSwipe = true
-        navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Avenir", size: 24)!, NSForegroundColorAttributeName : UIColor.white]
+            
+        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 32, height: view.frame.height))
+        
+        titleLabel.text = "Announcements"
+        titleLabel.textColor = .white
+        titleLabel.font = UIFont.systemFont(ofSize: 20)
+        navigationItem.titleView = titleLabel
+        
+        
+        
+//        navigationItem.title = "Announcements"
+//        navigationController?.hidesBarsOnSwipe = true
+//        navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Avenir", size: 24)!, NSForegroundColorAttributeName : UIColor.white]
         
         navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.barTintColor = UIColor(red:0.07, green:0.45, blue:0.91, alpha:1.00)
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().setBackgroundImage(nil, for: .default)
+        navigationController?.navigationBar.barTintColor = UIColor(red:0.14, green:0.32, blue:0.95, alpha:1.00)
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
         
-        let moreButton = UIBarButtonItem(image: UIImage(named: "More"), style: .plain, target: self, action: #selector(menuTap))
-        moreButton.tintColor = UIColor.white
-        navigationItem.leftBarButtonItem = moreButton
+//        let moreButton = UIBarButtonItem(image: UIImage(named: "More"), style: .plain, target: self, action: #selector(menuTap))
+//        moreButton.tintColor = UIColor.white
+//        navigationItem.rightBarButtonItem = moreButton
         
         let plusButton = UIBarButtonItem(image: UIImage(named: "add"), style: .plain, target: self, action: #selector(addAnnouncement))
         plusButton.tintColor = .white
