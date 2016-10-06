@@ -12,6 +12,7 @@
 		C136B9321D963E8C0047D23F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C136B9301D963E8C0047D23F /* Main.storyboard */; };
 		C136B9341D963E8C0047D23F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C136B9331D963E8C0047D23F /* Assets.xcassets */; };
 		C136B9371D963E8C0047D23F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C136B9351D963E8C0047D23F /* LaunchScreen.storyboard */; };
+		CE31A4931DA4509900359F04 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31A4921DA4509900359F04 /* Event.swift */; };
 		CEA16EA61DA05D0900EA6562 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA16EA51DA05D0900EA6562 /* ScheduleViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		C136B9331D963E8C0047D23F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C136B9361D963E8C0047D23F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C136B9381D963E8C0047D23F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE31A4921DA4509900359F04 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = HackGSU/Event.swift; sourceTree = SOURCE_ROOT; };
 		CEA16EA51DA05D0900EA6562 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +61,7 @@
 				C136B92C1D963E8C0047D23F /* AppDelegate.swift */,
 				C136B9301D963E8C0047D23F /* Main.storyboard */,
 				CEA16EA51DA05D0900EA6562 /* ScheduleViewController.swift */,
+				CE31A4921DA4509900359F04 /* Event.swift */,
 				03C2CA301DA19882007987BB /* ScheduleCell.swift */,
 				C136B9331D963E8C0047D23F /* Assets.xcassets */,
 				C136B9351D963E8C0047D23F /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE31A4931DA4509900359F04 /* Event.swift in Sources */,
 				C136B92D1D963E8C0047D23F /* AppDelegate.swift in Sources */,
 				03C2CA311DA19882007987BB /* ScheduleCell.swift in Sources */,
 				CEA16EA61DA05D0900EA6562 /* ScheduleViewController.swift in Sources */,

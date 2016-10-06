@@ -13,7 +13,7 @@ class ScheduleViewController: UITableViewController {
 
     let cellId = "cellId"
     
-    var time: [String] = [""]
+    
     var eventLocation: [String] = ["Location 1", "Location 2", "Location 3"]
     var dayOfWeekend: [String] = ["Friday", "Saturday", "Sunday"]
     var timesForFriday: [String] = ["5:00pm", "6:00pm", "6:30pm", "7:00pm", "8:00pm", "8:30pm", "9:30pm", "10:30pm", "12:00am"]
@@ -23,7 +23,6 @@ class ScheduleViewController: UITableViewController {
     var eventDescriptionSaturday: [String] = ["Breakfast", "Development Workshop D", "Lunch", "TBD", "Devlopment Workshop E", "TBD", "Dinner", "Snack", "Saturday Midnight Madness"]
     var eventDesriptionSunday: [String] = ["Breakfast", "Submit to Devpost Hacking Ends", "Hack Expo", "Finalist Demos", "Closing/Awards Ceremonies"]
     
-        
     override func viewDidLoad() {
         super.viewDidLoad()
         var allowsSelection: Bool = false
@@ -55,6 +54,12 @@ class ScheduleViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String{
         //given the index, return title string
+       // UIView(beginAnimations:nil, context:NULL)
+        //self.tableView.setTableHeaderView:nil
+        //UIView.commitAnimations
+        
+        //this is to animate the title doesnt work right now
+        
         return dayOfWeekend[section]
     }
     
@@ -63,16 +68,15 @@ class ScheduleViewController: UITableViewController {
         switch section {
             case 0:
                 return 9
-                break
+            
             case 1:
                 return 9
-                break
+            
             case 2:
                 return 5
-                break
+            
         default:
             return 0
-            break
         }
     }
     
@@ -84,6 +88,11 @@ class ScheduleViewController: UITableViewController {
         //given the index of the cell, return the cell
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ScheduleTableCell
         
+      
+        
+        
+        
+        // Event()
         
         //cell.eventTitle.text = eventTitle[indexPath.row]
 
