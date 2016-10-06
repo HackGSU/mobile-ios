@@ -59,8 +59,8 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         collectionView?.register(AnnouncementCell.self, forCellWithReuseIdentifier: "cellId")
         collectionView?.indicatorStyle = .black
         collectionView!.alwaysBounceVertical = true
-        collectionView?.contentInset = UIEdgeInsetsMake(70, 0, 0, 0)
-        collectionView?.scrollIndicatorInsets  = UIEdgeInsetsMake(70, 0, 0, 0)
+        collectionView?.contentInset = UIEdgeInsetsMake(120, 0, 0, 0)
+        collectionView?.scrollIndicatorInsets  = UIEdgeInsetsMake(120, 0, 0, 0)
 
     }
     
