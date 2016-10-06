@@ -15,6 +15,10 @@ class TabBarViewController: UIViewController, BATabBarControllerDelegate {
     @IBOutlet weak var topBarLabel: UILabel!
     var tabBar: BATabBarController!
     
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

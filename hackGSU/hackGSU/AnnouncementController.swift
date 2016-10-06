@@ -38,14 +38,6 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         collectionView?.addSubview(refresher)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        setupStatusBar()
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        statusBar.removeFromSuperview()
-    }
-    
     let menuBar: MenuBar = {
         let mb = MenuBar()
         mb.translatesAutoresizingMaskIntoConstraints = false
@@ -53,7 +45,7 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     }()
     
     
-    fileprivate func setupMenuBar(){
+    func setupMenuBar(){
         view.addSubview(menuBar)
         
         menuBar.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
@@ -67,34 +59,34 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         collectionView?.register(AnnouncementCell.self, forCellWithReuseIdentifier: "cellId")
         collectionView?.indicatorStyle = .black
         collectionView!.alwaysBounceVertical = true
-        collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
-        collectionView?.scrollIndicatorInsets  = UIEdgeInsetsMake(50, 0, 0, 0)
+        collectionView?.contentInset = UIEdgeInsetsMake(70, 0, 0, 0)
+        collectionView?.scrollIndicatorInsets  = UIEdgeInsetsMake(70, 0, 0, 0)
 
     }
     
-    let statusBar: UIView = {
-        let view = UIView()
-        view.backgroundColor = .blue
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
-
-    
-    func setupStatusBar(){
-        
-        let window = UIApplication.shared.keyWindow!
-
-        
-        window.addSubview(statusBar)
-        
-        //UIApplication.shared.keyWindow?.addSubview(statusBar)
-        
-        statusBar.topAnchor.constraint(equalTo: window.topAnchor).isActive = true
-        statusBar.leftAnchor.constraint(equalTo: window.leftAnchor).isActive = true
-        statusBar.widthAnchor.constraint(equalTo: window.widthAnchor).isActive = true
-        statusBar.heightAnchor.constraint(equalToConstant: 20).isActive = true
-    }
+//    let statusBar: UIView = {
+//        let view = UIView()
+//        view.backgroundColor = .blue
+//        view.translatesAutoresizingMaskIntoConstraints = false
+//        return view
+//    }()
+//    
+//
+//    
+//    func setupStatusBar(){
+//        
+//        let window = UIApplication.shared.keyWindow!
+//
+//        
+//        window.addSubview(statusBar)
+//        
+//        //UIApplication.shared.keyWindow?.addSubview(statusBar)
+//        
+//        statusBar.topAnchor.constraint(equalTo: window.topAnchor).isActive = true
+//        statusBar.leftAnchor.constraint(equalTo: window.leftAnchor).isActive = true
+//        statusBar.widthAnchor.constraint(equalTo: window.widthAnchor).isActive = true
+//        statusBar.heightAnchor.constraint(equalToConstant: 20).isActive = true
+//    }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
