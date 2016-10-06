@@ -10,9 +10,10 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class announcementFeedController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class announcementFeedController: UICollectionViewController, UICollectionViewDelegateFlowLayout{
     
     var firebaseAnnouncements = [Announcement]()
+
     
     lazy var refresher: UIRefreshControl = {
         let refresh = UIRefreshControl()
@@ -26,6 +27,8 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.restorationIdentifier = "Announcments"
         view.backgroundColor = .white
         setupNavBarAttributes()
         checkIfUserIsLoggedIn()

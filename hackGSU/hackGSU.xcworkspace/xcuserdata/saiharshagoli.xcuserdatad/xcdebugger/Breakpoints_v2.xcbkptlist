@@ -6,7 +6,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "hackGSU/TabBarViewController.swift"
@@ -17,38 +17,22 @@
             endingLineNumber = "18"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "hackGSU.TabBarViewController.viewDidLoad () -&gt; ()"
-                  moduleName = "hackGSU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/saiharshagolia/Projects/mobile-ios/hackGSU/hackGSU/TabBarViewController.swift"
-                  timestampString = "497413906.555963"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "@objc hackGSU.TabBarViewController.viewDidLoad () -&gt; ()"
-                  moduleName = "hackGSU"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/saiharshagolia/Projects/mobile-ios/hackGSU/hackGSU/TabBarViewController.swift"
-                  timestampString = "497413906.557592"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "60">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "hackGSU/TabBarViewController.swift"
+            timestampString = "497476489.739591"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "viewDidLayoutSubviews()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
