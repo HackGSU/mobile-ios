@@ -32,7 +32,7 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         setupMenuBar()
         setupStatusBar()
         setupCollectionView()
-        refreshFeed()
+        observeAnnouncements()
         collectionView?.addSubview(refresher)
     }
     
@@ -49,6 +49,8 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     
     fileprivate func setupMenuBar(){
         view.addSubview(menuBar)
+        
+        navigationController?.hidesBarsOnSwipe = true
         
         menuBar.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
         menuBar.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
@@ -177,7 +179,7 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
             
         let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 32, height: view.frame.height))
         
-        titleLabel.text = "Announcements"
+        titleLabel.text = " Announcements"
         titleLabel.textColor = .white
         titleLabel.font = UIFont.systemFont(ofSize: 20)
         navigationItem.titleView = titleLabel
