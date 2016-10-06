@@ -48,7 +48,7 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     func setupMenuBar(){
         view.addSubview(menuBar)
         
-        menuBar.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
+        menuBar.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 50).isActive = true
         menuBar.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         menuBar.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         menuBar.heightAnchor.constraint(equalToConstant: 50).isActive = true
