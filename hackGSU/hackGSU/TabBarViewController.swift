@@ -23,7 +23,6 @@ class TabBarViewController: UIViewController, BATabBarControllerDelegate {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .blue
-        
         return view
     }()
     
@@ -38,7 +37,7 @@ class TabBarViewController: UIViewController, BATabBarControllerDelegate {
     }
     
     let tabBarItem1: BATabBarItem = {
-        let tabBarItem = BATabBarItem(image: UIImage(named: "alert_unselected")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "alert"))
+        let tabBarItem = BATabBarItem(image: UIImage(named: "alert_unselected")?.withRenderingMode(.alwaysTemplate), selectedImage: UIImage(named: "alert"))
         return tabBarItem!
     }()
     
@@ -48,7 +47,7 @@ class TabBarViewController: UIViewController, BATabBarControllerDelegate {
         return tabBarItem!
     }()
     let tabBarItem3: BATabBarItem = {
-        let tabBarItem = BATabBarItem(image: UIImage(named: "map")?.withRenderingMode(.alwaysTemplate), selectedImage: UIImage(named: "map"))
+        let tabBarItem = BATabBarItem(image: UIImage(named: "map_unselected")?.withRenderingMode(.alwaysTemplate), selectedImage: UIImage(named: "map"))
         return tabBarItem!
     }()
         
@@ -61,11 +60,8 @@ class TabBarViewController: UIViewController, BATabBarControllerDelegate {
         let vc3 = storyboard?.instantiateViewController(withIdentifier: "Maps")
         vc3?.title = "Maps"
         
-        //If these tabBar items are not set (even if there are no images) the entire bar does not show
-        
         self.tabBar = BATabBarController()
         self.tabBar.tabBarItemStrokeColor = .white;
-        //Tab bar line width example
         //self.vc.tabBarItemLineWidth = 1.0;
         self.tabBar.viewControllers = [vc1, vc2!, vc3!]
         self.tabBar.tabBarItems = [tabBarItem1, tabBarItem2, tabBarItem3]
@@ -77,44 +73,25 @@ class TabBarViewController: UIViewController, BATabBarControllerDelegate {
     }
     
     func tabBarController(_ tabBarController: BATabBarController, didSelect viewController: UIViewController) {
-        print("Delegate success!")
-        
         
         if let title = viewController.title{
             switch title {
             case "Announcements":
-                UIView.animate(withDuration: 0.5, animations: { () -> Void in
-                    self.tabBar.tabBarBackgroundColor = UIColor(red:0.14, green:0.32, blue:0.95, alpha:1.00)
-                    self.statusBar.backgroundColor = .blue
-                    self.tabBarItem2.tintColor = .blue
-                    self.tabBarItem3.tintColor = .blue
-                    //self.topBar.backgroundColor = UIColor.blue
-                    //self.tabBar.tabBarItemStrokeColor = UIColor.white;
-                    //self.topBarLabel.text = "Announcements"
+                UIView.animate(withDuration: 0.25, animations: { () -> Void in
+                    self.colorTabBar("blue")
                 })
                 break
             case "Schedule":
-                UIView.animate(withDuration: 0.5, animations: { () -> Void in
-                    self.tabBar.tabBarBackgroundColor = UIColor(red:1.00, green:0.16, blue:0.10, alpha:1.00)
-                    self.statusBar.backgroundColor = UIColor(red:0.57, green:0.07, blue:0.04, alpha:1.00)
-                    self.tabBarItem1.tintColor = UIColor(red:0.57, green:0.07, blue:0.04, alpha:1.00)
-                    self.tabBarItem3.tintColor = UIColor(red:0.57, green:0.07, blue:0.04, alpha:1.00)
-                    //self.topBar.backgroundColor = UIColor.white
-                    //self.tabBar.tabBarItemStrokeColor = UIColor.blue
-                    //self.topBarLabel.text = "Schedule"
+                UIView.animate(withDuration: 0.25, animations: { () -> Void in
+                    self.colorTabBar("red")
                 })
                 break
             case "Maps":
-                UIView.animate(withDuration: 1.0, animations: { () -> Void in
-                    self.tabBar.tabBarBackgroundColor = UIColor.red
-                    
-                    //self.topBar.backgroundColor = UIColor.lightGray
-                    //self.tabBar.tabBarItemStrokeColor = UIColor.white
-                    //self.topBarLabel.text = "Maps"
+                UIView.animate(withDuration: 0.25, animations: { () -> Void in
+                    self.colorTabBar("green")
                 })
                 break
             default:
-                //We really shouldn't be here
                 break
             }
 
@@ -122,9 +99,36 @@ class TabBarViewController: UIViewController, BATabBarControllerDelegate {
         
         }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func colorTabBar(_ color: String){
+        
+        switch (color){
+        case "blue":
+            self.statusBar.backgroundColor = .blue
+            self.tabBar.tabBarBackgroundColor = .systemColor("blue")
+            self.tabBarItem1.tintColor = .white
+            self.tabBarItem2.tintColor = .blue
+            self.tabBarItem3.tintColor = .blue
+            break;
+        case "red":
+            self.tabBar.tabBarBackgroundColor = .systemColor("red")
+            self.statusBar.backgroundColor = .systemColor("darkRed")
+            self.tabBarItem1.tintColor = .systemColor("darkRed")
+            self.tabBarItem2.tintColor = .white
+            self.tabBarItem3.tintColor = .systemColor("darkRed")
+            break;
+        case "green":
+            self.tabBar.tabBarBackgroundColor = .systemColor("green")
+            self.statusBar.backgroundColor = .systemColor("darkGreen")
+            self.tabBarItem1.tintColor = .systemColor("darkGreen")
+            self.tabBarItem2.tintColor = .systemColor("darkGreen")
+            self.tabBarItem3.tintColor = .white
+            break;
+        default:
+            break;
+        }
+
     }
+    
 }
 

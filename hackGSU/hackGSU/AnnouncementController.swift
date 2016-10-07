@@ -183,10 +183,6 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         titleLabel.font = UIFont.systemFont(ofSize: 20)
         navigationItem.titleView = titleLabel        
         
-//        navigationItem.title = "Announcements"
-//        navigationController?.hidesBarsOnSwipe = true
-//        navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Avenir", size: 24)!, NSForegroundColorAttributeName : UIColor.white]
-        
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.barTintColor = UIColor(red:0.14, green:0.32, blue:0.95, alpha:1.00)
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
@@ -194,7 +190,6 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         
         let moreButton = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action: #selector(menuTap))
         moreButton.tintColor = UIColor.white
-//        navigationItem.rightBarButtonItem = moreButton
         
         let plusButton = UIBarButtonItem(image: UIImage(named: "Edit"), style: .plain, target: self, action: #selector(addAnnouncement))
         plusButton.tintColor = .white
@@ -210,7 +205,7 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     }
     
     func menuTap(){
-        logOut()
+        //logOut()
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

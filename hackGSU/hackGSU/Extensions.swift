@@ -8,10 +8,32 @@
 
 import UIKit
 
+
+extension UIColor {
+    
+    static func systemColor(_ color: String) -> UIColor{
+        
+        switch (color){
+        case "red":
+            return UIColor(red:1.00, green:0.16, blue:0.10, alpha:1.00)
+        case "darkRed":
+            return UIColor(red:0.57, green:0.07, blue:0.04, alpha:1.00)
+        case "blue":
+            return UIColor(red:0.14, green:0.32, blue:0.95, alpha:1.00)
+        case "green":
+            return UIColor(red:0.25, green:0.82, blue:0.49, alpha:1.00)
+        case "darkGreen":
+            return UIColor(red:0.00, green:0.56, blue:0.33, alpha:1.00)
+        default:
+            return .white
+        }
+    }
+}
+
 extension UIView {
     
     func anchorToTop(_ top: NSLayoutYAxisAnchor? = nil, left: NSLayoutXAxisAnchor? = nil, bottom: NSLayoutYAxisAnchor? = nil, right: NSLayoutXAxisAnchor? = nil) {
-        
+    
         anchorWithConstantsToTop(top, left: left, bottom: bottom, right: right, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0)
     }
     
