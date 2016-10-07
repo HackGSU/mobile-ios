@@ -48,10 +48,29 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     func setupMenuBar(){
         view.addSubview(menuBar)
         
+        let blueview: UIView = {
+            let view = UIView()
+            view.translatesAutoresizingMaskIntoConstraints = false
+            view.backgroundColor = .systemColor("blue")
+            return view
+        }()
+        
+        view.addSubview(blueview)
+        
+        
+        
         menuBar.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
         menuBar.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         menuBar.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         menuBar.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        blueview.topAnchor.constraint(equalTo: menuBar.topAnchor, constant: -20).isActive = true
+        blueview.leftAnchor.constraint(equalTo: menuBar.leftAnchor).isActive = true
+        blueview.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        blueview.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        menuBar.layer.zPosition = 1
+        
     }
     
     func setupCollectionView(){
@@ -59,8 +78,8 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         collectionView?.register(AnnouncementCell.self, forCellWithReuseIdentifier: "cellId")
         collectionView?.indicatorStyle = .black
         collectionView!.alwaysBounceVertical = true
-        collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
-        collectionView?.scrollIndicatorInsets  = UIEdgeInsetsMake(50, 0, 0, 0)
+        collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 49, 0)
+        collectionView?.scrollIndicatorInsets  = UIEdgeInsetsMake(50, 0, 49, 0)
 
     }
     
@@ -182,6 +201,8 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         titleLabel.textColor = .white
         titleLabel.font = UIFont.systemFont(ofSize: 20)
         navigationItem.titleView = titleLabel        
+        
+        navigationController?.hidesBarsOnSwipe = true
         
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.barTintColor = UIColor(red:0.14, green:0.32, blue:0.95, alpha:1.00)

@@ -43,11 +43,13 @@ class TabBarViewController: UIViewController, BATabBarControllerDelegate {
     
     let tabBarItem2: BATabBarItem = {
         let tabBarItem = BATabBarItem(image: UIImage(named: "calendar_unselected")?.withRenderingMode(.alwaysTemplate), selectedImage: UIImage(named: "calendar"))
+        tabBarItem?.tintColor = .blue
         
         return tabBarItem!
     }()
     let tabBarItem3: BATabBarItem = {
         let tabBarItem = BATabBarItem(image: UIImage(named: "map_unselected")?.withRenderingMode(.alwaysTemplate), selectedImage: UIImage(named: "map"))
+        tabBarItem?.tintColor = .blue
         return tabBarItem!
     }()
         
