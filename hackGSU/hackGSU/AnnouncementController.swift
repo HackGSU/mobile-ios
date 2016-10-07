@@ -48,7 +48,7 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     func setupMenuBar(){
         view.addSubview(menuBar)
         
-        menuBar.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 50).isActive = true
+        menuBar.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
         menuBar.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         menuBar.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         menuBar.heightAnchor.constraint(equalToConstant: 50).isActive = true
@@ -59,8 +59,8 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         collectionView?.register(AnnouncementCell.self, forCellWithReuseIdentifier: "cellId")
         collectionView?.indicatorStyle = .black
         collectionView!.alwaysBounceVertical = true
-        collectionView?.contentInset = UIEdgeInsetsMake(120, 0, 0, 0)
-        collectionView?.scrollIndicatorInsets  = UIEdgeInsetsMake(120, 0, 0, 0)
+        collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
+        collectionView?.scrollIndicatorInsets  = UIEdgeInsetsMake(50, 0, 0, 0)
 
     }
     
@@ -181,9 +181,7 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         titleLabel.text = " Announcements"
         titleLabel.textColor = .white
         titleLabel.font = UIFont.systemFont(ofSize: 20)
-        navigationItem.titleView = titleLabel
-        
-        
+        navigationItem.titleView = titleLabel        
         
 //        navigationItem.title = "Announcements"
 //        navigationController?.hidesBarsOnSwipe = true
