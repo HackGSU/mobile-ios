@@ -17,8 +17,9 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     
     lazy var refresher: UIRefreshControl = {
         let refresh = UIRefreshControl()
-        refresh.tintColor = .white
-        refresh.backgroundColor = UIColor(red:0.14, green:0.32, blue:0.95, alpha:1.00)
+        refresh.backgroundColor = UIColor(red:0.90, green:0.89, blue:0.90, alpha:1.00)
+        refresh.tintColor = .blue
+            //UIColor(red:0.14, green:0.32, blue:0.95, alpha:1.00)
         refresh.addTarget(self, action: #selector(refreshFeed), for: .valueChanged)
 
         return refresh
@@ -67,7 +68,8 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         blueview.topAnchor.constraint(equalTo: menuBar.topAnchor, constant: -20).isActive = true
         blueview.leftAnchor.constraint(equalTo: menuBar.leftAnchor).isActive = true
         blueview.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        blueview.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        blueview.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        blueview.isUserInteractionEnabled = false
         
         menuBar.layer.zPosition = 1
         
