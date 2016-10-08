@@ -14,7 +14,7 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     
     var firebaseAnnouncements = [Announcement]()
 
-    
+    let cellId = "cellId"
 //    lazy var refresher: UIRefreshControl = {
 //        let refresh = UIRefreshControl()
 //        refresh.backgroundColor = UIColor(red:0.90, green:0.89, blue:0.90, alpha:1.00)
@@ -29,17 +29,18 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
+        view.backgroundColor = .red
         setupNavBarAttributes()
         checkIfUserIsLoggedIn()
         setupMenuBar()
         setupCollectionView()
-        observeAnnouncements()
+        //observeAnnouncements()
         //collectionView?.addSubview(refresher)
     }
     
-    let menuBar: MenuBar = {
+    lazy var menuBar: MenuBar = {
         let mb = MenuBar()
+        mb.AnnouncementController = self
         mb.translatesAutoresizingMaskIntoConstraints = false
         return mb
     }()
@@ -58,7 +59,6 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         view.addSubview(blueview)
         
         
-        
         menuBar.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
         menuBar.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         menuBar.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
@@ -75,12 +75,21 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     }
     
     func setupCollectionView(){
+        
+        
+        if let flowlayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+             flowlayout.scrollDirection = .horizontal
+             flowlayout.minimumLineSpacing = 0
+        }
+        
         collectionView?.backgroundColor = UIColor(red:0.90, green:0.89, blue:0.90, alpha:1.00)
-        collectionView?.register(AnnouncementCell.self, forCellWithReuseIdentifier: "cellId")
+        //collectionView?.register(AnnouncementCell.self, forCellWithReuseIdentifier: "cellId")
+        collectionView?.register(FeedCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.indicatorStyle = .black
         collectionView!.alwaysBounceVertical = true
-        collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 49, 0)
-        collectionView?.scrollIndicatorInsets  = UIEdgeInsetsMake(50, 0, 49, 0)
+        collectionView?.isPagingEnabled = true
+        collectionView?.contentInset = UIEdgeInsetsMake(100, 0, 99, 0)
+        collectionView?.scrollIndicatorInsets  = UIEdgeInsetsMake(0, 0, 49, 0)
 
     }
     
@@ -108,49 +117,53 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
 //    }
     
     func observeAnnouncements(){
-        let ref = FIRDatabase.database().reference().child("announcements")
-        ref.observe(.childAdded, with: { (snapshot) in
-            
-            print(snapshot)
-            
-            if let dictionary = snapshot.value as? [String: Any]{
-                
-                let announcement = Announcement()
-    
-                if let title = dictionary["Title"] as? String!{
-                    announcement.Title = title
-                    //print(title)
         
-                }
-                if let bodyText = dictionary["bodyText"] as? String!{
-                    announcement.bodyText = bodyText
-                    //print(bodyText)
-                }
-                if let timestamp = dictionary["timestamp"] as! NSNumber?{
-                    announcement.timestamp = timestamp
-                }
-                if let topic = dictionary["topic"] as? String!{
-                    announcement.topic = topic
-                }
-                if let fromId = dictionary["fromId"] as? String!{
-                    announcement.fromId = fromId
-                }
-                
-                
-                self.firebaseAnnouncements.append(announcement)
-
-                self.firebaseAnnouncements.sort(by: { (message1, message2) -> Bool in
-                        
-                        return (message1.timestamp?.intValue)! > (message2.timestamp?.intValue)!
-                    })
-                
-                DispatchQueue.main.async {
-                    self.collectionView?.reloadData()
-                }
-                
-                
-            }
-            }, withCancel: nil)
+        
+        FirebaseService.sharedInstance.fetchAnnouncements { (announcements: [Announcement]) in
+            self.firebaseAnnouncements = announcements
+            self.collectionView?.reloadData()
+        }
+//        let ref = FIRDatabase.database().reference().child("announcements")
+//        ref.observe(.childAdded, with: { (snapshot) in
+//            
+//            print(snapshot)
+//            
+//            if let dictionary = snapshot.value as? [String: Any]{
+//                
+//                let announcement = Announcement()
+//    
+//                if let title = dictionary["Title"] as? String!{
+//                    announcement.Title = title
+//        
+//                }
+//                if let bodyText = dictionary["bodyText"] as? String!{
+//                    announcement.bodyText = bodyText
+//                }
+//                if let timestamp = dictionary["timestamp"] as! NSNumber?{
+//                    announcement.timestamp = timestamp
+//                }
+//                if let topic = dictionary["topic"] as? String!{
+//                    announcement.topic = topic
+//                }
+//                if let fromId = dictionary["fromId"] as? String!{
+//                    announcement.fromId = fromId
+//                }
+//                
+//                
+//                self.firebaseAnnouncements.append(announcement)
+//
+//                self.firebaseAnnouncements.sort(by: { (message1, message2) -> Bool in
+//                        
+//                        return (message1.timestamp?.intValue)! > (message2.timestamp?.intValue)!
+//                    })
+//                
+//                DispatchQueue.main.async {
+//                    self.collectionView?.reloadData()
+//                }
+//                
+//                
+//            }
+//            }, withCancel: nil)
         
     }
     
@@ -174,7 +187,7 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         titleLabel.font = UIFont.systemFont(ofSize: 20)
         navigationItem.titleView = titleLabel        
         
-        navigationController?.hidesBarsOnSwipe = true
+        //navigationController?.hidesBarsOnSwipe = true
         
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.barTintColor = UIColor(red:0.14, green:0.32, blue:0.95, alpha:1.00)
@@ -184,9 +197,9 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         let moreButton = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action: #selector(menuTap))
         moreButton.tintColor = UIColor.white
         
-        let plusButton = UIBarButtonItem(image: UIImage(named: "Edit"), style: .plain, target: self, action: #selector(addAnnouncement))
-        plusButton.tintColor = .white
-        navigationItem.rightBarButtonItems = [moreButton, plusButton]
+//        let plusButton = UIBarButtonItem(image: UIImage(named: "Edit"), style: .plain, target: self, action: #selector(addAnnouncement))
+//        plusButton.tintColor = .white
+        navigationItem.rightBarButtonItems = [moreButton]
         
     }
     
@@ -201,37 +214,42 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         //logOut()
     }
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return firebaseAnnouncements.count
+    override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+        let index = targetContentOffset.pointee.x / view.frame.width
+        let indexPath = IndexPath(item: Int(index), section: 0)
+        
+        menuBar.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
+        
     }
     
+    func scrollToMenuIndex(_ menuIndex: Int){
+        
+        let indexPath = IndexPath(item: menuIndex, section: 0)
+        
+        collectionView?.scrollToItem(at: indexPath, at: [] , animated: true)
+    }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        menuBar.horizontalBarLeftAnchorConstraint?.constant = scrollView.contentOffset.x / 4
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell( withReuseIdentifier: "cellId", for: indexPath) as! AnnouncementCell
+        //let cell = collectionView.dequeueReusableCell( withReuseIdentifier: "cellId", for: indexPath) as! AnnouncementCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        //cell.announcement = firebaseAnnouncements[(indexPath as NSIndexPath).item]
         
-        cell.announcement = firebaseAnnouncements[(indexPath as NSIndexPath).item]
-        cell.backgroundColor = .white
-        
+//        let colors: [UIColor] = [.blue, .red, .green, .black]
+//        
+//        cell.backgroundColor = colors[indexPath.item]
+    
         return cell
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
-    }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let knownHeight: CGFloat = 35 + 40 + 40
-        
-        if let announcementTitle = firebaseAnnouncements[indexPath.item].Title {
-                        
-            let rect = NSString(string: announcementTitle).boundingRect(with: CGSize(width: view.frame.width, height: 1000), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 16)], context: nil)
-            
-            let rectTitle = NSString(string: (firebaseAnnouncements[indexPath.item].bodyText)!).boundingRect(with: CGSize(width: view.frame.width, height: 1000), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 16)], context: nil)
-
-            
-            return CGSize(width: view.frame.width, height: rect.height + knownHeight + rectTitle.height)
-        }
-        
-        return CGSize(width: view.frame.width, height: 400)
+        return CGSize(width: view.frame.width, height: view.frame.height - 99)
     }
 }
