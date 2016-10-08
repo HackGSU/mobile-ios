@@ -66,7 +66,7 @@ class TabBarViewController: UIViewController, BATabBarControllerDelegate {
         self.tabBar.viewControllers = [vc1, vc2!, vc3!]
         self.tabBar.tabBarItems = [tabBarItem1, tabBarItem2, tabBarItem3]
         self.tabBar.setSelectedView(vc1, animated: false)
-        //self.vc1.tabBarItemLineWidth = 1.0
+
         self.tabBar.tabBarBackgroundColor = UIColor(red:0.14, green:0.32, blue:0.95, alpha:1.00)
         self.tabBar.delegate = self
         self.view.addSubview(self.tabBar.view)
