@@ -16,5 +16,6 @@ class Announcement: NSObject {
     var topic: String?
     var fromId: String?
     var uid: String?
+    var likes: NSNumber?
     
 }

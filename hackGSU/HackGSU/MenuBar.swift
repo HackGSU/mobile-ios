@@ -65,7 +65,7 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         AnnouncementController?.scrollToMenuIndex(indexPath.item)
-
+        AnnouncementController?.collectionView?.reloadData()
     }
     
     

@@ -42,7 +42,6 @@ class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
                             announcement.fromId = fromId
                         }
         
-        
                         self.firebaseAnnouncements.append(announcement)
         
                         self.firebaseAnnouncements.sort(by: { (message1, message2) -> Bool in
@@ -77,6 +76,7 @@ class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
         collectionView.register(AnnouncementCell.self, forCellWithReuseIdentifier: cellId)
         observeAnnouncements()
         addSubview(collectionView)
+        
         
         
         collectionView.topAnchor.constraint(equalTo: topAnchor).isActive = true

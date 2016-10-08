@@ -16,8 +16,14 @@ class AnnouncementCell: BaseCell {
             announcementTitle.text = announcement?.Title
             //announcementPoster.text = announcement?.fromId
             topicLabel.text = announcement?.topic
-            
             timestamp.text =  setupTime((announcement?.timestamp?.intValue)!)
+        }
+    }
+    
+    
+    func setupLikes(_ likes: Int){
+        if (likes > 1){
+            self.button.setTitle(likes.description, for: .normal)
         }
     }
     

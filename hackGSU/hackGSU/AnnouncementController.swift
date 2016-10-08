@@ -12,7 +12,10 @@ import FirebaseAuth
 class announcementFeedController: UICollectionViewController, UICollectionViewDelegateFlowLayout{
     
     let cellId = "cellId"
+    let trendingCellId = "trendingCellId"
     
+    let titles = ["Announcements", "Trending", "Food Alerts", "Tech Tips"]
+
     lazy var menuBar: MenuBar = {
         let mb = MenuBar()
         mb.AnnouncementController = self
@@ -27,6 +30,9 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         setupNavBarAttributes()
         setupMenuBar()
         setupCollectionView()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        collectionView?.reloadData()
     }
     
     func checkIfUserIsLoggedIn(){
@@ -51,9 +57,9 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         
         let moreButton = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action: #selector(menuTap))
         moreButton.tintColor = UIColor.white
-        //        let plusButton = UIBarButtonItem(image: UIImage(named: "Edit"), style: .plain, target: self, action: #selector(addAnnouncement))
-        //        plusButton.tintColor = .white
-        navigationItem.rightBarButtonItems = [moreButton]
+                let plusButton = UIBarButtonItem(image: UIImage(named: "Edit"), style: .plain, target: self, action: #selector(addAnnouncement))
+                plusButton.tintColor = .white
+        navigationItem.rightBarButtonItems = [moreButton, plusButton]
         
     }
     
@@ -92,11 +98,12 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         
         collectionView?.backgroundColor = UIColor(red:0.90, green:0.89, blue:0.90, alpha:1.00)
         collectionView?.register(FeedCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.register(TrendingCell.self, forCellWithReuseIdentifier: trendingCellId)
         collectionView?.indicatorStyle = .black
-        collectionView!.alwaysBounceVertical = true
         collectionView?.isPagingEnabled = true
         collectionView?.contentInset = UIEdgeInsetsMake(100, 0, 99, 0)
         collectionView?.scrollIndicatorInsets  = UIEdgeInsetsMake(0, 0, 49, 0)
+        collectionView?.showsHorizontalScrollIndicator = false
 
     }
     
@@ -126,16 +133,32 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         //logOut()
     }
     
+    
     override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let index = targetContentOffset.pointee.x / view.frame.width
         let indexPath = IndexPath(item: Int(index), section: 0)
         menuBar.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
+        
+        setTitleForIndex(Int(index))
+        collectionView?.reloadData()
         
     }
     
     func scrollToMenuIndex(_ menuIndex: Int){
         let indexPath = IndexPath(item: menuIndex, section: 0)
         collectionView?.scrollToItem(at: indexPath, at: [] , animated: true)
+        
+//        if let titleLabel = navigationItem.titleView as? UILabel{
+//            titleLabel.text = " \(titles[menuIndex])"
+//        }
+        
+        setTitleForIndex(menuIndex)
+    }
+    
+    private func setTitleForIndex(_ index: Int){
+        if let titleLabel = navigationItem.titleView as? UILabel{
+            titleLabel.text = " \(titles[index])"
+        }
     }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -146,6 +169,12 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         return 4
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if indexPath.item == 1 {
+            return collectionView.dequeueReusableCell(withReuseIdentifier: trendingCellId, for: indexPath)
+
+        }
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
     
         return cell
