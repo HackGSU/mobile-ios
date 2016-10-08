@@ -15,28 +15,27 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     var firebaseAnnouncements = [Announcement]()
 
     
-    lazy var refresher: UIRefreshControl = {
-        let refresh = UIRefreshControl()
-        refresh.backgroundColor = UIColor(red:0.90, green:0.89, blue:0.90, alpha:1.00)
-        refresh.tintColor = .blue
-            //UIColor(red:0.14, green:0.32, blue:0.95, alpha:1.00)
-        refresh.addTarget(self, action: #selector(refreshFeed), for: .valueChanged)
-
-        return refresh
-    }()
+//    lazy var refresher: UIRefreshControl = {
+//        let refresh = UIRefreshControl()
+//        refresh.backgroundColor = UIColor(red:0.90, green:0.89, blue:0.90, alpha:1.00)
+//        refresh.tintColor = UIColor(red:0.01, green:0.83, blue:0.84, alpha:1.00)
+//            //UIColor(red:0.14, green:0.32, blue:0.95, alpha:1.00)
+//        refresh.addTarget(self, action: #selector(refreshFeed), for: .valueChanged)
+//
+//        return refresh
+//    }()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.restorationIdentifier = "Announcments"
         view.backgroundColor = .white
         setupNavBarAttributes()
         checkIfUserIsLoggedIn()
         setupMenuBar()
         setupCollectionView()
         observeAnnouncements()
-        collectionView?.addSubview(refresher)
+        //collectionView?.addSubview(refresher)
     }
     
     let menuBar: MenuBar = {
@@ -85,36 +84,6 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
 
     }
     
-//    let statusBar: UIView = {
-//        let view = UIView()
-//        view.backgroundColor = .blue
-//        view.translatesAutoresizingMaskIntoConstraints = false
-//        return view
-//    }()
-//    
-//
-//    
-//    func setupStatusBar(){
-//        
-//        let window = UIApplication.shared.keyWindow!
-//
-//        
-//        window.addSubview(statusBar)
-//        
-//        //UIApplication.shared.keyWindow?.addSubview(statusBar)
-//        
-//        statusBar.topAnchor.constraint(equalTo: window.topAnchor).isActive = true
-//        statusBar.leftAnchor.constraint(equalTo: window.leftAnchor).isActive = true
-//        statusBar.widthAnchor.constraint(equalTo: window.widthAnchor).isActive = true
-//        statusBar.heightAnchor.constraint(equalToConstant: 20).isActive = true
-//    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        self.collectionView?.sendSubview(toBack: refresher)
-    }
-    
     func logOut(){
         
         do {
@@ -132,21 +101,22 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         
     }
     
-    func refreshFeed(){
-        firebaseAnnouncements.removeAll()
-        observeAnnouncements()
-        stopRefresher()
-    }
+//    func refreshFeed(){
+//        firebaseAnnouncements.removeAll()
+//        observeAnnouncements()
+//        stopRefresher()
+//    }
     
     func observeAnnouncements(){
         let ref = FIRDatabase.database().reference().child("announcements")
         ref.observe(.childAdded, with: { (snapshot) in
             
-            //print(snapshot)
+            print(snapshot)
             
             if let dictionary = snapshot.value as? [String: Any]{
-                let announcement = Announcement()
                 
+                let announcement = Announcement()
+    
                 if let title = dictionary["Title"] as? String!{
                     announcement.Title = title
                     //print(title)
@@ -184,10 +154,10 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         
     }
     
-    func stopRefresher()
-    {
-        refresher.endRefreshing()
-    }
+//    func stopRefresher()
+//    {
+//        refresher.endRefreshing()
+//    }
     
     func checkIfUserIsLoggedIn(){
         if FIRAuth.auth()?.currentUser?.uid == nil {
