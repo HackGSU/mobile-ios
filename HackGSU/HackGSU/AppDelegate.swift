@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.statusBarStyle = .lightContent
 
         FIRApp.configure()
-        //window?.rootViewController = CustomTabBarController()
         return true
     }
     

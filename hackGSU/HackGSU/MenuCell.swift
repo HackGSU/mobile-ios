@@ -8,12 +8,7 @@
 
 import UIKit
 
-class MenuCell: UICollectionViewCell{
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupViews()
-    }
+class MenuCell: BaseCell{
     
     var imageView: UIImageView = {
         let iv = UIImageView()
@@ -36,7 +31,9 @@ class MenuCell: UICollectionViewCell{
     }
     
     
-    func setupViews(){
+    override func setupViews(){
+        super.setupViews()
+        
         addSubview(imageView)
         
         imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
@@ -44,11 +41,21 @@ class MenuCell: UICollectionViewCell{
         imageView.widthAnchor.constraint(equalToConstant: 28).isActive = true
         imageView.heightAnchor.constraint(equalToConstant: 28).isActive = true
     }
+
     
+}
+
+class BaseCell: UICollectionViewCell {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupViews()
+    }
     
+    func setupViews() {
+        
+    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }

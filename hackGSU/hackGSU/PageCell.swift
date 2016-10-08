@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PageCell: UICollectionViewCell {
+class PageCell: BaseCell{
     
     var page: Page? {
         didSet {
@@ -40,12 +40,6 @@ class PageCell: UICollectionViewCell {
         }
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setupViews()
-    }
-    
     let imageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
@@ -68,7 +62,7 @@ class PageCell: UICollectionViewCell {
         return view
     }()
     
-    func setupViews() {
+    override func setupViews() {
         addSubview(imageView)
         addSubview(textView)
         addSubview(lineSeparatorView)
@@ -81,10 +75,6 @@ class PageCell: UICollectionViewCell {
         
         lineSeparatorView.anchorToTop(nil, left: leftAnchor, bottom: textView.topAnchor, right: rightAnchor)
         lineSeparatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
 }

@@ -14,7 +14,8 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     let imageNames = ["home", "trending", "food", "tech"]
     
     var AnnouncementController: announcementFeedController?
-    
+    var horizontalBarLeftAnchorConstraint: NSLayoutConstraint?
+
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
     var cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -24,7 +25,6 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         cv.delegate = self
         return cv
     }()
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,12 +41,9 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         let selectedIndexPath = IndexPath(item: 0, section: 0)
         collectionView.selectItem(at: selectedIndexPath, animated: false, scrollPosition: [])
         
-        
         setupHorizontalBar()
         
     }
-    
-    var horizontalBarLeftAnchorConstraint: NSLayoutConstraint?
     
     func setupHorizontalBar(){
         let horizontalBarView = UIView()

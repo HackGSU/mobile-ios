@@ -8,11 +8,7 @@
 
 import UIKit
 
-class AnnouncementCell: UICollectionViewCell {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupViews()
-    }
+class AnnouncementCell: BaseCell {
     
     var announcement: Announcement?{
         didSet{
@@ -22,8 +18,6 @@ class AnnouncementCell: UICollectionViewCell {
             topicLabel.text = announcement?.topic
             
             timestamp.text =  setupTime((announcement?.timestamp?.intValue)!)
-            
-            
         }
     }
     
@@ -182,8 +176,7 @@ class AnnouncementCell: UICollectionViewCell {
     }()
     
     func handleLikeButton(){
-        
-        
+                
         likeButtonContainer.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
         UIView.animate(withDuration: 0.5,
                        delay: 0,
@@ -231,7 +224,7 @@ class AnnouncementCell: UICollectionViewCell {
     let topicLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .lightGray
-        //label.text = "GENERAL"
+        label.text = "GENERAL"
         label.textAlignment = .center
         label.font = UIFont.boldSystemFont(ofSize: 9)
         label.textColor = .white
@@ -244,7 +237,7 @@ class AnnouncementCell: UICollectionViewCell {
         return CGSize(width: self.frame.width, height: UIViewNoIntrinsicMetric)
     }
     
-    func setupViews(){
+    override func setupViews(){
         addSubview(announcementInfoContainer)
         addSubview(announcementTitle)
         addSubview(announcementText)
@@ -258,14 +251,10 @@ class AnnouncementCell: UICollectionViewCell {
         announcementInfoContainer.addSubview(moreButton)
         
         bottomButtonContainer.addSubview(likeButtonContainer)
-        //bottomButtonContainer.addSubview(commentButtonContainer)
         bottomButtonContainer.addSubview(shareButtonContainer)
         
         likeButtonContainer.addSubview(likeIcon)
         likeButtonContainer.addSubview(button)
-        
-//        commentButtonContainer.addSubview(commentIcon)
-//        commentButtonContainer.addSubview(secondbutton)
         
         shareButtonContainer.addSubview(shareIcon)
         shareButtonContainer.addSubview(thirdbutton)
@@ -333,21 +322,6 @@ class AnnouncementCell: UICollectionViewCell {
         likeIcon.widthAnchor.constraint(equalToConstant: 20).isActive = true
         likeIcon.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
-//        commentButtonContainer.leftAnchor.constraint(equalTo: likeButtonContainer.rightAnchor).isActive = true
-//        commentButtonContainer.centerYAnchor.constraint(equalTo: bottomButtonContainer.centerYAnchor).isActive = true
-//        commentButtonContainer.widthAnchor.constraint(equalTo: bottomButtonContainer.widthAnchor, multiplier: 0.33).isActive = true
-//        commentButtonContainer.heightAnchor.constraint(equalTo: bottomButtonContainer.heightAnchor, multiplier: 1.0).isActive = true
-//        
-//        secondbutton.centerXAnchor.constraint(equalTo: commentButtonContainer.centerXAnchor, constant: 4).isActive = true
-//        secondbutton.centerYAnchor.constraint(equalTo: commentButtonContainer.centerYAnchor).isActive = true
-//        secondbutton.widthAnchor.constraint(equalTo: commentButtonContainer.widthAnchor, multiplier: 0.8).isActive = true
-//        secondbutton.heightAnchor.constraint(equalTo: commentButtonContainer.heightAnchor, multiplier: 0.9).isActive = true
-//        
-//        commentIcon.rightAnchor.constraint(equalTo: secondbutton.leftAnchor, constant: 2).isActive = true
-//        commentIcon.centerYAnchor.constraint(equalTo: secondbutton.centerYAnchor).isActive = true
-//        commentIcon.widthAnchor.constraint(equalToConstant: 20).isActive = true
-//        commentIcon.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        
         shareButtonContainer.leftAnchor.constraint(equalTo: likeButtonContainer.rightAnchor).isActive = true
         shareButtonContainer.centerYAnchor.constraint(equalTo: bottomButtonContainer.centerYAnchor).isActive = true
         shareButtonContainer.widthAnchor.constraint(equalTo: bottomButtonContainer.widthAnchor, multiplier: 0.5).isActive = true
@@ -370,8 +344,6 @@ class AnnouncementCell: UICollectionViewCell {
         
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+
 }
 

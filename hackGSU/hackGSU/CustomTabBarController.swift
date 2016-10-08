@@ -19,7 +19,6 @@ class CustomTabBarController: UITabBarController{
         let feedController = UINavigationController(rootViewController: announcementFeedController(collectionViewLayout: layout))
         
         feedController.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "alert"), selectedImage: UIImage(named: "alert_filled-1"))
-        //tabBarItem.imageInsets = UIEdgeInsets(top: 9, left: 0, bottom: -9, right: 0)
         feedController.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
         
 

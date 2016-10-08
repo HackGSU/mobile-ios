@@ -49,51 +49,59 @@ class LoginCell: UICollectionViewCell {
     }()
     
     func handleAnonTap(){
-        let vc:UIViewController = (self.window?.rootViewController)!
+        //let vc:UIViewController = (self.window?.rootViewController)!
         
-        anonContainerView.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
-        UIView.animate(withDuration: 1.0,
-                       delay: 0,
-                       usingSpringWithDamping: 0.9,
-                       initialSpringVelocity: 0.5,
-                       options: UIViewAnimationOptions.allowUserInteraction,
-                       animations: {
-                        self.anonContainerView.transform = CGAffineTransform.identity
-            }, completion:  {
-                (value: Bool) in
-                
-                FIRAuth.auth()?.signInAnonymously() { (user, error) in
+        if var topController = UIApplication.shared.keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            
+            anonContainerView.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+            UIView.animate(withDuration: 1.0,
+                           delay: 0,
+                           usingSpringWithDamping: 0.9,
+                           initialSpringVelocity: 0.5,
+                           options: UIViewAnimationOptions.allowUserInteraction,
+                           animations: {
+                            self.anonContainerView.transform = CGAffineTransform.identity
+                }, completion:  {
+                    (value: Bool) in
                     
-                    
-                    if error != nil{
-                        print (error)
-                        return
-                    }
-
-                    guard let uid = user?.uid else {
-                        return
-                    }
-
-                    let ref = FIRDatabase.database().reference(fromURL: "https://hackgsu-20b92.firebaseio.com/")
-                    let usersReference = ref.child("user").child(uid)
-                    let values = ["name":"anon", "email":"anon@gmail.com"]
-                    usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in
-                        if err != nil {
-                            print(err)
+                    FIRAuth.auth()?.signInAnonymously() { (user, error) in
+                        
+                        
+                        if error != nil{
+                            print (error)
                             return
                         }
                         
-                        print("Saved user successfully into Firebase db")
-                    })
+                        guard let uid = user?.uid else {
+                            return
+                        }
+                        
+                        let ref = FIRDatabase.database().reference(fromURL: "https://hackgsu-20b92.firebaseio.com/")
+                        let usersReference = ref.child("user").child(uid)
+                        let values = ["name":"anon", "email":"anon@gmail.com"]
+                        usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in
+                            if err != nil {
+                                print(err)
+                                return
+                            }
+                            
+                            print("Saved user successfully into Firebase db")
+                        })
+                        
+                        
+                        
+                        
+                        print("User logged in anonymously" + user!.uid)
+                    }
+                    
+                    topController.dismiss(animated: true, completion: nil)
+            })
 
-                    
-                    
-                    
-                    print("User logged in anonymously" + user!.uid)
-                }
-                
-                vc.dismiss(animated: true, completion: nil)
-        })
+        }
+        
         
     
     }
