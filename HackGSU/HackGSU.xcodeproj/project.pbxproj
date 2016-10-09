@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72B8270F1DA718DC005FB569 /* teamMemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B8270E1DA718DC005FB569 /* teamMemberCell.swift */; };
 		C136B92D1D963E8C0047D23F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136B92C1D963E8C0047D23F /* AppDelegate.swift */; };
 		C136B92F1D963E8C0047D23F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C136B92E1D963E8C0047D23F /* ViewController.swift */; };
 		C136B9321D963E8C0047D23F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C136B9301D963E8C0047D23F /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		72B8270E1DA718DC005FB569 /* teamMemberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = teamMemberCell.swift; path = HackGSU/teamMemberCell.swift; sourceTree = SOURCE_ROOT; };
 		C136B9291D963E8C0047D23F /* hackGSU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackGSU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C136B92C1D963E8C0047D23F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C136B92E1D963E8C0047D23F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				C136B92C1D963E8C0047D23F /* AppDelegate.swift */,
 				C136B92E1D963E8C0047D23F /* ViewController.swift */,
+				72B8270E1DA718DC005FB569 /* teamMemberCell.swift */,
 				C136B9301D963E8C0047D23F /* Main.storyboard */,
 				C136B9331D963E8C0047D23F /* Assets.xcassets */,
 				C136B9351D963E8C0047D23F /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C136B92F1D963E8C0047D23F /* ViewController.swift in Sources */,
+				72B8270F1DA718DC005FB569 /* teamMemberCell.swift in Sources */,
 				C136B92D1D963E8C0047D23F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +301,7 @@
 				C136B93D1D963E8C0047D23F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
