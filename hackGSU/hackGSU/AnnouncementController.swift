@@ -101,8 +101,9 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         collectionView?.register(TrendingCell.self, forCellWithReuseIdentifier: trendingCellId)
         collectionView?.indicatorStyle = .black
         collectionView?.isPagingEnabled = true
-        collectionView?.contentInset = UIEdgeInsetsMake(100, 0, 99, 0)
-        collectionView?.scrollIndicatorInsets  = UIEdgeInsetsMake(0, 0, 49, 0)
+        collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 49, 0)
+        //collectionView?.contentInset = UIEdgeInsetsMake(0, 0, 99, 0)
+        collectionView?.scrollIndicatorInsets  = UIEdgeInsetsMake(50, 0, 49, 0)
         collectionView?.showsHorizontalScrollIndicator = false
 
     }
@@ -147,10 +148,6 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     func scrollToMenuIndex(_ menuIndex: Int){
         let indexPath = IndexPath(item: menuIndex, section: 0)
         collectionView?.scrollToItem(at: indexPath, at: [] , animated: true)
-        
-//        if let titleLabel = navigationItem.titleView as? UILabel{
-//            titleLabel.text = " \(titles[menuIndex])"
-//        }
         
         setTitleForIndex(menuIndex)
     }

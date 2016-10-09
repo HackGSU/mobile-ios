@@ -56,14 +56,18 @@ class TabBarViewController: UIViewController, BATabBarControllerDelegate {
         
         let vc1 = UINavigationController(rootViewController: announcementFeedController(collectionViewLayout: UICollectionViewFlowLayout()))
         vc1.title = "Announcements"
-        let vc2 = storyboard?.instantiateViewController(withIdentifier: "Schedule")
-        vc2?.title = "Schedule"
+        
+        
+        let vc2 = UINavigationController(rootViewController: scheduleFeedController(collectionViewLayout: UICollectionViewFlowLayout()))
+        
+        //let vc2 = storyboard?.instantiateViewController(withIdentifier: "Schedule")
+        vc2.title = "Schedule"
         let vc3 = storyboard?.instantiateViewController(withIdentifier: "Maps")
         vc3?.title = "Maps"
         
         self.tabBar = BATabBarController()
         self.tabBar.tabBarItemStrokeColor = .white;
-        self.tabBar.viewControllers = [vc1, vc2!, vc3!]
+        self.tabBar.viewControllers = [vc1, vc2, vc3!]
         self.tabBar.tabBarItems = [tabBarItem1, tabBarItem2, tabBarItem3]
         self.tabBar.setSelectedView(vc1, animated: false)
 

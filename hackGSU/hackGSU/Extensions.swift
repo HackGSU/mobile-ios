@@ -30,6 +30,44 @@ extension UIColor {
     }
 }
 
+extension NSDate
+{
+    func hour() -> Int
+    {
+        //Get Hour
+        let calendar = NSCalendar.current
+        let components = calendar.component(.hour, from: self as Date)
+        //let components = calendar.components(.Hour, fromDate: self)
+        let hour = components
+        
+        //Return Hour
+        return hour
+    }
+    
+    
+    func minute() -> Int
+    {
+        //Get Minute
+        let calendar = NSCalendar.current
+        let components = calendar.component(.minute, from: self as Date)
+        let minute = components
+        
+        //Return Minute
+        return minute
+    }
+    
+    func toShortTimeString() -> String
+    {
+        //Get Short Time String
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        let timeString = formatter.string(from: self as Date)
+        
+        //Return Short Time String
+        return timeString
+    }
+}
+
 extension UIView {
     
     func anchorToTop(_ top: NSLayoutYAxisAnchor? = nil, left: NSLayoutXAxisAnchor? = nil, bottom: NSLayoutYAxisAnchor? = nil, right: NSLayoutXAxisAnchor? = nil) {

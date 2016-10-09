@@ -19,7 +19,7 @@ class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
                 let ref = FIRDatabase.database().reference().child("announcements")
                 ref.observe(.childAdded, with: { (snapshot) in
         
-                    print(snapshot)
+                    //print(snapshot)
         
                     if let dictionary = snapshot.value as? [String: Any]{
         
@@ -77,14 +77,12 @@ class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
         observeAnnouncements()
         addSubview(collectionView)
         
-        
-        
         collectionView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         collectionView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         collectionView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
         collectionView.heightAnchor.constraint(equalTo: heightAnchor).isActive = true
         collectionView.backgroundColor = UIColor(white: 0.9, alpha: 1)
-
+        
         
     }
     

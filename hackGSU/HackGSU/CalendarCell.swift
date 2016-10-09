@@ -1,50 +1,14 @@
 //
-//  AnnouncementCell.swift
+//  CalendarCell.swift
 //  hackGSU
 //
-//  Created by Viraj Shah on 9/27/16.
+//  Created by Viraj Shah on 10/8/16.
 //  Copyright © 2016 Panther Hackers. All rights reserved.
 //
 
 import UIKit
 
-class AnnouncementCell: BaseCell {
-    
-    var announcement: Announcement?{
-        didSet{
-            announcementText.text = announcement?.bodyText
-            announcementTitle.text = announcement?.Title
-            //announcementPoster.text = announcement?.fromId
-            topicLabel.text = announcement?.topic
-            timestamp.text =  setupTime((announcement?.timestamp?.intValue)!)
-        }
-    }
-    
-    
-    func setupLikes(_ likes: Int){
-        if (likes > 1){
-            self.button.setTitle(likes.description, for: .normal)
-        }
-    }
-    
-    func setupTime(_ time: Int)->String {
-        var currentTime = Int(NSDate().timeIntervalSince1970)
-        currentTime = (currentTime - time )/60
-        if (currentTime == 1){
-            return (currentTime.description + " minute ago • ")
-        }
-        if (currentTime >= 60){
-        currentTime = currentTime/60
-            if (currentTime == 1){
-                return (currentTime.description + " hour ago • ")
-            }else{
-                return (currentTime.description + " hours ago • ")
-            }
-        }
-        return (currentTime.description + " minutes ago • ")
-        
-        
-    }
+class CalendarCell: BaseCell{
     
     let announcementInfoContainer: UIView = {
         let view = UIView()
@@ -133,7 +97,7 @@ class AnnouncementCell: BaseCell {
         return view
     }()
     let likeIcon: UIImageView = {
-       let iv = UIImageView()
+        let iv = UIImageView()
         iv.image = UIImage(named: "like")?.withRenderingMode(.alwaysTemplate)
         iv.tintColor = .gray
         iv.translatesAutoresizingMaskIntoConstraints = false
@@ -182,7 +146,7 @@ class AnnouncementCell: BaseCell {
     }()
     
     func handleLikeButton(){
-                
+        
         likeButtonContainer.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
         UIView.animate(withDuration: 0.5,
                        delay: 0,
@@ -244,6 +208,8 @@ class AnnouncementCell: BaseCell {
     }
     
     override func setupViews(){
+        super.setupViews()
+        
         addSubview(announcementInfoContainer)
         addSubview(announcementTitle)
         addSubview(announcementText)
@@ -251,7 +217,7 @@ class AnnouncementCell: BaseCell {
         addSubview(buttonBottomSeparatorView)
         addSubview(bottomSeparatorView)
         addSubview(topicLabel)
-
+        
         announcementInfoContainer.addSubview(timestamp)
         announcementInfoContainer.addSubview(announcementPoster)
         announcementInfoContainer.addSubview(moreButton)
@@ -288,7 +254,7 @@ class AnnouncementCell: BaseCell {
         announcementTitle.topAnchor.constraint(equalTo: announcementInfoContainer.bottomAnchor, constant: -12).isActive = true
         announcementTitle.leadingAnchor.constraint(equalTo: self.readableContentGuide.leadingAnchor).isActive = true
         announcementTitle.trailingAnchor.constraint(equalTo: self.readableContentGuide.trailingAnchor).isActive = true
-
+        
         topicLabel.topAnchor.constraint(equalTo: announcementTitle.bottomAnchor, constant: -2).isActive = true
         topicLabel.leftAnchor.constraint(equalTo: announcementTitle.leftAnchor, constant: 6).isActive = true
         topicLabel.widthAnchor.constraint(equalToConstant: 50).isActive = true
@@ -350,6 +316,6 @@ class AnnouncementCell: BaseCell {
         
     }
     
-
+    
 }
 
