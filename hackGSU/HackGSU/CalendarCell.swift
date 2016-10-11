@@ -10,6 +10,7 @@ import UIKit
 
 class CalendarCell: BaseCell{
     
+    
     let announcementInfoContainer: UIView = {
         let view = UIView()
         view.backgroundColor = .white

@@ -27,6 +27,7 @@ class scheduleFeedController: UICollectionViewController, UICollectionViewDelega
     lazy var menuBar: ScheduleMenuBar = {
         let mb = ScheduleMenuBar()
         mb.translatesAutoresizingMaskIntoConstraints = false
+        mb.ScheduleController = self
         mb.backgroundColor = .systemColor("red")
         return mb
     }()
@@ -39,7 +40,6 @@ class scheduleFeedController: UICollectionViewController, UICollectionViewDelega
         menuBar.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         menuBar.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         menuBar.heightAnchor.constraint(equalToConstant: 80).isActive = true
-
 
     }
     
@@ -71,11 +71,51 @@ class scheduleFeedController: UICollectionViewController, UICollectionViewDelega
         navigationItem.rightBarButtonItems = [moreButton]
     }
     
+    func scrollToMenuIndex(_ menuIndex: Int){
+        let indexPath = IndexPath(item: menuIndex, section: 0)
+        collectionView?.scrollToItem(at: indexPath, at: [] , animated: true)
+        setDateForMenu(menuIndex)
+        
+    }
+    
+    func setDateForMenu(_ index: Int){
+        switch (index){
+        case 0:
+            menuBar.dateLabel.text = "Friday, October 21, 2016"
+        case 1:
+            menuBar.dateLabel.text = "Saturday, October 22, 2016"
+        case 2:
+            menuBar.dateLabel.text = "Sunday, October 23, 2016"
+        default: break
+            
+        }
+    
+    }
+    
+    
+    override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+        
+        let index = targetContentOffset.pointee.x / view.frame.width
+        let indexPath = IndexPath(item: Int(index), section: 0)
+        menuBar.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
+        setDateForMenu(Int(index))
+        collectionView?.reloadData()
+        
+    }
     
     func setupCollectionView(){
-        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        
+        if let flowlayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowlayout.scrollDirection = .horizontal
+            flowlayout.minimumLineSpacing = 0
+        }
+        
+        collectionView?.register(EventFeedCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.contentInset = UIEdgeInsetsMake(80, 0, 49, 0)
+        collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(80, 0, 49, 0)
         collectionView?.backgroundColor = .systemColor("darkRed")
+        collectionView?.isPagingEnabled = true
         
     }
     
@@ -84,14 +124,10 @@ class scheduleFeedController: UICollectionViewController, UICollectionViewDelega
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
-    }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         
-        return CGSize(width: view.frame.width, height: 100)
+        return CGSize(width: view.frame.width, height: view.frame.height - 129)
     }
     
     

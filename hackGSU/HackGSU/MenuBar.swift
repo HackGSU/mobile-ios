@@ -13,6 +13,7 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     let cellId = "cellId"
     let imageNames = ["home", "trending", "food", "tech"]
     
+    
     var AnnouncementController: announcementFeedController?
     var horizontalBarLeftAnchorConstraint: NSLayoutConstraint?
 

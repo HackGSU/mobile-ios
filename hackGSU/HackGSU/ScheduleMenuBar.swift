@@ -11,10 +11,12 @@ import UIKit
 class ScheduleMenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     
     let cellId = "cellId"
-    let imageNames = ["Friday", "Saturday", "Sunday"]
+    let daysOfWeek = ["Friday", "Saturday", "Sunday"]
+    let dates = ["21","22","23"]
+
+    
     
     var ScheduleController: scheduleFeedController?
-    var horizontalBarLeftAnchorConstraint: NSLayoutConstraint?
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -127,25 +129,6 @@ class ScheduleMenuBar: UIView, UICollectionViewDataSource, UICollectionViewDeleg
         let selectedIndexPath = IndexPath(item: 0, section: 0)
         collectionView.selectItem(at: selectedIndexPath, animated: false, scrollPosition: [])
         
-        //setupHorizontalBar()
-        
-    }
-    
-    func setupHorizontalBar(){
-        let horizontalBarView = UIView()
-        horizontalBarView.translatesAutoresizingMaskIntoConstraints = false
-        horizontalBarView.backgroundColor = UIColor(white: 0.9, alpha: 1)
-        addSubview(horizontalBarView)
-        
-        
-        horizontalBarLeftAnchorConstraint = horizontalBarView.leftAnchor.constraint(equalTo: leftAnchor)
-        
-        horizontalBarLeftAnchorConstraint?.isActive = true
-        
-        horizontalBarView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        horizontalBarView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1/3).isActive = true
-        horizontalBarView.heightAnchor.constraint(equalToConstant: 4).isActive = true
-        
     }
     
     
@@ -157,6 +140,7 @@ class ScheduleMenuBar: UIView, UICollectionViewDataSource, UICollectionViewDeleg
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ScheduleMenuCell
         
+        cell.dayText.text = dates[indexPath.item]
         
         return cell
     }
@@ -168,6 +152,15 @@ class ScheduleMenuBar: UIView, UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        ScheduleController?.scrollToMenuIndex(indexPath.item)
+        ScheduleController?.collectionView?.reloadData()
+//        AnnouncementController?.scrollToMenuIndex(indexPath.item)
+//        AnnouncementController?.collectionView?.reloadData()
+    }
+
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
