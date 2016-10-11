@@ -9,8 +9,9 @@
 import Foundation
 
 class Event : NSObject {
-    var Title: String?
+    var title: String?
     var Day: String?
+    var timestamp: NSNumber?
     var Date: NSDate?
     var uid: String?
 }

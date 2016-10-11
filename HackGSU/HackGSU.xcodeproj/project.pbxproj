@@ -24,7 +24,6 @@
 		034D46D31D9596EC0059266C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 034D46D11D9596EC0059266C /* LaunchScreen.storyboard */; };
 		034D46DE1D9596EC0059266C /* hackGSUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D46DD1D9596EC0059266C /* hackGSUTests.swift */; };
 		034D46E91D9596EC0059266C /* hackGSUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D46E81D9596EC0059266C /* hackGSUUITests.swift */; };
-		034D46F71D9597290059266C /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D46F61D9597290059266C /* CustomTabBarController.swift */; };
 		036023221DA8CB6900E7F2E9 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036023211DA8CB6900E7F2E9 /* FeedCell.swift */; };
 		036023261DA8F2DE00E7F2E9 /* TrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036023251DA8F2DE00E7F2E9 /* TrendingCell.swift */; };
 		036023281DA9F2FC00E7F2E9 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036023271DA9F2FC00E7F2E9 /* CalendarCell.swift */; };
@@ -34,6 +33,7 @@
 		039E68751DA69960004FA963 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039E68741DA69960004FA963 /* MenuBar.swift */; };
 		039E68771DA69EFF004FA963 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039E68761DA69EFF004FA963 /* MenuCell.swift */; };
 		03BE9C461DAC98AF00209739 /* EventFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE9C451DAC98AF00209739 /* EventFeedCell.swift */; };
+		03BE9C481DAD7B7600209739 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE9C471DAD7B7600209739 /* ScheduleCell.swift */; };
 		AA85232C9242D7378DA4511D /* Pods_hackGSU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A866E192359F9C5D42F32FD4 /* Pods_hackGSU.framework */; };
 		D2B806B61DA6DD11001CF43D /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B806B51DA6DD11001CF43D /* Maps.swift */; };
 		D2B806B81DA6DE1B001CF43D /* ScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B806B71DA6DE1B001CF43D /* ScheduleController.swift */; };
@@ -82,7 +82,6 @@
 		034D46E41D9596EC0059266C /* hackGSUUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hackGSUUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		034D46E81D9596EC0059266C /* hackGSUUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hackGSUUITests.swift; sourceTree = "<group>"; };
 		034D46EA1D9596EC0059266C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		034D46F61D9597290059266C /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		036023211DA8CB6900E7F2E9 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		036023251DA8F2DE00E7F2E9 /* TrendingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingCell.swift; sourceTree = "<group>"; };
 		036023271DA9F2FC00E7F2E9 /* CalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
@@ -92,6 +91,7 @@
 		039E68741DA69960004FA963 /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		039E68761DA69EFF004FA963 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		03BE9C451DAC98AF00209739 /* EventFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventFeedCell.swift; sourceTree = "<group>"; };
+		03BE9C471DAD7B7600209739 /* ScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
 		85FFF7CAF179A2C43B0A0669 /* Pods-hackGSU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackGSU.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackGSU/Pods-hackGSU.release.xcconfig"; sourceTree = "<group>"; };
 		A866E192359F9C5D42F32FD4 /* Pods_hackGSU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackGSU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C062AE6C7EEDFB7831AEE1A4 /* Pods-hackGSU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackGSU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackGSU/Pods-hackGSU.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				D2D7B5651DA6DB4A000FDE81 /* TabBarViewController.swift */,
-				034D46F61D9597290059266C /* CustomTabBarController.swift */,
 				0305149A1D9B58BE00CF4863 /* LoginController.swift */,
 				0316E0341D97227200E9160E /* AnnouncementController.swift */,
 				D2B806B71DA6DE1B001CF43D /* ScheduleController.swift */,
@@ -165,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				0305147C1D9ACA2800CF4863 /* AnnouncementCell.swift */,
+				03BE9C471DAD7B7600209739 /* ScheduleCell.swift */,
 				036023211DA8CB6900E7F2E9 /* FeedCell.swift */,
 				03BE9C451DAC98AF00209739 /* EventFeedCell.swift */,
 				036023251DA8F2DE00E7F2E9 /* TrendingCell.swift */,
@@ -454,6 +454,7 @@
 				030514971D9B587700CF4863 /* Extensions.swift in Sources */,
 				0305147D1D9ACA2800CF4863 /* AnnouncementCell.swift in Sources */,
 				039E68751DA69960004FA963 /* MenuBar.swift in Sources */,
+				03BE9C481DAD7B7600209739 /* ScheduleCell.swift in Sources */,
 				0360232C1DAA0B4B00E7F2E9 /* ScheduleMenuBar.swift in Sources */,
 				030514951D9B585E00CF4863 /* Page.swift in Sources */,
 				03BE9C461DAC98AF00209739 /* EventFeedCell.swift in Sources */,
@@ -461,7 +462,6 @@
 				0360232E1DAAA88D00E7F2E9 /* ScheduleMenuCell.swift in Sources */,
 				D2B806B61DA6DD11001CF43D /* Maps.swift in Sources */,
 				0305147B1D9ABD0E00CF4863 /* Announcement.swift in Sources */,
-				034D46F71D9597290059266C /* CustomTabBarController.swift in Sources */,
 				03484D391D9D9DCB0026FBB6 /* NewAnnouncementView.swift in Sources */,
 				0305149B1D9B58BE00CF4863 /* LoginController.swift in Sources */,
 				D2D7B5661DA6DB4A000FDE81 /* TabBarViewController.swift in Sources */,

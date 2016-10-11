@@ -15,11 +15,11 @@ class scheduleFeedController: UICollectionViewController, UICollectionViewDelega
     
     var events: [Event] = {
         var event1 = Event()
-        event1.Title = "Early Check-in Begins / Late Registration"
+        event1.title = "Early Check-in Begins / Late Registration"
         var event2 = Event()
-        event2.Title = "Check-in"
+        event2.title = "Check-in"
         var event3 = Event()
-        event3.Title = "Opening Ceremonies"
+        event3.title = "Opening Ceremonies"
         
         return [event1, event2, event3]
     }()

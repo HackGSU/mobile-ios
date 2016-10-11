@@ -182,7 +182,10 @@ class AnnouncementCell: BaseCell {
     }()
     
     func handleLikeButton(){
-                
+        
+        likeIcon.tintColor = UIColor(red:0.07, green:0.45, blue:0.91, alpha:1.00)
+        button.setTitleColor(UIColor(red:0.07, green:0.45, blue:0.91, alpha:1.00), for: .normal)
+
         likeButtonContainer.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
         UIView.animate(withDuration: 0.5,
                        delay: 0,

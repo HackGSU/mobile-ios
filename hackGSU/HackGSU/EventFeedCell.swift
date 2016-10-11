@@ -11,46 +11,37 @@ import Firebase
 
 class EventFeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout  {
     
-    //    override func setupViews() {
-    //        super.setupViews()
-    //
-    //    }
+        var events = [Event]()
     
-        var firebaseAnnouncements = [Announcement]()
-        
+    
         func observeAnnouncements(){
             
-            let ref = FIRDatabase.database().reference().child("announcements")
+            let ref = FIRDatabase.database().reference().child("schedule")
             ref.observe(.childAdded, with: { (snapshot) in
                 
                 //print(snapshot)
                 
                 if let dictionary = snapshot.value as? [String: Any]{
                     
-                    let announcement = Announcement()
+                    let event = Event()
                     
-                    if let title = dictionary["Title"] as? String!{
-                        announcement.Title = title
-                        
+                    if let title = dictionary["title"] as? String!{
+                        event.title = title
                     }
-                    if let bodyText = dictionary["bodyText"] as? String!{
-                        announcement.bodyText = bodyText
-                    }
+                    
                     if let timestamp = dictionary["timestamp"] as! NSNumber?{
-                        announcement.timestamp = timestamp
+                        event.timestamp = timestamp
                     }
-                    if let topic = dictionary["topic"] as? String!{
-                        announcement.topic = topic
-                    }
-                    if let fromId = dictionary["fromId"] as? String!{
-                        announcement.fromId = fromId
+                   
+                   
+                    if (event.timestamp!.intValue < 1477108800001){
+                        self.events.append(event)
+
                     }
                     
-                    self.firebaseAnnouncements.append(announcement)
-                    
-                    self.firebaseAnnouncements.sort(by: { (message1, message2) -> Bool in
+                    self.events.sort(by: { (message1, message2) -> Bool in
                         
-                        return (message1.timestamp?.intValue)! > (message2.timestamp?.intValue)!
+                        return (message2.timestamp?.intValue)! > (message1.timestamp?.intValue)!
                     })
                     
                     DispatchQueue.main.async {
@@ -77,7 +68,7 @@ class EventFeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDeleg
         override func setupViews(){
             super.setupViews()
             
-            collectionView.register(AnnouncementCell.self, forCellWithReuseIdentifier: cellId)
+            collectionView.register(ScheduleCell.self, forCellWithReuseIdentifier: cellId)
             observeAnnouncements()
             addSubview(collectionView)
             
@@ -91,13 +82,17 @@ class EventFeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDeleg
         }
         
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return firebaseAnnouncements.count
+            return events.count
         }
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell( withReuseIdentifier: cellId, for: indexPath) as! AnnouncementCell
+            let cell = collectionView.dequeueReusableCell( withReuseIdentifier: cellId, for: indexPath) as! ScheduleCell
             
-            cell.announcement = firebaseAnnouncements[(indexPath as NSIndexPath).item]
+//            cell.announcement = firebaseAnnouncements[(indexPath as NSIndexPath).item]
+            
+            
+            
+            cell.event = events[(indexPath as NSIndexPath).item]
             cell.backgroundColor = .white
             
             return cell
@@ -109,16 +104,15 @@ class EventFeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDeleg
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             
-            let knownHeight: CGFloat = 35 + 40 + 40
+            let knownHeight: CGFloat = 15 + 40
             
-            if let announcementTitle = firebaseAnnouncements[indexPath.item].Title {
+            if let eventTitle = events[indexPath.item].title {
                 
-                let rect = NSString(string: announcementTitle).boundingRect(with: CGSize(width: frame.width, height: 1000), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 16)], context: nil)
-                
-                let rectTitle = NSString(string: (firebaseAnnouncements[indexPath.item].bodyText)!).boundingRect(with: CGSize(width: frame.width, height: 1000), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 16)], context: nil)
+                let rect = NSString(string: eventTitle).boundingRect(with: CGSize(width: frame.width, height: 1000), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 16)], context: nil)
                 
                 
-                return CGSize(width: frame.width, height: rect.height + knownHeight + rectTitle.height)
+                
+                return CGSize(width: frame.width, height: rect.height + knownHeight)
             }
             
             return CGSize(width: frame.width, height: 400)

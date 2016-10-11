@@ -59,9 +59,9 @@ class TabBarViewController: UIViewController, BATabBarControllerDelegate {
         
         
         let vc2 = UINavigationController(rootViewController: scheduleFeedController(collectionViewLayout: UICollectionViewFlowLayout()))
-        
-        //let vc2 = storyboard?.instantiateViewController(withIdentifier: "Schedule")
         vc2.title = "Schedule"
+        
+        
         let vc3 = storyboard?.instantiateViewController(withIdentifier: "Maps")
         vc3?.title = "Maps"
         

@@ -13,6 +13,8 @@ import FirebaseAuth
 
 class LoginCell: UICollectionViewCell {
     
+    var loginController = LoginViewController()
+    
     let logoImageView: UIImageView = {
         let image = UIImage(named: "PHLogo")
         let imageView = UIImageView(image: image)
@@ -97,7 +99,8 @@ class LoginCell: UICollectionViewCell {
                         print("User logged in anonymously" + user!.uid)
                     }
                     
-                    topController.dismiss(animated: true, completion: nil)
+                    
+//                    loginController.dismiss()
             })
 
         }
