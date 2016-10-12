@@ -12,6 +12,8 @@ import UIKit
 class scheduleFeedController: UICollectionViewController, UICollectionViewDelegateFlowLayout{
 
     let cellId = "cellId"
+    let saturdayCellId = "saturdayCellId"
+    let sundayCellId = "sundayCellId"
     
     var events: [Event] = {
         var event1 = Event()
@@ -66,8 +68,6 @@ class scheduleFeedController: UICollectionViewController, UICollectionViewDelega
         
         let moreButton = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action: #selector(menuTap))
         moreButton.tintColor = UIColor.white
-//        let plusButton = UIBarButtonItem(image: UIImage(named: "Edit"), style: .plain, target: self, action: #selector(addAnnouncement))
-//        plusButton.tintColor = .white
         navigationItem.rightBarButtonItems = [moreButton]
     }
     
@@ -112,6 +112,8 @@ class scheduleFeedController: UICollectionViewController, UICollectionViewDelega
         }
         
         collectionView?.register(EventFeedCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.register(SaturdayFeedCell.self, forCellWithReuseIdentifier: saturdayCellId)
+        collectionView?.register(SundayFeedCell.self, forCellWithReuseIdentifier: sundayCellId)
         collectionView?.contentInset = UIEdgeInsetsMake(80, 0, 49, 0)
         collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(80, 0, 49, 0)
         collectionView?.backgroundColor = .systemColor("darkRed")
@@ -137,10 +139,27 @@ class scheduleFeedController: UICollectionViewController, UICollectionViewDelega
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
         
-        cell.backgroundColor = .white
         
-        return cell
+        
+        if indexPath.item == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+            cell.backgroundColor = .white
+            return cell
+
+        }else if indexPath.item == 1 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: saturdayCellId, for: indexPath)
+            cell.backgroundColor = .white
+            return cell
+
+        }else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: sundayCellId, for: indexPath)
+            cell.backgroundColor = .white
+            return cell
+        }
+        
+        
+        
+        
     }
 }

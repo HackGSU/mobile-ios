@@ -40,27 +40,19 @@ class ScheduleCell: BaseCell{
     var event: Event?{
         didSet{
             eventTitle.text = event?.title
-            timeLabel.text = setupTime()
+            
+            if let seconds = (event?.timestamp?.doubleValue) {
+                
+                let jodaConvert = seconds/1000
+                let timestampDate = NSDate(timeIntervalSince1970: jodaConvert)
+                
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "h:mm a"
+                
+                timeLabel.text = dateFormatter.string(from: timestampDate as Date)
+            }
+            
         }
-    }
-    
-    func setupTime() -> String{
-//        let timestamp_ios = timestamp/1000
-//        
-//        var currentTime = Int(NSDate().timeIntervalSince1970)
-//        currentTime = NSDate(timestamp_ios - currentTime )
-
-        let date = Date()
-        let calendar = Calendar.current
-        
-        
-        
-        
-        let hour = calendar.component(.hour, from: date)
-        let minutes = calendar.component(.minute, from: date)
-        print("hours = \(hour):\(minutes)")
-        
-        return "\(hour):\(minutes)"
     }
     
     let timeLabel : UILabel = {

@@ -34,14 +34,13 @@ class EventFeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDeleg
                     }
                    
                    
-                    if (event.timestamp!.intValue < 1477108800001){
+                    if (event.timestamp!.doubleValue < 1477108800001){
                         self.events.append(event)
-
                     }
                     
                     self.events.sort(by: { (message1, message2) -> Bool in
                         
-                        return (message2.timestamp?.intValue)! > (message1.timestamp?.intValue)!
+                        return (message2.timestamp?.decimalValue)! > (message1.timestamp?.decimalValue)!
                     })
                     
                     DispatchQueue.main.async {
@@ -52,7 +51,7 @@ class EventFeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDeleg
                 }
                 }, withCancel: nil)
         }
-        
+
         
         lazy var collectionView: UICollectionView = {
             let layout = UICollectionViewFlowLayout()
@@ -119,5 +118,88 @@ class EventFeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDeleg
         }
         
     }
+
+class SaturdayFeedCell: EventFeedCell{
+    override func observeAnnouncements() {
+        
+        let ref = FIRDatabase.database().reference().child("schedule")
+        ref.observe(.childAdded, with: { (snapshot) in
+            
+            //print(snapshot)
+            
+            if let dictionary = snapshot.value as? [String: Any]{
+                
+                let event = Event()
+                
+                if let title = dictionary["title"] as? String!{
+                    event.title = title
+                }
+                
+                if let timestamp = dictionary["timestamp"] as! NSNumber?{
+                    event.timestamp = timestamp
+                }
+                
+                
+                if (event.timestamp!.doubleValue < 1477224000000){
+                    if (event.timestamp!.doubleValue > 1477137599999){
+                    self.events.append(event)
+                    }}
+                
+                self.events.sort(by: { (message1, message2) -> Bool in
+                    
+                return (message2.timestamp?.decimalValue)! > (message1.timestamp?.decimalValue)!
+                })
+                
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+                
+                
+            }
+            }, withCancel: nil)
+
+    }
+}
+
+class SundayFeedCell: EventFeedCell{
+    override func observeAnnouncements() {
+        
+        let ref = FIRDatabase.database().reference().child("schedule")
+        ref.observe(.childAdded, with: { (snapshot) in
+            
+            //print(snapshot)
+            
+            if let dictionary = snapshot.value as? [String: Any]{
+                
+                let event = Event()
+                
+                if let title = dictionary["title"] as? String!{
+                    event.title = title
+                }
+                
+                if let timestamp = dictionary["timestamp"] as! NSNumber?{
+                    event.timestamp = timestamp
+                }
+                
+                
+                if (event.timestamp!.doubleValue > 1477223999999){
+                        self.events.append(event)
+                }
+                
+                self.events.sort(by: { (message1, message2) -> Bool in
+                    
+                    return (message2.timestamp?.decimalValue)! > (message1.timestamp?.decimalValue)!
+                })
+                
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+                
+                
+            }
+            }, withCancel: nil)
+        
+    }
+}
 
 
