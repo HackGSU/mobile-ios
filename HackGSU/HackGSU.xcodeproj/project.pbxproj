@@ -37,6 +37,7 @@
 		03BE9C481DAD7B7600209739 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE9C471DAD7B7600209739 /* ScheduleCell.swift */; };
 		03D00A451DAFE19300180999 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D00A441DAFE19300180999 /* MapController.swift */; };
 		03D00A471DAFFFE500180999 /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D00A461DAFFFE500180999 /* MapCell.swift */; };
+		03D00A491DB0052D00180999 /* ScheduleMenuLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D00A481DB0052D00180999 /* ScheduleMenuLauncher.swift */; };
 		AA85232C9242D7378DA4511D /* Pods_hackGSU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A866E192359F9C5D42F32FD4 /* Pods_hackGSU.framework */; };
 		D2B806B61DA6DD11001CF43D /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B806B51DA6DD11001CF43D /* Maps.swift */; };
 		D2B806B81DA6DE1B001CF43D /* ScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B806B71DA6DE1B001CF43D /* ScheduleController.swift */; };
@@ -98,6 +99,7 @@
 		03BE9C471DAD7B7600209739 /* ScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
 		03D00A441DAFE19300180999 /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		03D00A461DAFFFE500180999 /* MapCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
+		03D00A481DB0052D00180999 /* ScheduleMenuLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleMenuLauncher.swift; sourceTree = "<group>"; };
 		85FFF7CAF179A2C43B0A0669 /* Pods-hackGSU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackGSU.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackGSU/Pods-hackGSU.release.xcconfig"; sourceTree = "<group>"; };
 		A866E192359F9C5D42F32FD4 /* Pods_hackGSU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackGSU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C062AE6C7EEDFB7831AEE1A4 /* Pods-hackGSU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackGSU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackGSU/Pods-hackGSU.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				0305149A1D9B58BE00CF4863 /* LoginController.swift */,
 				0316E0341D97227200E9160E /* AnnouncementController.swift */,
 				0352B6461DAEB63D009B78C3 /* AnnouncementMenuLauncher.swift */,
+				03D00A481DB0052D00180999 /* ScheduleMenuLauncher.swift */,
 				D2B806B71DA6DE1B001CF43D /* ScheduleController.swift */,
 				03D00A441DAFE19300180999 /* MapController.swift */,
 				03484D3C1D9DB9EC0026FBB6 /* NewAnnouncementController.swift */,
@@ -470,6 +473,7 @@
 				03D00A451DAFE19300180999 /* MapController.swift in Sources */,
 				03BE9C461DAC98AF00209739 /* EventFeedCell.swift in Sources */,
 				036023221DA8CB6900E7F2E9 /* FeedCell.swift in Sources */,
+				03D00A491DB0052D00180999 /* ScheduleMenuLauncher.swift in Sources */,
 				0360232E1DAAA88D00E7F2E9 /* ScheduleMenuCell.swift in Sources */,
 				D2B806B61DA6DD11001CF43D /* Maps.swift in Sources */,
 				0305147B1D9ABD0E00CF4863 /* Announcement.swift in Sources */,

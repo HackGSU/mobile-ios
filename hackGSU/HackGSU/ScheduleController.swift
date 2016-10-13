@@ -110,10 +110,16 @@ class scheduleFeedController: UICollectionViewController, UICollectionViewDelega
         collectionView?.showsHorizontalScrollIndicator = false
     }
     
-    func menuTap(){
-        
-    }
     
+    lazy var menuLauncher: ScheduleMenuLauncher = {
+       let launcher = ScheduleMenuLauncher()
+        launcher.announcementController = self
+        return launcher
+    }()
+    
+    func menuTap(){
+        menuLauncher.showSettings()
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         

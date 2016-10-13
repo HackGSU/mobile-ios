@@ -11,16 +11,16 @@
 import UIKit
 
 
-class announcementMenuLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class ScheduleMenuLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     let blackView = UIView()
     
-    var announcementController = announcementFeedController()
+    var announcementController = scheduleFeedController()
     
     let cellId = "cellId"
     let cellHeight: CGFloat = 50
-    let options = ["About Us", "Sponsors", "Check out the Prizes", "Request a mentor", "Send Feedback", "Code of Conduct"]
-    let imageNames = ["about", "sponsor", "prize", "help", "feedback", "privacy"]
+    let options = ["Visit our Website", "Cancel"]
+    let imageNames = ["website", "grayDelete"]
     
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -90,6 +90,7 @@ class announcementMenuLauncher: NSObject, UICollectionViewDataSource, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         handleDismiss()
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
