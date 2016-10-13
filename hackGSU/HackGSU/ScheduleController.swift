@@ -15,17 +15,6 @@ class scheduleFeedController: UICollectionViewController, UICollectionViewDelega
     let saturdayCellId = "saturdayCellId"
     let sundayCellId = "sundayCellId"
     
-    var events: [Event] = {
-        var event1 = Event()
-        event1.title = "Early Check-in Begins / Late Registration"
-        var event2 = Event()
-        event2.title = "Check-in"
-        var event3 = Event()
-        event3.title = "Opening Ceremonies"
-        
-        return [event1, event2, event3]
-    }()
-    
     lazy var menuBar: ScheduleMenuBar = {
         let mb = ScheduleMenuBar()
         mb.translatesAutoresizingMaskIntoConstraints = false
@@ -118,7 +107,7 @@ class scheduleFeedController: UICollectionViewController, UICollectionViewDelega
         collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(80, 0, 49, 0)
         collectionView?.backgroundColor = .systemColor("darkRed")
         collectionView?.isPagingEnabled = true
-        
+        collectionView?.showsHorizontalScrollIndicator = false
     }
     
     func menuTap(){
@@ -134,7 +123,7 @@ class scheduleFeedController: UICollectionViewController, UICollectionViewDelega
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return events.count
+        return 3
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

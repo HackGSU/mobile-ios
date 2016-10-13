@@ -102,7 +102,6 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         collectionView?.indicatorStyle = .black
         collectionView?.isPagingEnabled = true
         collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 49, 0)
-        //collectionView?.contentInset = UIEdgeInsetsMake(0, 0, 99, 0)
         collectionView?.scrollIndicatorInsets  = UIEdgeInsetsMake(50, 0, 49, 0)
         collectionView?.showsHorizontalScrollIndicator = false
 
@@ -130,8 +129,15 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         present(newAnnouncementController, animated: true, completion: nil)
     }
     
+    lazy var menuLauncher: announcementMenuLauncher = {
+        let launcher = announcementMenuLauncher()
+        launcher.announcementController = self
+        return launcher
+    }()
+    
+    
     func menuTap(){
-        //logOut()
+        menuLauncher.showSettings()
     }
     
     

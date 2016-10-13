@@ -22,12 +22,12 @@ class ScheduleCell: BaseCell{
         timeLabel.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
         timeLabel.heightAnchor.constraint(equalToConstant: 15).isActive = true
         
-        timeSeparator.topAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: 5).isActive = true
+        timeSeparator.topAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: 8).isActive = true
         timeSeparator.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         timeSeparator.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.94).isActive = true
-        timeSeparator.heightAnchor.constraint(equalToConstant: 4).isActive = true
+        timeSeparator.heightAnchor.constraint(equalToConstant: 6).isActive = true
         
-        eventTitle.topAnchor.constraint(equalTo: timeSeparator.bottomAnchor, constant: 5).isActive = true
+        eventTitle.topAnchor.constraint(equalTo: timeSeparator.bottomAnchor, constant: 3).isActive = true
         eventTitle.leadingAnchor.constraint(equalTo: readableContentGuide.leadingAnchor).isActive = true
         eventTitle.trailingAnchor.constraint(equalTo: readableContentGuide.trailingAnchor).isActive = true
         

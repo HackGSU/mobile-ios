@@ -24,9 +24,10 @@
 		034D46D31D9596EC0059266C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 034D46D11D9596EC0059266C /* LaunchScreen.storyboard */; };
 		034D46DE1D9596EC0059266C /* hackGSUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D46DD1D9596EC0059266C /* hackGSUTests.swift */; };
 		034D46E91D9596EC0059266C /* hackGSUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D46E81D9596EC0059266C /* hackGSUUITests.swift */; };
+		0352B6471DAEB63D009B78C3 /* AnnouncementMenuLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0352B6461DAEB63D009B78C3 /* AnnouncementMenuLauncher.swift */; };
+		0352B6491DAEB6A0009B78C3 /* announcementMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0352B6481DAEB6A0009B78C3 /* announcementMenuCell.swift */; };
 		036023221DA8CB6900E7F2E9 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036023211DA8CB6900E7F2E9 /* FeedCell.swift */; };
 		036023261DA8F2DE00E7F2E9 /* TrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036023251DA8F2DE00E7F2E9 /* TrendingCell.swift */; };
-		036023281DA9F2FC00E7F2E9 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036023271DA9F2FC00E7F2E9 /* CalendarCell.swift */; };
 		0360232A1DA9F70F00E7F2E9 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036023291DA9F70F00E7F2E9 /* Event.swift */; };
 		0360232C1DAA0B4B00E7F2E9 /* ScheduleMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360232B1DAA0B4B00E7F2E9 /* ScheduleMenuBar.swift */; };
 		0360232E1DAAA88D00E7F2E9 /* ScheduleMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0360232D1DAAA88D00E7F2E9 /* ScheduleMenuCell.swift */; };
@@ -82,9 +83,10 @@
 		034D46E41D9596EC0059266C /* hackGSUUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hackGSUUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		034D46E81D9596EC0059266C /* hackGSUUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hackGSUUITests.swift; sourceTree = "<group>"; };
 		034D46EA1D9596EC0059266C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0352B6461DAEB63D009B78C3 /* AnnouncementMenuLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnnouncementMenuLauncher.swift; path = HackGSU/AnnouncementMenuLauncher.swift; sourceTree = SOURCE_ROOT; };
+		0352B6481DAEB6A0009B78C3 /* announcementMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = announcementMenuCell.swift; sourceTree = "<group>"; };
 		036023211DA8CB6900E7F2E9 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		036023251DA8F2DE00E7F2E9 /* TrendingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingCell.swift; sourceTree = "<group>"; };
-		036023271DA9F2FC00E7F2E9 /* CalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		036023291DA9F70F00E7F2E9 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		0360232B1DAA0B4B00E7F2E9 /* ScheduleMenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleMenuBar.swift; sourceTree = "<group>"; };
 		0360232D1DAAA88D00E7F2E9 /* ScheduleMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduleMenuCell.swift; path = HackGSU/ScheduleMenuCell.swift; sourceTree = SOURCE_ROOT; };
@@ -153,6 +155,7 @@
 				D2D7B5651DA6DB4A000FDE81 /* TabBarViewController.swift */,
 				0305149A1D9B58BE00CF4863 /* LoginController.swift */,
 				0316E0341D97227200E9160E /* AnnouncementController.swift */,
+				0352B6461DAEB63D009B78C3 /* AnnouncementMenuLauncher.swift */,
 				D2B806B71DA6DE1B001CF43D /* ScheduleController.swift */,
 				03484D3C1D9DB9EC0026FBB6 /* NewAnnouncementController.swift */,
 				D2B806B51DA6DD11001CF43D /* Maps.swift */,
@@ -168,8 +171,8 @@
 				036023211DA8CB6900E7F2E9 /* FeedCell.swift */,
 				03BE9C451DAC98AF00209739 /* EventFeedCell.swift */,
 				036023251DA8F2DE00E7F2E9 /* TrendingCell.swift */,
-				036023271DA9F2FC00E7F2E9 /* CalendarCell.swift */,
 				039E68761DA69EFF004FA963 /* MenuCell.swift */,
+				0352B6481DAEB6A0009B78C3 /* announcementMenuCell.swift */,
 				0360232D1DAAA88D00E7F2E9 /* ScheduleMenuCell.swift */,
 				030514981D9B589C00CF4863 /* LoginCell.swift */,
 				030514921D9B584E00CF4863 /* PageCell.swift */,
@@ -447,6 +450,7 @@
 				039E68771DA69EFF004FA963 /* MenuCell.swift in Sources */,
 				03484D3D1D9DB9EC0026FBB6 /* NewAnnouncementController.swift in Sources */,
 				D2B806B81DA6DE1B001CF43D /* ScheduleController.swift in Sources */,
+				0352B6471DAEB63D009B78C3 /* AnnouncementMenuLauncher.swift in Sources */,
 				034D46C91D9596EC0059266C /* AppDelegate.swift in Sources */,
 				0316E0351D97227200E9160E /* AnnouncementController.swift in Sources */,
 				030514931D9B584E00CF4863 /* PageCell.swift in Sources */,
@@ -467,7 +471,7 @@
 				D2D7B5661DA6DB4A000FDE81 /* TabBarViewController.swift in Sources */,
 				030514991D9B589C00CF4863 /* LoginCell.swift in Sources */,
 				0360232A1DA9F70F00E7F2E9 /* Event.swift in Sources */,
-				036023281DA9F2FC00E7F2E9 /* CalendarCell.swift in Sources */,
+				0352B6491DAEB6A0009B78C3 /* announcementMenuCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,7 +622,7 @@
 				CODE_SIGN_ENTITLEMENTS = hackGSU/hackGSU.entitlements;
 				DEVELOPMENT_TEAM = BZY65TYX78;
 				INFOPLIST_FILE = hackGSU/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PantherHackers.hackGSU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -636,7 +640,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				DEVELOPMENT_TEAM = BZY65TYX78;
 				INFOPLIST_FILE = hackGSU/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PantherHackers.hackGSU;
 				PRODUCT_NAME = "$(TARGET_NAME)";

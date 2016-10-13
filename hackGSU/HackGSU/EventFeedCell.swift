@@ -103,7 +103,7 @@ class EventFeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDeleg
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             
-            let knownHeight: CGFloat = 15 + 40
+            let knownHeight: CGFloat = 15 + 65
             
             if let eventTitle = events[indexPath.item].title {
                 
