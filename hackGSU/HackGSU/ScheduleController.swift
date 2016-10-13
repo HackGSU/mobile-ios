@@ -105,7 +105,7 @@ class scheduleFeedController: UICollectionViewController, UICollectionViewDelega
         collectionView?.register(SundayFeedCell.self, forCellWithReuseIdentifier: sundayCellId)
         collectionView?.contentInset = UIEdgeInsetsMake(80, 0, 49, 0)
         collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(80, 0, 49, 0)
-        collectionView?.backgroundColor = .systemColor("darkRed")
+        collectionView?.backgroundColor = UIColor(red:0.90, green:0.89, blue:0.90, alpha:1.00)
         collectionView?.isPagingEnabled = true
         collectionView?.showsHorizontalScrollIndicator = false
     }

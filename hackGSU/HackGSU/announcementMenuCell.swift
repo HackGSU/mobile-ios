@@ -43,8 +43,6 @@ class announcementMenuCell: BaseCell {
         imageView.widthAnchor.constraint(equalToConstant: 24).isActive = true
         imageView.heightAnchor.constraint(equalToConstant: 24).isActive = true
         
-        
-        
         textLabel.leftAnchor.constraint(equalTo: imageView.rightAnchor, constant: 12).isActive = true
         textLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         textLabel.widthAnchor.constraint(equalTo: widthAnchor, constant: -28).isActive = true
