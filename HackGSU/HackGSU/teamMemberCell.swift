@@ -20,8 +20,12 @@ class teamMemberCell: UICollectionViewCell {
         let iv = UIImageView()
         iv.image = UIImage(named: "profilePic")
         iv.contentMode = .scaleAspectFill
+        iv.backgroundColor = .red
+        iv.clipsToBounds = true
         iv.translatesAutoresizingMaskIntoConstraints = false
-        
+        iv.layer.cornerRadius = 75
+        iv.layer.borderColor = UIColor.yellow.cgColor
+        iv.layer.borderWidth = 1
         return iv
     }()
     
@@ -29,7 +33,7 @@ class teamMemberCell: UICollectionViewCell {
     let teamTextLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "ios Developer"
+        label.text = "iOS Developer"
         return label
     }()
     
@@ -42,7 +46,7 @@ class teamMemberCell: UICollectionViewCell {
     
     
     func setupView() {
-        backgroundColor = .yellow
+        backgroundColor = .white
         addSubview(profileImageView)
         addSubview(teamTextLabel)
         addSubview(nameTextLabel)
@@ -50,12 +54,16 @@ class teamMemberCell: UICollectionViewCell {
         //ios 9 constraints x,y, width , height
         
         profileImageView.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -1).isActive = true
-        profileImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        profileImageView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.5).isActive = true
-        profileImageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.5).isActive = true
+        profileImageView.centerYAnchor.constraint(equalTo: topAnchor).isActive = true
+        profileImageView.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        profileImageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
         
         
-        teamTextLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        teamTextLabel.topAnchor.constraint(equalTo: profileImageView.bottomAnchor).isActive = true
+        teamTextLabel.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 1).isActive = true
+        
+        nameTextLabel.topAnchor.constraint(equalTo: teamTextLabel.bottomAnchor).isActive = true
+        nameTextLabel.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0.5).isActive = true
         
         
     }

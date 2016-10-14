@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class teamMember: NSObject {
+    var memberName: String?
+    var profileImageName: String?
+    var groupName: String?
+}
