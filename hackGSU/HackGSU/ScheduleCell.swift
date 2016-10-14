@@ -66,7 +66,7 @@ class ScheduleCell: BaseCell{
     let timeSeparator: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .systemColor("darkRed")
+        view.backgroundColor = .systemColor("red")
         return view
     }()
     
