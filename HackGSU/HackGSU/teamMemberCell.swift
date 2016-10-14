@@ -24,7 +24,7 @@ class teamMemberCell: UICollectionViewCell {
         iv.clipsToBounds = true
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.layer.cornerRadius = 75
-        iv.layer.borderColor = UIColor.yellow.cgColor
+        iv.layer.borderColor = UIColor.black.cgColor
         iv.layer.borderWidth = 1
         return iv
     }()
