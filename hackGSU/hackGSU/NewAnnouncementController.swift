@@ -42,7 +42,7 @@ extension NewAnnouncementController{
         let childRef = ref.childByAutoId()
         
         let fromId = FIRAuth.auth()!.currentUser!.uid
-        let currentTime:Int = Int(NSDate().timeIntervalSince1970)
+        let currentTime:Int = Int(NSDate().timeIntervalSince1970) * 1000
         let likes = Int(22)
         
         submitButton.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
@@ -58,7 +58,7 @@ extension NewAnnouncementController{
                 
                 if let TitleText = self.titleTextView.text{
                     
-                    let values = ["Title": TitleText, "bodyText": self.bodyTextView.text, "timestamp" : currentTime, "topic": self.topicTextView.text, "fromId" : fromId, "likes": likes] as [String : Any]
+                    let values = ["title": TitleText, "bodyText": self.bodyTextView.text, "timestamp" : currentTime, "topic": self.topicTextView.text, "fromId" : fromId, "likes": likes] as [String : Any]
                     
                     childRef.updateChildValues(values)
                     print(fromId)

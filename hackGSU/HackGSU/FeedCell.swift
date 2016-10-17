@@ -25,8 +25,8 @@ class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
         
                         let announcement = Announcement()
         
-                        if let title = dictionary["Title"] as? String!{
-                            announcement.Title = title
+                        if let title = dictionary["title"] as? String!{
+                            announcement.title = title
         
                         }
                         if let bodyText = dictionary["bodyText"] as? String!{
@@ -107,7 +107,7 @@ class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
         
         let knownHeight: CGFloat = 35 + 40 + 40
         
-        if let announcementTitle = firebaseAnnouncements[indexPath.item].Title {
+        if let announcementTitle = firebaseAnnouncements[indexPath.item].title {
             
             let rect = NSString(string: announcementTitle).boundingRect(with: CGSize(width: frame.width, height: 1000), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 16)], context: nil)
             

@@ -21,8 +21,8 @@ class TrendingCell: FeedCell{
                 
                 let announcement = Announcement()
                 
-                if let title = dictionary["Title"] as? String!{
-                    announcement.Title = title
+                if let title = dictionary["title"] as? String!{
+                    announcement.title = title
                     
                 }
                 if let bodyText = dictionary["bodyText"] as? String!{

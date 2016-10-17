@@ -13,7 +13,7 @@ class AnnouncementCell: BaseCell {
     var announcement: Announcement?{
         didSet{
             announcementText.text = announcement?.bodyText
-            announcementTitle.text = announcement?.Title
+            announcementTitle.text = announcement?.title
             //announcementPoster.text = announcement?.fromId
             topicLabel.text = announcement?.topic
             timestamp.text =  setupTime((announcement?.timestamp?.intValue)!)
@@ -29,7 +29,11 @@ class AnnouncementCell: BaseCell {
     
     func setupTime(_ time: Int)->String {
         var currentTime = Int(NSDate().timeIntervalSince1970)
-        currentTime = (currentTime - time )/60
+        
+        let jodaConvert = time/1000
+        
+        currentTime = (currentTime - jodaConvert )/60
+        
         if (currentTime == 1){
             return (currentTime.description + " minute ago • ")
         }
