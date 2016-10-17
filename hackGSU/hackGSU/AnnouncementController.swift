@@ -13,6 +13,8 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     
     let cellId = "cellId"
     let trendingCellId = "trendingCellId"
+    let foodCellId = "foodCellId"
+    let techCellId = "techCellId"
     
     let titles = ["Announcements", "Trending", "Food Alerts", "Tech Tips"]
 
@@ -99,6 +101,10 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         collectionView?.backgroundColor = UIColor(red:0.90, green:0.89, blue:0.90, alpha:1.00)
         collectionView?.register(FeedCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.register(TrendingCell.self, forCellWithReuseIdentifier: trendingCellId)
+        
+        collectionView?.register(FoodCell.self, forCellWithReuseIdentifier: foodCellId)
+        collectionView?.register(TechTipCell.self, forCellWithReuseIdentifier: techCellId)
+        
         collectionView?.indicatorStyle = .black
         collectionView?.isPagingEnabled = true
         collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 49, 0)
@@ -173,14 +179,21 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if indexPath.item == 1 {
+        let index = indexPath.item
+        switch (index){
+        case 0:
+            return collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+            
+        case 1:
             return collectionView.dequeueReusableCell(withReuseIdentifier: trendingCellId, for: indexPath)
-
-        }
+        case 2:
+            return collectionView.dequeueReusableCell(withReuseIdentifier: foodCellId, for: indexPath)
+        case 3:
+            return collectionView.dequeueReusableCell(withReuseIdentifier: techCellId, for: indexPath)
+        default:
+            return collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-    
-        return cell
+        }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         //tabBar height = 49 + menuBar = 50

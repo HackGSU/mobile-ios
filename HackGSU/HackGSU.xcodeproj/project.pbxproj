@@ -26,6 +26,8 @@
 		034D46E91D9596EC0059266C /* hackGSUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034D46E81D9596EC0059266C /* hackGSUUITests.swift */; };
 		0352B6471DAEB63D009B78C3 /* AnnouncementMenuLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0352B6461DAEB63D009B78C3 /* AnnouncementMenuLauncher.swift */; };
 		0352B6491DAEB6A0009B78C3 /* announcementMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0352B6481DAEB6A0009B78C3 /* announcementMenuCell.swift */; };
+		035342581DB4A68D006339FE /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035342571DB4A68D006339FE /* FoodCell.swift */; };
+		0353425A1DB4A69B006339FE /* TechTipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035342591DB4A69B006339FE /* TechTipCell.swift */; };
 		036023221DA8CB6900E7F2E9 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036023211DA8CB6900E7F2E9 /* FeedCell.swift */; };
 		036023261DA8F2DE00E7F2E9 /* TrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036023251DA8F2DE00E7F2E9 /* TrendingCell.swift */; };
 		0360232A1DA9F70F00E7F2E9 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036023291DA9F70F00E7F2E9 /* Event.swift */; };
@@ -88,6 +90,8 @@
 		034D46EA1D9596EC0059266C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0352B6461DAEB63D009B78C3 /* AnnouncementMenuLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnnouncementMenuLauncher.swift; path = HackGSU/AnnouncementMenuLauncher.swift; sourceTree = SOURCE_ROOT; };
 		0352B6481DAEB6A0009B78C3 /* announcementMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = announcementMenuCell.swift; sourceTree = "<group>"; };
+		035342571DB4A68D006339FE /* FoodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
+		035342591DB4A69B006339FE /* TechTipCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechTipCell.swift; sourceTree = "<group>"; };
 		036023211DA8CB6900E7F2E9 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		036023251DA8F2DE00E7F2E9 /* TrendingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingCell.swift; sourceTree = "<group>"; };
 		036023291DA9F70F00E7F2E9 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -176,9 +180,11 @@
 			children = (
 				0305147C1D9ACA2800CF4863 /* AnnouncementCell.swift */,
 				03BE9C471DAD7B7600209739 /* ScheduleCell.swift */,
-				036023211DA8CB6900E7F2E9 /* FeedCell.swift */,
-				03BE9C451DAC98AF00209739 /* EventFeedCell.swift */,
 				036023251DA8F2DE00E7F2E9 /* TrendingCell.swift */,
+				036023211DA8CB6900E7F2E9 /* FeedCell.swift */,
+				035342571DB4A68D006339FE /* FoodCell.swift */,
+				035342591DB4A69B006339FE /* TechTipCell.swift */,
+				03BE9C451DAC98AF00209739 /* EventFeedCell.swift */,
 				03D00A461DAFFFE500180999 /* MapCell.swift */,
 				039E68761DA69EFF004FA963 /* MenuCell.swift */,
 				0352B6481DAEB6A0009B78C3 /* announcementMenuCell.swift */,
@@ -459,6 +465,7 @@
 				039E68771DA69EFF004FA963 /* MenuCell.swift in Sources */,
 				03484D3D1D9DB9EC0026FBB6 /* NewAnnouncementController.swift in Sources */,
 				D2B806B81DA6DE1B001CF43D /* ScheduleController.swift in Sources */,
+				0353425A1DB4A69B006339FE /* TechTipCell.swift in Sources */,
 				0352B6471DAEB63D009B78C3 /* AnnouncementMenuLauncher.swift in Sources */,
 				034D46C91D9596EC0059266C /* AppDelegate.swift in Sources */,
 				0316E0351D97227200E9160E /* AnnouncementController.swift in Sources */,
@@ -483,6 +490,7 @@
 				D2D7B5661DA6DB4A000FDE81 /* TabBarViewController.swift in Sources */,
 				030514991D9B589C00CF4863 /* LoginCell.swift in Sources */,
 				0360232A1DA9F70F00E7F2E9 /* Event.swift in Sources */,
+				035342581DB4A68D006339FE /* FoodCell.swift in Sources */,
 				0352B6491DAEB6A0009B78C3 /* announcementMenuCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
