@@ -125,7 +125,9 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         
         let vc = LoginViewController()
         DispatchQueue.main.async(execute: { () -> Void in
-            self.present(vc, animated: true, completion: nil)
+            
+            self.navigationController?.pushViewController(vc, animated: true)
+            //self.present(vc, animated: true, completion: nil)
         })
         
     }
@@ -139,6 +141,7 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         navigationController?.pushViewController(NewAnnouncementController(), animated: true)
         
         //navigationController?.pushViewController(SendFeedbackController(), animated: true)
+        
     }
     
     lazy var menuLauncher: announcementMenuLauncher = {

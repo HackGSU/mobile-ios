@@ -11,9 +11,10 @@ import UIKit
 class CodeOfConductViewController: UIViewController, UIWebViewDelegate {
 
     lazy var codeOfConductWebView: UIWebView = {
-        let webV: UIWebView = UIWebView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+        let webV: UIWebView = UIWebView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 109))
         webV.loadRequest(URLRequest(url: URL(string: "https://static.mlh.io/docs/mlh-code-of-conduct.pdf")!))
         webV.delegate = self
+        webV.scalesPageToFit = true
         return webV
     }()
     

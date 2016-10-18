@@ -11,7 +11,7 @@ import UIKit
 class SendFeedbackController: UIViewController, UIWebViewDelegate {
     
     lazy var codeOfConductWebView: UIWebView = {
-        let webV: UIWebView = UIWebView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+        let webV: UIWebView = UIWebView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 109))
         webV.loadRequest(URLRequest(url: URL(string: "https://sri40.typeform.com/to/QTFwTX")!))
         webV.delegate = self
         return webV
@@ -22,7 +22,7 @@ class SendFeedbackController: UIViewController, UIWebViewDelegate {
         
         self.view.addSubview(codeOfConductWebView)
         setupNavBarAttributes()
-        setupViews()
+        //setupViews()
         
     }
     
@@ -38,7 +38,7 @@ class SendFeedbackController: UIViewController, UIWebViewDelegate {
     func setupNavBarAttributes() {
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.barTintColor = UIColor(red:0.14, green:0.32, blue:0.95, alpha:1.00)
-        navigationItem.title = "Code of Conduct"
+        navigationItem.title = "Send Feedback"
         navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Avenir", size: 18)!, NSForegroundColorAttributeName : UIColor.white]
         navigationController!.navigationBar.tintColor = .white
     }
