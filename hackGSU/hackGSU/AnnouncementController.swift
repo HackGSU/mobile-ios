@@ -140,6 +140,8 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
             navigationController?.pushViewController(Sponsor(), animated: true)
             case "Code of Conduct":
             navigationController?.pushViewController(CodeOfConductViewController(), animated: true)
+            case "Request a mentor":
+                navigationController?.pushViewController(MentorViewController(collectionViewLayout: UICollectionViewFlowLayout()), animated: true)
             case "Send Feedback":
         navigationController?.pushViewController(SendFeedbackController(), animated: true)
         default:

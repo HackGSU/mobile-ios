@@ -30,6 +30,10 @@
 		0353425A1DB4A69B006339FE /* TechTipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035342591DB4A69B006339FE /* TechTipCell.swift */; };
 		0353425E1DB5F37B006339FE /* SendFeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0353425D1DB5F37B006339FE /* SendFeedbackController.swift */; };
 		035342601DB604DB006339FE /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0353425F1DB604DB006339FE /* Setting.swift */; };
+		035342621DB616C5006339FE /* MentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035342611DB616C5006339FE /* MentorViewController.swift */; };
+		035342641DB61B21006339FE /* MentorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035342631DB61B21006339FE /* MentorRequest.swift */; };
+		035342661DB6206F006339FE /* SendMentorRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035342651DB6206F006339FE /* SendMentorRequestView.swift */; };
+		035342681DB620AA006339FE /* SendMentorRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035342671DB620AA006339FE /* SendMentorRequestController.swift */; };
 		036023221DA8CB6900E7F2E9 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036023211DA8CB6900E7F2E9 /* FeedCell.swift */; };
 		036023261DA8F2DE00E7F2E9 /* TrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036023251DA8F2DE00E7F2E9 /* TrendingCell.swift */; };
 		0360232A1DA9F70F00E7F2E9 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036023291DA9F70F00E7F2E9 /* Event.swift */; };
@@ -98,6 +102,10 @@
 		035342591DB4A69B006339FE /* TechTipCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechTipCell.swift; sourceTree = "<group>"; };
 		0353425D1DB5F37B006339FE /* SendFeedbackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendFeedbackController.swift; sourceTree = "<group>"; };
 		0353425F1DB604DB006339FE /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		035342611DB616C5006339FE /* MentorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MentorViewController.swift; path = HackGSU/MentorViewController.swift; sourceTree = SOURCE_ROOT; };
+		035342631DB61B21006339FE /* MentorRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorRequest.swift; sourceTree = "<group>"; };
+		035342651DB6206F006339FE /* SendMentorRequestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMentorRequestView.swift; sourceTree = "<group>"; };
+		035342671DB620AA006339FE /* SendMentorRequestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMentorRequestController.swift; sourceTree = "<group>"; };
 		036023211DA8CB6900E7F2E9 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		036023251DA8F2DE00E7F2E9 /* TrendingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingCell.swift; sourceTree = "<group>"; };
 		036023291DA9F70F00E7F2E9 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -152,6 +160,7 @@
 				039E68741DA69960004FA963 /* MenuBar.swift */,
 				0360232B1DAA0B4B00E7F2E9 /* ScheduleMenuBar.swift */,
 				03484D381D9D9DCB0026FBB6 /* NewAnnouncementView.swift */,
+				035342651DB6206F006339FE /* SendMentorRequestView.swift */,
 				0305149C1D9B59EA00CF4863 /* Cells */,
 			);
 			name = View;
@@ -164,6 +173,7 @@
 				030514941D9B585E00CF4863 /* Page.swift */,
 				036023291DA9F70F00E7F2E9 /* Event.swift */,
 				0353425F1DB604DB006339FE /* Setting.swift */,
+				035342631DB61B21006339FE /* MentorRequest.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -179,6 +189,8 @@
 				D2B806B71DA6DE1B001CF43D /* ScheduleController.swift */,
 				03D00A441DAFE19300180999 /* MapController.swift */,
 				03484D3C1D9DB9EC0026FBB6 /* NewAnnouncementController.swift */,
+				035342611DB616C5006339FE /* MentorViewController.swift */,
+				035342671DB620AA006339FE /* SendMentorRequestController.swift */,
 				D2B806B51DA6DD11001CF43D /* Maps.swift */,
 				D2B12C631DB5D28F0034E8B3 /* SponsorViewController.swift */,
 				D2B12C651DB5DCD60034E8B3 /* CodeOfConductViewController.swift */,
@@ -475,9 +487,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				035342641DB61B21006339FE /* MentorRequest.swift in Sources */,
 				039E68771DA69EFF004FA963 /* MenuCell.swift in Sources */,
 				03484D3D1D9DB9EC0026FBB6 /* NewAnnouncementController.swift in Sources */,
 				D2B806B81DA6DE1B001CF43D /* ScheduleController.swift in Sources */,
+				035342621DB616C5006339FE /* MentorViewController.swift in Sources */,
 				0353425A1DB4A69B006339FE /* TechTipCell.swift in Sources */,
 				0352B6471DAEB63D009B78C3 /* AnnouncementMenuLauncher.swift in Sources */,
 				034D46C91D9596EC0059266C /* AppDelegate.swift in Sources */,
@@ -505,7 +519,9 @@
 				0305149B1D9B58BE00CF4863 /* LoginController.swift in Sources */,
 				D2D7B5661DA6DB4A000FDE81 /* TabBarViewController.swift in Sources */,
 				030514991D9B589C00CF4863 /* LoginCell.swift in Sources */,
+				035342661DB6206F006339FE /* SendMentorRequestView.swift in Sources */,
 				0360232A1DA9F70F00E7F2E9 /* Event.swift in Sources */,
+				035342681DB620AA006339FE /* SendMentorRequestController.swift in Sources */,
 				035342581DB4A68D006339FE /* FoodCell.swift in Sources */,
 				035342601DB604DB006339FE /* Setting.swift in Sources */,
 				0352B6491DAEB6A0009B78C3 /* announcementMenuCell.swift in Sources */,
