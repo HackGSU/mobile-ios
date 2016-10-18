@@ -8,11 +8,11 @@
 
 import UIKit
 
-class CodeOfConductViewController: UIViewController, UIWebViewDelegate {
-
+class SendFeedbackController: UIViewController, UIWebViewDelegate {
+    
     lazy var codeOfConductWebView: UIWebView = {
         let webV: UIWebView = UIWebView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
-        webV.loadRequest(URLRequest(url: URL(string: "https://static.mlh.io/docs/mlh-code-of-conduct.pdf")!))
+        webV.loadRequest(URLRequest(url: URL(string: "https://sri40.typeform.com/to/QTFwTX")!))
         webV.delegate = self
         return webV
     }()
@@ -42,7 +42,7 @@ class CodeOfConductViewController: UIViewController, UIWebViewDelegate {
         navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Avenir", size: 18)!, NSForegroundColorAttributeName : UIColor.white]
         navigationController!.navigationBar.tintColor = .white
     }
-
+    
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
         print("Webview fail with error \(error)");
     }
@@ -50,15 +50,15 @@ class CodeOfConductViewController: UIViewController, UIWebViewDelegate {
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         return true;
     }
-
+    
     func webViewDidStartLoad(_ webView: UIWebView) {
         print("Webview started Loading")
     }
-
+    
     func webViewDidFinishLoad(_ webView: UIWebView) {
         print("Webview did finish load")
         
         
     }
-
+    
 }
