@@ -133,7 +133,8 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     func addAnnouncement(){
 //        let newAnnouncementController = UINavigationController(rootViewController: NewAnnouncementController())
 //        present(newAnnouncementController, animated: true, completion: nil)
-        navigationController?.pushViewController(Sponsor(), animated: true)
+        //navigationController?.pushViewController(Sponsor(), animated: true)
+        navigationController?.pushViewController(CodeOfConductViewController(), animated: true)
     }
     
     lazy var menuLauncher: announcementMenuLauncher = {

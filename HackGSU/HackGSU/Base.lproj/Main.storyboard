@@ -42,6 +42,21 @@
             </objects>
             <point key="canvasLocation" x="-255.19999999999999" y="44.527736131934034"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="SVP-yQ-6P0">
+            <objects>
+                <viewController id="YZz-jA-qjr" sceneMemberID="viewController">
+                    <webView key="view" contentMode="scaleToFill" id="mch-rb-cz1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <dataDetectorType key="dataDetectorTypes"/>
+                    </webView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LW6-W9-CiB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="630" y="53"/>
+        </scene>
         <!--Announcement Feed Controller-->
         <scene sceneID="3fo-DH-nhl">
             <objects>
