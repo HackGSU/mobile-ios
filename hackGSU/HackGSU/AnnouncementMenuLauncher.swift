@@ -19,8 +19,11 @@ class announcementMenuLauncher: NSObject, UICollectionViewDataSource, UICollecti
     
     let cellId = "cellId"
     let cellHeight: CGFloat = 50
-    let options = ["About Us", "Sponsors", "Check out the Prizes", "Request a mentor", "Send Feedback", "Code of Conduct"]
-    let imageNames = ["about", "sponsor", "prize", "help", "feedback", "privacy"]
+    
+    let settings: [Setting] = {
+        return [Setting(name: "About Us", imageName: "about"), Setting(name: "Sponsors", imageName: "sponsor"), Setting(name: "Check out the Prizes", imageName: "prize"), Setting(name: "Request a mentor", imageName: "help"), Setting(name: "Send Feedback", imageName: "feedback"), Setting(name: "Code of Conduct", imageName: "privacy")]
+    }()
+
     
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -42,7 +45,7 @@ class announcementMenuLauncher: NSObject, UICollectionViewDataSource, UICollecti
             
             window.addSubview(collectionView)
             
-            let height: CGFloat = CGFloat(options.count) * cellHeight
+            let height: CGFloat = CGFloat(settings.count) * cellHeight
             let y = window.frame.height - height
             
             collectionView.frame = CGRect(x: 0, y: window.frame.height, width: window.frame.width, height: height)
@@ -61,18 +64,24 @@ class announcementMenuLauncher: NSObject, UICollectionViewDataSource, UICollecti
         }
     }
     
-    func handleDismiss() {
-        UIView.animate(withDuration: 0.5) {
-            self.blackView.alpha = 0
+    func handleDismiss(_ setting: Setting) {
+        
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: { 
             
-            if let window = UIApplication.shared.keyWindow {
-                self.collectionView.frame = CGRect(x: 0, y: window.frame.height, width: window.frame.width, height: self.collectionView.frame.height)
-            }
+                        self.blackView.alpha = 0
+            
+                        if let window = UIApplication.shared.keyWindow {
+                            self.collectionView.frame = CGRect(x: 0, y: window.frame.height, width: window.frame.width, height: self.collectionView.frame.height)
+                        }
+            
+        }) { (completed: Bool) in
+            self.announcementController.showViewControllerForSetting(setting)
         }
     }
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return options.count
+        return settings.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -82,14 +91,17 @@ class announcementMenuLauncher: NSObject, UICollectionViewDataSource, UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! announcementMenuCell
         
-        cell.textLabel.text = options[indexPath.item]
-        cell.imageView.image = UIImage(named: imageNames[indexPath.item])
+        let setting = settings[indexPath.item]
+        cell.setting = setting
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        handleDismiss()
+        
+        let setting = settings[indexPath.item]
+        
+        handleDismiss(setting)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

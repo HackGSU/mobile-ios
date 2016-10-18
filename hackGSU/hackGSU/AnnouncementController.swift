@@ -132,6 +132,27 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         
     }
     
+    func showViewControllerForSetting(_ setting: Setting){
+        let name = setting.name
+        
+        switch (name){
+            case "Sponsors":
+            navigationController?.pushViewController(Sponsor(), animated: true)
+            case "Code of Conduct":
+            navigationController?.pushViewController(CodeOfConductViewController(), animated: true)
+            case "Send Feedback":
+        navigationController?.pushViewController(SendFeedbackController(), animated: true)
+        default:
+            return
+        }
+    }
+    
+//    
+//    let settings: [Setting] = {
+//        return [Setting(name: "About Us", imageName: "about"), Setting(name: "Sponsors", imageName: "sponsor"), Setting(name: "Check out the Prizes", imageName: "prize"), Setting(name: "Request a mentor", imageName: "help"), Setting(name: "Send Feedback", imageName: "feedback"), Setting(name: "Code of Conduct", imageName: "privacy")]
+//    }()
+    
+    
     func addAnnouncement(){
 //        let newAnnouncementController = UINavigationController(rootViewController: NewAnnouncementController())
 //        present(newAnnouncementController, animated: true, completion: nil)

@@ -39,7 +39,7 @@ class TrendingCell: FeedCell{
                 }
                 
                 if let likes = dictionary["likes"] as! NSNumber?{
-                    if (Int(likes) > 5){
+                    if (Int(likes) > 35){
                         self.firebaseAnnouncements.append(announcement)
                     }
                 }

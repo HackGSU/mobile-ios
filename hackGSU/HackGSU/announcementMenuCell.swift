@@ -11,6 +11,28 @@ import UIKit
 
 class announcementMenuCell: BaseCell {
     
+    override var isHighlighted: Bool {
+        didSet {
+            backgroundColor = isHighlighted ? .lightGray : .white
+            
+            textLabel.textColor = isHighlighted ? .white : .black
+            
+            imageView.tintColor = isHighlighted ? .white : .lightGray
+        }
+    }
+    
+    var setting: Setting? {
+        didSet {
+            textLabel.text = setting?.name
+            
+            if let imageName = setting?.imageName {
+                imageView.image = UIImage(named: imageName)?.withRenderingMode(.alwaysTemplate)
+                imageView.tintColor = .lightGray
+            }
+        }
+    }
+    
+    
     let textLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black

@@ -13,7 +13,7 @@ class Sponsor: UIViewController {
     
     let sponsorImageView: UIImageView = {
         let iv = UIImageView()
-        iv.image = UIImage(named: "Sponsors")
+        iv.image = UIImage(named: "sponsors-blue")
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
     }()
