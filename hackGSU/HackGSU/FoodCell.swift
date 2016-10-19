@@ -16,7 +16,6 @@ class FoodCell : FeedCell{
         let ref = FIRDatabase.database().reference().child("announcements")
         ref.observe(.childAdded, with: { (snapshot) in
             
-            print(snapshot)
             
             if let dictionary = snapshot.value as? [String: Any]{
                 
@@ -38,6 +37,8 @@ class FoodCell : FeedCell{
                 if let fromId = dictionary["fromId"] as? String!{
                     announcement.fromId = fromId
                 }
+                announcement.uid = snapshot.key
+
 
                 
                 

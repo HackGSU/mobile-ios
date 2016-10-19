@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class AnnouncementCell: BaseCell {
+    
+    
+    var uid: String?
+    var likes: Int?
     
     var announcement: Announcement?{
         didSet{
@@ -17,8 +22,12 @@ class AnnouncementCell: BaseCell {
             //announcementPoster.text = announcement?.fromId
             topicLabel.text = announcement?.topic
             timestamp.text =  setupTime((announcement?.timestamp?.intValue)!)
+            uid = announcement?.uid
+            likes = announcement?.likes?.intValue
         }
     }
+    
+    var ref: FIRDatabaseReference!
     
     
     func setupLikes(_ likes: Int){
@@ -188,6 +197,7 @@ class AnnouncementCell: BaseCell {
     func handleLikeButton(){
         
         //button.setTitleColor(UIColor(red:0.07, green:0.45, blue:0.91, alpha:1.00), for: .normal)
+        self.toggle()
 
         likeButtonContainer.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
         UIView.animate(withDuration: 0.5,
@@ -200,18 +210,38 @@ class AnnouncementCell: BaseCell {
             }, completion:  {
                 (value: Bool) in
                 
-                self.toggle()
         })
         
+    }
+    
+    
+    func toggleLike(_ increment: String){
+        var newLike:Int
+        
+        switch (increment){
+        case "Add":
+            newLike = likes! + 1
+        case "Minus":
+            newLike = likes! - 1
+        default:
+            newLike = likes!
+        }
+        
+        
+        let ref = FIRDatabase.database().reference().child("announcements")
+        
+        ref.child(uid!).updateChildValues(["likes": newLike])
     }
     
     func toggle(){
         if likeIcon.tintColor == UIColor(red:0.07, green:0.45, blue:0.91, alpha:1.00){
             likeIcon.tintColor = .gray
             button.setTitleColor(.gray, for: .normal)
+            toggleLike("Minus")
         }else{
             likeIcon.tintColor = UIColor(red:0.07, green:0.45, blue:0.91, alpha:1.00)
             button.setTitleColor(UIColor(red:0.07, green:0.45, blue:0.91, alpha:1.00), for: .normal)
+            toggleLike("Add")
         }
     }
     

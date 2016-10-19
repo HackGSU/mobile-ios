@@ -19,7 +19,6 @@ class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
                 let ref = FIRDatabase.database().reference().child("announcements")
                 ref.observe(.childAdded, with: { (snapshot) in
         
-                    //print(snapshot)
         
                     if let dictionary = snapshot.value as? [String: Any]{
         
@@ -41,7 +40,11 @@ class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
                         if let fromId = dictionary["fromId"] as? String!{
                             announcement.fromId = fromId
                         }
-        
+                        if let likes = dictionary["likes"] as! NSNumber?{
+                            announcement.likes = likes
+                        }
+                        announcement.uid = snapshot.key
+                        
                         self.firebaseAnnouncements.append(announcement)
         
                         self.firebaseAnnouncements.sort(by: { (message1, message2) -> Bool in

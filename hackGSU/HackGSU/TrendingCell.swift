@@ -15,7 +15,6 @@ class TrendingCell: FeedCell{
         let ref = FIRDatabase.database().reference().child("announcements")
         ref.observe(.childAdded, with: { (snapshot) in
             
-            print(snapshot)
             
             if let dictionary = snapshot.value as? [String: Any]{
                 
@@ -37,6 +36,8 @@ class TrendingCell: FeedCell{
                 if let fromId = dictionary["fromId"] as? String!{
                     announcement.fromId = fromId
                 }
+                announcement.uid = snapshot.key
+
                 
                 if let likes = dictionary["likes"] as! NSNumber?{
                     if (Int(likes) > 40){

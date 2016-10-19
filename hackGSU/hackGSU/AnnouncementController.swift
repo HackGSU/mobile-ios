@@ -51,7 +51,6 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         titleLabel.font = UIFont.systemFont(ofSize: 20)
         navigationItem.titleView = titleLabel
         
-        //navigationController?.hidesBarsOnSwipe = true
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.barTintColor = UIColor(red:0.14, green:0.32, blue:0.95, alpha:1.00)
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
@@ -148,23 +147,10 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
             return
         }
     }
-    
-//    
-//    let settings: [Setting] = {
-//        return [Setting(name: "About Us", imageName: "about"), Setting(name: "Sponsors", imageName: "sponsor"), Setting(name: "Check out the Prizes", imageName: "prize"), Setting(name: "Request a mentor", imageName: "help"), Setting(name: "Send Feedback", imageName: "feedback"), Setting(name: "Code of Conduct", imageName: "privacy")]
-//    }()
-    
+
     
     func addAnnouncement(){
-//        let newAnnouncementController = UINavigationController(rootViewController: NewAnnouncementController())
-//        present(newAnnouncementController, animated: true, completion: nil)
-        //navigationController?.pushViewController(Sponsor(), animated: true)
-        //navigationController?.pushViewController(CodeOfConductViewController(), animated: true)
-        
         navigationController?.pushViewController(NewAnnouncementController(), animated: true)
-        
-        //navigationController?.pushViewController(SendFeedbackController(), animated: true)
-        
     }
     
     lazy var menuLauncher: announcementMenuLauncher = {
