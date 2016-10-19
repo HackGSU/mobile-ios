@@ -11,23 +11,12 @@ import Firebase
 
 extension NewAnnouncementController{
     
-    func setupNavBarAttributes(){
-        navigationItem.title = "Add Announcement"
-        navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Avenir", size: 24)!, NSForegroundColorAttributeName : UIColor.white]
-        
+    func setupNavBarAttributes() {
         navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.barTintColor = UIColor(red:0.07, green:0.45, blue:0.91, alpha:1.00)
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-        
-        let cancelButton = UIBarButtonItem(image: UIImage(named: "Delete"), style: .plain, target: self, action: #selector(dismissController))
-        cancelButton.tintColor = .white
-        navigationItem.leftBarButtonItem = cancelButton
-        
-    }
-    
-    func dismissController(){
-        self.dismiss(animated: true, completion: nil)
+        navigationController?.navigationBar.barTintColor = UIColor(red:0.14, green:0.32, blue:0.95, alpha:1.00)
+        navigationItem.title = "Add Announcement"
+        navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Avenir", size: 18)!, NSForegroundColorAttributeName : UIColor.white]
+        navigationController!.navigationBar.tintColor = .white
     }
     
     func addAnnouncement(){
@@ -41,9 +30,9 @@ extension NewAnnouncementController{
         let ref = FIRDatabase.database().reference().child("announcements")
         let childRef = ref.childByAutoId()
         
-        let fromId = FIRAuth.auth()!.currentUser!.uid
-        let currentTime:Int = Int(NSDate().timeIntervalSince1970)
+        let currentTime:Int = Int(NSDate().timeIntervalSince1970) * 1000
         
+        let likes = getLikes()
         
         submitButton.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
         UIView.animate(withDuration: 1.0,
@@ -58,12 +47,13 @@ extension NewAnnouncementController{
                 
                 if let TitleText = self.titleTextView.text{
                     
-                    let values = ["Title": TitleText, "bodyText": self.bodyTextView.text, "timestamp" : currentTime, "topic": self.topicTextView.text, "fromId" : fromId] as [String : Any]
+                    let values = ["title": TitleText, "bodyText": self.bodyTextView.text, "timestamp" : currentTime, "topic": self.topicTextView.text, "likes": likes] as [String : Any]
                     
                     childRef.updateChildValues(values)
-                    print(fromId)
-                    print(childRef.description())
-                    self.dismiss(animated: true, completion: nil)
+                    
+                self.navigationController!.popViewController(animated: true)
+
+                
                 }else{
                     print("Enter value for Title")
                     
@@ -73,7 +63,10 @@ extension NewAnnouncementController{
         
     }
 
-    
+    func getLikes()-> Int {
+        let random = Int(arc4random_uniform(50))
+        return random
+    }
 
     
     

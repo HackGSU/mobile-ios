@@ -7,29 +7,47 @@
 //
 
 import UIKit
+import Firebase
 
-class AnnouncementCell: UICollectionViewCell {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupViews()
-    }
+class AnnouncementCell: BaseCell {
+    
+    
+    var ac = announcementFeedController()
+    
+    var uid: String?
+    var likes: Int?
+    var array: [String] = []
     
     var announcement: Announcement?{
         didSet{
             announcementText.text = announcement?.bodyText
-            announcementTitle.text = announcement?.Title
+            announcementTitle.text = announcement?.title
             //announcementPoster.text = announcement?.fromId
             topicLabel.text = announcement?.topic
-            
             timestamp.text =  setupTime((announcement?.timestamp?.intValue)!)
-            
-            
+            uid = announcement?.uid
+            likes = announcement?.likes?.intValue
+            array.append((announcement?.title)!)
+            array.append((announcement?.bodyText)!)
+        }
+    }
+    
+    var ref: FIRDatabaseReference!
+    
+    
+    func setupLikes(_ likes: Int){
+        if (likes > 1){
+            self.button.setTitle(likes.description, for: .normal)
         }
     }
     
     func setupTime(_ time: Int)->String {
         var currentTime = Int(NSDate().timeIntervalSince1970)
-        currentTime = (currentTime - time )/60
+        
+        let jodaConvert = time/1000
+        
+        currentTime = (currentTime - jodaConvert )/60
+        
         if (currentTime == 1){
             return (currentTime.description + " minute ago • ")
         }
@@ -53,18 +71,18 @@ class AnnouncementCell: UICollectionViewCell {
         return view
     }()
     
-    lazy var moreButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.contentMode = .scaleAspectFit
-        button.setImage(UIImage(named: "mores"), for: .normal)
-        button.addTarget(self, action: #selector(handleMore), for: .touchUpInside)
-        return button
-    }()
-    
-    func handleMore(){
-        print("more")
-    }
+//    lazy var moreButton: UIButton = {
+//        let button = UIButton()
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        button.contentMode = .scaleAspectFit
+//        button.setImage(UIImage(named: "mores"), for: .normal)
+//        button.addTarget(self, action: #selector(handleMore), for: .touchUpInside)
+//        return button
+//    }()
+//    
+//    func handleMore(){
+//        print("more")
+//    }
     
     let timestamp: UILabel = {
         let label = UILabel()
@@ -162,15 +180,6 @@ class AnnouncementCell: UICollectionViewCell {
         return button
     }()
     
-    lazy var secondbutton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Comment", for: .normal)
-        button.setTitleColor(.gray, for: .normal)
-        button.addTarget(self, action: #selector(handleButton), for: .touchUpInside)
-        return button
-    }()
-    
     lazy var thirdbutton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -183,7 +192,8 @@ class AnnouncementCell: UICollectionViewCell {
     
     func handleLikeButton(){
         
-        
+        self.toggle()
+
         likeButtonContainer.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
         UIView.animate(withDuration: 0.5,
                        delay: 0,
@@ -195,23 +205,44 @@ class AnnouncementCell: UICollectionViewCell {
             }, completion:  {
                 (value: Bool) in
                 
-                self.toggle()
         })
         
+    }
+    
+    
+    func toggleLike(_ increment: String){
+        var newLike:Int = likes!
+        
+        switch (increment){
+        case "Add":
+            newLike += 1
+        case "Minus":
+            newLike -= 1
+        default:
+            newLike = likes!
+        }
+        
+        
+        let ref = FIRDatabase.database().reference().child("announcements")
+        
+        ref.child(uid!).updateChildValues(["likes": newLike])
     }
     
     func toggle(){
         if likeIcon.tintColor == UIColor(red:0.07, green:0.45, blue:0.91, alpha:1.00){
             likeIcon.tintColor = .gray
             button.setTitleColor(.gray, for: .normal)
+            toggleLike("Minus")
         }else{
             likeIcon.tintColor = UIColor(red:0.07, green:0.45, blue:0.91, alpha:1.00)
             button.setTitleColor(UIColor(red:0.07, green:0.45, blue:0.91, alpha:1.00), for: .normal)
+            toggleLike("Add")
         }
     }
     
+    
     func handleButton(){
-        print(123)
+        ac.prints(array)
     }
     
     let buttonBottomSeparatorView: UIView = {
@@ -230,8 +261,8 @@ class AnnouncementCell: UICollectionViewCell {
     
     let topicLabel: UILabel = {
         let label = UILabel()
-        label.backgroundColor = .lightGray
-        //label.text = "GENERAL"
+        label.backgroundColor = UIColor(white: 0.8, alpha:1)
+        label.text = "GENERAL"
         label.textAlignment = .center
         label.font = UIFont.boldSystemFont(ofSize: 9)
         label.textColor = .white
@@ -244,7 +275,7 @@ class AnnouncementCell: UICollectionViewCell {
         return CGSize(width: self.frame.width, height: UIViewNoIntrinsicMetric)
     }
     
-    func setupViews(){
+    override func setupViews(){
         addSubview(announcementInfoContainer)
         addSubview(announcementTitle)
         addSubview(announcementText)
@@ -255,17 +286,13 @@ class AnnouncementCell: UICollectionViewCell {
 
         announcementInfoContainer.addSubview(timestamp)
         announcementInfoContainer.addSubview(announcementPoster)
-        announcementInfoContainer.addSubview(moreButton)
+//        announcementInfoContainer.addSubview(moreButton)
         
         bottomButtonContainer.addSubview(likeButtonContainer)
-        //bottomButtonContainer.addSubview(commentButtonContainer)
         bottomButtonContainer.addSubview(shareButtonContainer)
         
         likeButtonContainer.addSubview(likeIcon)
         likeButtonContainer.addSubview(button)
-        
-//        commentButtonContainer.addSubview(commentIcon)
-//        commentButtonContainer.addSubview(secondbutton)
         
         shareButtonContainer.addSubview(shareIcon)
         shareButtonContainer.addSubview(thirdbutton)
@@ -285,10 +312,10 @@ class AnnouncementCell: UICollectionViewCell {
         announcementPoster.widthAnchor.constraint(equalToConstant: 150)
         announcementPoster.heightAnchor.constraint(equalToConstant: 30)
         
-        moreButton.rightAnchor.constraint(equalTo: announcementInfoContainer.rightAnchor, constant: -12).isActive = true
-        moreButton.centerYAnchor.constraint(equalTo: announcementPoster.centerYAnchor).isActive = true
-        moreButton.widthAnchor.constraint(equalToConstant: 100)
-        moreButton.heightAnchor.constraint(equalToConstant: 30)
+//        moreButton.rightAnchor.constraint(equalTo: announcementInfoContainer.rightAnchor, constant: -12).isActive = true
+//        moreButton.centerYAnchor.constraint(equalTo: announcementPoster.centerYAnchor).isActive = true
+//        moreButton.widthAnchor.constraint(equalToConstant: 100)
+//        moreButton.heightAnchor.constraint(equalToConstant: 30)
         
         announcementTitle.topAnchor.constraint(equalTo: announcementInfoContainer.bottomAnchor, constant: -12).isActive = true
         announcementTitle.leadingAnchor.constraint(equalTo: self.readableContentGuide.leadingAnchor).isActive = true
@@ -333,21 +360,6 @@ class AnnouncementCell: UICollectionViewCell {
         likeIcon.widthAnchor.constraint(equalToConstant: 20).isActive = true
         likeIcon.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
-//        commentButtonContainer.leftAnchor.constraint(equalTo: likeButtonContainer.rightAnchor).isActive = true
-//        commentButtonContainer.centerYAnchor.constraint(equalTo: bottomButtonContainer.centerYAnchor).isActive = true
-//        commentButtonContainer.widthAnchor.constraint(equalTo: bottomButtonContainer.widthAnchor, multiplier: 0.33).isActive = true
-//        commentButtonContainer.heightAnchor.constraint(equalTo: bottomButtonContainer.heightAnchor, multiplier: 1.0).isActive = true
-//        
-//        secondbutton.centerXAnchor.constraint(equalTo: commentButtonContainer.centerXAnchor, constant: 4).isActive = true
-//        secondbutton.centerYAnchor.constraint(equalTo: commentButtonContainer.centerYAnchor).isActive = true
-//        secondbutton.widthAnchor.constraint(equalTo: commentButtonContainer.widthAnchor, multiplier: 0.8).isActive = true
-//        secondbutton.heightAnchor.constraint(equalTo: commentButtonContainer.heightAnchor, multiplier: 0.9).isActive = true
-//        
-//        commentIcon.rightAnchor.constraint(equalTo: secondbutton.leftAnchor, constant: 2).isActive = true
-//        commentIcon.centerYAnchor.constraint(equalTo: secondbutton.centerYAnchor).isActive = true
-//        commentIcon.widthAnchor.constraint(equalToConstant: 20).isActive = true
-//        commentIcon.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        
         shareButtonContainer.leftAnchor.constraint(equalTo: likeButtonContainer.rightAnchor).isActive = true
         shareButtonContainer.centerYAnchor.constraint(equalTo: bottomButtonContainer.centerYAnchor).isActive = true
         shareButtonContainer.widthAnchor.constraint(equalTo: bottomButtonContainer.widthAnchor, multiplier: 0.5).isActive = true
@@ -370,8 +382,6 @@ class AnnouncementCell: UICollectionViewCell {
         
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+
 }
 

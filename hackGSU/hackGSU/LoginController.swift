@@ -156,10 +156,17 @@ class LoginViewController: UIViewController, UICollectionViewDataSource, UIColle
         return pages.count + 1
     }
     
+    
+    func dismissLoginController(){
+        
+    }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if indexPath.item == pages.count {
-            let loginCell = collectionView.dequeueReusableCell(withReuseIdentifier: loginCellId, for: indexPath)
+            let loginCell = collectionView.dequeueReusableCell(withReuseIdentifier: loginCellId, for: indexPath) as! LoginCell
+            
+            loginCell.loginController = self
+            
             return loginCell
         }
         
@@ -189,10 +196,6 @@ class LoginViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
 }
-
-
-
-
 
 
 

@@ -10,11 +10,12 @@ import Foundation
 
 class Announcement: NSObject {
     
-    var Title: String?
+    var title: String?
     var bodyText: String?
     var timestamp: NSNumber?
     var topic: String?
     var fromId: String?
     var uid: String?
+    var likes: NSNumber?
     
 }
