@@ -14,7 +14,8 @@ class MapController: UICollectionViewController, UICollectionViewDelegateFlowLay
     
     let cellId = "cellId"
     
-    let imageNames = ["firstmap", "secondmap"]
+    let imageNames = ["concourse", "firstfloor"]
+    let floorNames = ["CONCOURSE FLOOR", "FIRST FLOOR"]
     
     override func viewDidLoad() {
         collectionView?.backgroundColor = .white
@@ -73,6 +74,8 @@ class MapController: UICollectionViewController, UICollectionViewDelegateFlowLay
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MapCell
         cell.mapImageView.image = UIImage(named: imageNames[indexPath.item])
+        
+        cell.floorLabel.text = floorNames[indexPath.item]
         
         return cell
         

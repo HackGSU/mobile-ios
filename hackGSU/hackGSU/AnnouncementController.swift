@@ -223,9 +223,8 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     }
     
     func prints(_ message: [String]){
-        print("yay")
         
-        let concate = message[0] + " " + message[1]
+        let concate = "\(message[0])  \(message[1])"
         
         let shareItems:Array = [concate]
         

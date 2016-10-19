@@ -34,7 +34,7 @@ extension SendMentorRequestController{
             return
         }
         
-        let ref = FIRDatabase.database().reference().child("mentorRequests")
+        let ref = FIRDatabase.database().reference().child("mentor_requests")
         let childRef = ref.child(uid)
         
         let fromId = FIRAuth.auth()!.currentUser!.uid

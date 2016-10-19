@@ -9,10 +9,14 @@
 import Foundation
 
 class MentorRequest: NSObject {
-    
-    var timestamp: NSNumber?
-    var name: String?
-    var bodyText: String?
+    var category: String?
+    var textdescription: String?
+    var floor: String?
     var location: String?
-    
+    var status: String?
+    var teamName: String?
+    var timestamp: NSNumber?
+    var title: String?
+    var name: String?
+    var uid: String?
 }

@@ -26,30 +26,48 @@ class MentorViewController: UICollectionViewController, UICollectionViewDelegate
     
     func observeAnnouncements(){
         
-        let ref = FIRDatabase.database().reference().child("mentorRequests")
+        let ref = FIRDatabase.database().reference().child("mentor_requests")
         ref.observe(.childAdded, with: { (snapshot) in
-            
-            print(snapshot)
             
             if let dictionary = snapshot.value as? [String: Any]{
                 
                 let requests = MentorRequest()
                 
-                if let name = dictionary["name"] as? String!{
-                    requests.name = name
+                if let teamName = dictionary["teamName"] as? String!{
+                    requests.name = teamName
                 }
                 if let timestamp = dictionary["timestamp"] as? NSNumber!{
                     requests.timestamp = timestamp
                 }
-                if let bodyText = dictionary["bodyText"] as? String!{
-                    requests.bodyText = bodyText
+                if let textdescription = dictionary["description"] as? String!{
+                    requests.textdescription = textdescription
                 }
                 if let location = dictionary["location"] as? String!{
                     requests.location = location
                 }
+                if let category = dictionary["category"] as? String!{
+                    requests.category = category
+                }
+                if let floor = dictionary["floor"] as? String!{
+                    requests.floor = floor
+                }
+                if let status = dictionary["staus"] as? String!{
+                    requests.status = status
+                }
+                if let title = dictionary["title"] as? String!{
+                    requests.title = title
+                }
+                requests.uid = snapshot.key
+                print(snapshot.key)
+                print(FIRAuth.auth()?.currentUser?.uid)
                 
                 self.firebaseRequests.append(requests)
 
+                
+//                if (FIRAuth.auth()?.currentUser?.uid == snapshot.key){
+//                    print(requests)
+//                }
+                
                 self.firebaseRequests.sort(by: { (message1, message2) -> Bool in
                     
                     return (message1.timestamp?.intValue)! > (message2.timestamp?.intValue)!
@@ -70,7 +88,7 @@ class MentorViewController: UICollectionViewController, UICollectionViewDelegate
 
         
         navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.barTintColor = UIColor(red:0.14, green:0.32, blue:0.95, alpha:1.00)
+        //navigationController?.navigationBar.barTintColor = UIColor(red:0.14, green:0.32, blue:0.95, alpha:1.00)
         navigationItem.title = "Request Help"
         navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Avenir", size: 18)!, NSForegroundColorAttributeName : UIColor.white]
         navigationController!.navigationBar.tintColor = .white
@@ -91,7 +109,7 @@ class MentorViewController: UICollectionViewController, UICollectionViewDelegate
             flowlayout.minimumInteritemSpacing = 5
         }
         
-        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.register(MentorRequestCell.self, forCellWithReuseIdentifier: cellId)
         
         collectionView?.contentInset = UIEdgeInsetsMake(0, 0, 49, 0)
         collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 49, 0)
@@ -114,14 +132,28 @@ class MentorViewController: UICollectionViewController, UICollectionViewDelegate
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: view.frame.height/2)
+        
+        let knownHeight: CGFloat = 35 + 40 + 40
+        
+        if let announcementTitle = firebaseRequests[indexPath.item].title {
+            
+            let rect = NSString(string: announcementTitle).boundingRect(with: CGSize(width: view.frame.width, height: 1000), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 16)], context: nil)
+            
+            let rectTitle = NSString(string: (firebaseRequests[indexPath.item].textdescription)!).boundingRect(with: CGSize(width: view.frame.width, height: 1000), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 16)], context: nil)
+            
+            
+            return CGSize(width: view.frame.width, height: rect.height + knownHeight + rectTitle.height )
+        }
+        
+        return CGSize(width: view.frame.width, height: 400)
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-        cell.backgroundColor = .red
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MentorRequestCell
         
+        cell.mentorRequest = firebaseRequests[indexPath.item]
+        cell.backgroundColor = .white
         return cell
         
     }
