@@ -39,7 +39,7 @@ class announcementMenuCell: BaseCell {
         label.textAlignment = .left
         label.font = UIFont.systemFont(ofSize: 18)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .gray
+        label.textColor = .lightGray
         return label
     }()
     

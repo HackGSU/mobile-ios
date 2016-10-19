@@ -14,10 +14,7 @@ extension SendMentorRequestController{
     
     func setupNavBarAttributes() {
         navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.barTintColor = UIColor(red:0.14, green:0.32, blue:0.95, alpha:1.00)
         navigationItem.title = "Request Mentor"
-        
-        
         
         navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Avenir", size: 18)!, NSForegroundColorAttributeName : UIColor.white]
         navigationController?.navigationBar.tintColor = .white
@@ -25,8 +22,7 @@ extension SendMentorRequestController{
     
     func addAnnouncement(){
         
-        if nameTextView.text.isEmpty || bodyTextView.text.isEmpty || LocationTextView.text.isEmpty{
-            print("Enter values")
+        if (teamNameLabel.text?.isEmpty)! || (topicLabel.text?.isEmpty)! || (titleLabel.text?.isEmpty)! || bodyTextView.text.isEmpty{
             return
         }
         
@@ -36,8 +32,7 @@ extension SendMentorRequestController{
         
         let ref = FIRDatabase.database().reference().child("mentor_requests")
         let childRef = ref.child(uid)
-        
-        let fromId = FIRAuth.auth()!.currentUser!.uid
+
         let currentTime:Int = Int(NSDate().timeIntervalSince1970) * 1000
         
         submitButton.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
@@ -51,13 +46,11 @@ extension SendMentorRequestController{
             }, completion:  {
                 (value: Bool) in
                 
-                if let nameText = self.nameTextView.text{
+                if let nameText = self.titleLabel.text{
                     
                     let values = ["name": nameText, "bodyText": self.bodyTextView.text, "timestamp" : currentTime, "location": self.LocationTextView.text] as [String : Any]
                     
                     childRef.updateChildValues(values)
-                    print(fromId)
-                    print(childRef.description())
                     
                     self.navigationController!.popViewController(animated: true)
                     

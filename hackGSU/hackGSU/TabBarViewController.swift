@@ -63,9 +63,6 @@ class TabBarViewController: UIViewController, BATabBarControllerDelegate {
         
         let vc3 = UINavigationController(rootViewController: MapController(collectionViewLayout: UICollectionViewFlowLayout()))
         vc3.title = "Maps"
-//
-//        let vc3 = storyboard?.instantiateViewController(withIdentifier: "Maps")
-//        vc3?.title = "Maps"
         
         self.tabBar = BATabBarController()
         self.tabBar.tabBarItemStrokeColor = .white

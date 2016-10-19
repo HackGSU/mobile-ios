@@ -137,6 +137,9 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         let name = setting.name
         
         switch (name){
+            
+            case "About Us":
+            navigationController?.pushViewController(AboutViewController(collectionViewLayout: UICollectionViewFlowLayout()), animated: true)
             case "Sponsors":
             navigationController?.pushViewController(Sponsor(), animated: true)
             case "Check out the Prizes":
@@ -228,7 +231,7 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     
     func prints(_ message: [String]){
         
-        let concate = "\(message[0])  \(message[1])"
+        let concate = "\(message[1])"
         
         let shareItems:Array = [concate]
         

@@ -21,6 +21,13 @@ class MapCell: BaseCell{
         return label
     }()
     
+    let bottomSeparatorView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = UIColor.lightGray
+        return view
+    }()
+
     
     let mapImageView: UIImageView = {
         let iv = UIImageView()
@@ -36,6 +43,7 @@ class MapCell: BaseCell{
         super.setupViews()
         
         addSubview(floorLabel)
+        addSubview(bottomSeparatorView)
         addSubview(mapImageView)
         
         
@@ -44,7 +52,12 @@ class MapCell: BaseCell{
         floorLabel.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
         floorLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
-        mapImageView.topAnchor.constraint(equalTo: floorLabel.bottomAnchor).isActive = true
+        bottomSeparatorView.topAnchor.constraint(equalTo: floorLabel.bottomAnchor).isActive = true
+        bottomSeparatorView.centerXAnchor.constraint(equalTo: floorLabel.centerXAnchor).isActive = true
+        bottomSeparatorView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1).isActive = true
+        bottomSeparatorView.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
+        
+        mapImageView.topAnchor.constraint(equalTo: bottomSeparatorView.bottomAnchor).isActive = true
         mapImageView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         mapImageView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
         mapImageView.heightAnchor.constraint(equalTo: heightAnchor, constant: -50).isActive = true

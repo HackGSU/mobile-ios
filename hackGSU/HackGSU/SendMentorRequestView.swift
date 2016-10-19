@@ -10,6 +10,55 @@ import UIKit
 
 class SendMentorRequestController: UIViewController{
     
+    
+    let teamNameLabel: UITextField = {
+        let tf = UITextField()
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.layer.borderColor = UIColor.lightGray.cgColor
+        tf.layer.borderWidth = 0.5
+        tf.placeholder = "Team Name"
+        tf.textAlignment = .center
+        return tf
+    }()
+    
+    let topicLabel: UITextField = {
+        let tf = UITextField()
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.layer.borderColor = UIColor.lightGray.cgColor
+        tf.layer.borderWidth = 0.5
+        tf.placeholder = "Topic"
+        tf.textAlignment = .center
+        return tf
+    }()
+    
+    let floorContainer: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.borderWidth = 0.5
+        view.layer.borderColor = UIColor.lightGray.cgColor
+        return view
+    }()
+    
+    let locationLabel: UITextField = {
+        let tf = UITextField()
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.layer.borderColor = UIColor.lightGray.cgColor
+        tf.layer.borderWidth = 0.5
+        tf.placeholder = "Location"
+        tf.textAlignment = .center
+        return tf
+    }()
+    
+    let titleLabel: UITextField = {
+        let tf = UITextField()
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.layer.borderColor = UIColor.lightGray.cgColor
+        tf.layer.borderWidth = 0.5
+        tf.placeholder = "What's Your Problem?"
+        tf.textAlignment = .center
+        return tf
+    }()
+    
     lazy var nameTextView: UITextView = {
         let tv = UITextView()
         tv.translatesAutoresizingMaskIntoConstraints = false
@@ -43,7 +92,7 @@ class SendMentorRequestController: UIViewController{
     lazy var submitButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = UIColor(red:0.07, green:0.45, blue:0.91, alpha:1.00)
+        button.backgroundColor = UIColor(white: 0.8, alpha: 1)
         button.setTitle("Send Mentor Request", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(addAnnouncement), for: .touchUpInside)
@@ -59,21 +108,45 @@ class SendMentorRequestController: UIViewController{
         setupViews()
     }
     func setupViews(){
-        view.addSubview(nameTextView)
-        view.addSubview(LocationTextView)
+        
+        view.addSubview(teamNameLabel)
+        view.addSubview(topicLabel)
+        view.addSubview(floorContainer)
+        view.addSubview(locationLabel)
+        view.addSubview(titleLabel)
         view.addSubview(bodyTextView)
         view.addSubview(submitButton)
         
-        nameTextView.anchorWithConstantsToTop(topLayoutGuide.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 12, leftConstant: 12, bottomConstant: 0, rightConstant: 12)
-        nameTextView.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        teamNameLabel.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 12).isActive = true
+        teamNameLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 6).isActive = true
+        teamNameLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5, constant: -12).isActive = true
+        teamNameLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
-        LocationTextView.anchorWithConstantsToTop(nameTextView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 6, leftConstant: 12, bottomConstant: 0, rightConstant: 12)
-        LocationTextView.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        topicLabel.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 12).isActive = true
+        topicLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -6).isActive = true
+        topicLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5, constant: -12).isActive = true
+        topicLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
-        bodyTextView.anchorWithConstantsToTop(LocationTextView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 6, leftConstant: 12, bottomConstant: 0, rightConstant: 12)
-        bodyTextView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
-        _ = submitButton.anchor(bodyTextView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 6, leftConstant: 12, bottomConstant: 0, rightConstant: 12, widthConstant: 0, heightConstant: 50)
+        floorContainer.topAnchor.constraint(equalTo: teamNameLabel.bottomAnchor, constant: 12).isActive = true
+        floorContainer.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 6).isActive = true
+        floorContainer.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5, constant: -12).isActive = true
+        floorContainer.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        
+        locationLabel.topAnchor.constraint(equalTo: topicLabel.bottomAnchor, constant: 12).isActive = true
+        locationLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -6).isActive = true
+        locationLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5, constant: -12).isActive = true
+        locationLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        
+        titleLabel.anchorWithConstantsToTop(floorContainer.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 12, leftConstant: 6, bottomConstant: 0, rightConstant: 6)
+        titleLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        
+        bodyTextView.anchorWithConstantsToTop(titleLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 6, leftConstant: 6, bottomConstant: 0, rightConstant: 6)
+        bodyTextView.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        
+        submitButton.anchorWithConstantsToTop(bodyTextView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 6, leftConstant: 6, bottomConstant: 0, rightConstant: 6)
+        submitButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
         
     }
     

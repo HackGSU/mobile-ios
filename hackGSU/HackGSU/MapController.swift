@@ -74,7 +74,7 @@ class MapController: UICollectionViewController, UICollectionViewDelegateFlowLay
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: view.frame.height/2)
+        return CGSize(width: view.frame.width, height: view.frame.height/1.5)
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -92,6 +92,9 @@ class MapController: UICollectionViewController, UICollectionViewDelegateFlowLay
         let name = setting.name
         
         switch (name){
+        case "About Us":
+            navigationController?.pushViewController(AboutViewController(collectionViewLayout: UICollectionViewFlowLayout()), animated: true)
+
         case "Sponsors":
             navigationController?.pushViewController(Sponsor(), animated: true)
         case "Check out the Prizes":

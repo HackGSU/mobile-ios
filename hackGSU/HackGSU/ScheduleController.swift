@@ -159,6 +159,8 @@ class scheduleFeedController: UICollectionViewController, UICollectionViewDelega
         let name = setting.name
         
         switch (name){
+        case "About Us":
+            navigationController?.pushViewController(AboutViewController(collectionViewLayout: UICollectionViewFlowLayout()), animated: true)
         case "Sponsors":
             navigationController?.pushViewController(Sponsor(), animated: true)
         case "Check out the Prizes":

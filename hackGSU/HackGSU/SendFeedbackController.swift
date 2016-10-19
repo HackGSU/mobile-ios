@@ -44,7 +44,6 @@ class SendFeedbackController: UIViewController, UIWebViewDelegate {
     }
     
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
-        print("Webview fail with error \(error)");
     }
     
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
@@ -52,11 +51,9 @@ class SendFeedbackController: UIViewController, UIWebViewDelegate {
     }
     
     func webViewDidStartLoad(_ webView: UIWebView) {
-        print("Webview started Loading")
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        print("Webview did finish load")
         
         
     }
