@@ -58,8 +58,15 @@ class MapController: UICollectionViewController, UICollectionViewDelegateFlowLay
         collectionView?.backgroundColor = UIColor(red:0.90, green:0.89, blue:0.90, alpha:1.00)
     }
     
+    
+    lazy var menuLauncher : announcementMenuLauncher = {
+        let launcher = announcementMenuLauncher()
+        launcher.mapController = self
+        return launcher
+    }()
+    
     func menuTap(){
-        
+        menuLauncher.showSettings()
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -79,6 +86,25 @@ class MapController: UICollectionViewController, UICollectionViewDelegateFlowLay
         
         return cell
         
+    }
+    
+    func showViewControllerForSetting(_ setting: Setting){
+        let name = setting.name
+        
+        switch (name){
+        case "Sponsors":
+            navigationController?.pushViewController(Sponsor(), animated: true)
+        case "Check out the Prizes":
+            navigationController?.pushViewController(PrizesViewController(), animated: true)
+        case "Code of Conduct":
+            navigationController?.pushViewController(CodeOfConductViewController(), animated: true)
+        case "Request a mentor":
+            navigationController?.pushViewController(MentorViewController(collectionViewLayout: UICollectionViewFlowLayout()), animated: true)
+        case "Send Feedback":
+            navigationController?.pushViewController(SendFeedbackController(), animated: true)
+        default:
+            return
+        }
     }
     
 }

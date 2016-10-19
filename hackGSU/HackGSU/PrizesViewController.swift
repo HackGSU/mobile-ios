@@ -38,7 +38,7 @@ class PrizesViewController: UIViewController, UIWebViewDelegate {
     
     func setupNavBarAttributes() {
         navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.barTintColor = UIColor(red:0.14, green:0.32, blue:0.95, alpha:1.00)
+        //navigationController?.navigationBar.barTintColor = UIColor(red:0.14, green:0.32, blue:0.95, alpha:1.00)
         navigationItem.title = "Prizes"
         navigationController!.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Avenir", size: 18)!, NSForegroundColorAttributeName : UIColor.white]
         navigationController!.navigationBar.tintColor = .white

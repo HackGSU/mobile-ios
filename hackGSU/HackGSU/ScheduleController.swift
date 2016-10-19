@@ -111,9 +111,9 @@ class scheduleFeedController: UICollectionViewController, UICollectionViewDelega
     }
     
     
-    lazy var menuLauncher: ScheduleMenuLauncher = {
-       let launcher = ScheduleMenuLauncher()
-        launcher.announcementController = self
+    lazy var menuLauncher: announcementMenuLauncher = {
+       let launcher = announcementMenuLauncher()
+        launcher.scheduleController = self
         return launcher
     }()
     
@@ -156,5 +156,24 @@ class scheduleFeedController: UICollectionViewController, UICollectionViewDelega
         
         
         
+    }
+    
+    func showViewControllerForSetting(_ setting: Setting){
+        let name = setting.name
+        
+        switch (name){
+        case "Sponsors":
+            navigationController?.pushViewController(Sponsor(), animated: true)
+        case "Check out the Prizes":
+            navigationController?.pushViewController(PrizesViewController(), animated: true)
+        case "Code of Conduct":
+            navigationController?.pushViewController(CodeOfConductViewController(), animated: true)
+        case "Request a mentor":
+            navigationController?.pushViewController(MentorViewController(collectionViewLayout: UICollectionViewFlowLayout()), animated: true)
+        case "Send Feedback":
+            navigationController?.pushViewController(SendFeedbackController(), animated: true)
+        default:
+            return
+        }
     }
 }

@@ -39,7 +39,9 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
     
     func checkIfUserIsLoggedIn(){
         if FIRAuth.auth()?.currentUser?.uid == nil {
-            perform(#selector(logOut), with: nil, afterDelay: 0)
+            FIRAuth.auth()?.signInAnonymously(){ (user, error) in
+                
+            }
         }
     }
     
@@ -58,9 +60,9 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         
         let moreButton = UIBarButtonItem(image: UIImage(named: "menu"), style: .plain, target: self, action: #selector(menuTap))
         moreButton.tintColor = UIColor.white
-                let plusButton = UIBarButtonItem(image: UIImage(named: "Edit"), style: .plain, target: self, action: #selector(addAnnouncement))
-                plusButton.tintColor = .white
-        navigationItem.rightBarButtonItems = [moreButton, plusButton]
+//                let plusButton = UIBarButtonItem(image: UIImage(named: "Edit"), style: .plain, target: self, action: #selector(addAnnouncement))
+//                plusButton.tintColor = .white
+        navigationItem.rightBarButtonItems = [moreButton]
         
     }
     

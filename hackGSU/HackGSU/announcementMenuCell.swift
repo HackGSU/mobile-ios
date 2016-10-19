@@ -15,7 +15,7 @@ class announcementMenuCell: BaseCell {
         didSet {
             backgroundColor = isHighlighted ? .lightGray : .white
             
-            textLabel.textColor = isHighlighted ? .white : .black
+            textLabel.textColor = isHighlighted ? .white : .lightGray
             
             imageView.tintColor = isHighlighted ? .white : .lightGray
         }

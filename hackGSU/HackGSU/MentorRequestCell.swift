@@ -23,17 +23,7 @@ class MentorRequestCell: BaseCell {
             mentorRequestPoster.text = mentorRequest?.name
             timestamp.text = setupTime((mentorRequest?.timestamp?.intValue)!)
             topicLabel.text = mentorRequest?.category
-            
-//            mentorRequestText.text = announcement?.bodyText
-//            mentorRequestTitle.text = announcement?.title
-//            //mentorRequestPoster.text = announcement?.fromId
-//            topicLabel.text = announcement?.topic
-//            timestamp.text =  setupTime((announcement?.timestamp?.intValue)!)
-//            uid = announcement?.uid
-//            likes = announcement?.likes?.intValue
-//            array.append((announcement?.title)!)
-//            array.append((announcement?.bodyText)!)
-        }
+            }
     }
     
     var ref: FIRDatabaseReference!
@@ -71,7 +61,6 @@ class MentorRequestCell: BaseCell {
     let timestamp: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "14 minutes ago • "
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = .lightGray
         return label
@@ -80,7 +69,6 @@ class MentorRequestCell: BaseCell {
     let mentorRequestPoster: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "@admin "
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = .lightGray
         return label
@@ -112,7 +100,7 @@ class MentorRequestCell: BaseCell {
     lazy var bottomButtonContainer: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .systemColor("blue")
+        view.backgroundColor = UIColor(white: 0.8, alpha: 1)
         return view
     }()
     

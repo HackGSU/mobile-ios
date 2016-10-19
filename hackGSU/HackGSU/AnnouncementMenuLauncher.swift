@@ -16,7 +16,9 @@ class announcementMenuLauncher: NSObject, UICollectionViewDataSource, UICollecti
     let blackView = UIView()
     
     var announcementController = announcementFeedController()
-    
+    var mapController = MapController()
+    var scheduleController = scheduleFeedController()
+
     let cellId = "cellId"
     let cellHeight: CGFloat = 50
     
@@ -76,6 +78,8 @@ class announcementMenuLauncher: NSObject, UICollectionViewDataSource, UICollecti
             
         }) { (completed: Bool) in
             self.announcementController.showViewControllerForSetting(setting)
+            self.scheduleController.showViewControllerForSetting(setting)
+            self.mapController.showViewControllerForSetting(setting)
         }
     }
 
