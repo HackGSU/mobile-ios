@@ -137,6 +137,8 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         switch (name){
             case "Sponsors":
             navigationController?.pushViewController(Sponsor(), animated: true)
+            case "Check out the Prizes":
+            navigationController?.pushViewController(PrizesViewController(), animated: true)
             case "Code of Conduct":
             navigationController?.pushViewController(CodeOfConductViewController(), animated: true)
             case "Request a mentor":

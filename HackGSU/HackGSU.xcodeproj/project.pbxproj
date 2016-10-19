@@ -16,6 +16,7 @@
 		0305149B1D9B58BE00CF4863 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0305149A1D9B58BE00CF4863 /* LoginController.swift */; };
 		0316E0351D97227200E9160E /* AnnouncementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0316E0341D97227200E9160E /* AnnouncementController.swift */; };
 		0318ACBC1DB7C57600E07142 /* MentorRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0318ACBB1DB7C57600E07142 /* MentorRequestCell.swift */; };
+		0318ACBE1DB7D3CA00E07142 /* PrizesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0318ACBD1DB7D3CA00E07142 /* PrizesViewController.swift */; };
 		0318B0E71D9C33F70077A13C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0318B0E61D9C33F70077A13C /* GoogleService-Info.plist */; };
 		03484D391D9D9DCB0026FBB6 /* NewAnnouncementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03484D381D9D9DCB0026FBB6 /* NewAnnouncementView.swift */; };
 		03484D3D1D9DB9EC0026FBB6 /* NewAnnouncementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03484D3C1D9DB9EC0026FBB6 /* NewAnnouncementController.swift */; };
@@ -82,6 +83,7 @@
 		0305149A1D9B58BE00CF4863 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		0316E0341D97227200E9160E /* AnnouncementController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementController.swift; sourceTree = "<group>"; };
 		0318ACBB1DB7C57600E07142 /* MentorRequestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorRequestCell.swift; sourceTree = "<group>"; };
+		0318ACBD1DB7D3CA00E07142 /* PrizesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrizesViewController.swift; path = HackGSU/PrizesViewController.swift; sourceTree = SOURCE_ROOT; };
 		0318B0E61D9C33F70077A13C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0318B0E81D9CD0D20077A13C /* hackGSU.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = hackGSU.entitlements; sourceTree = "<group>"; };
 		03484D381D9D9DCB0026FBB6 /* NewAnnouncementView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAnnouncementView.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				D2B806B51DA6DD11001CF43D /* Maps.swift */,
 				D2B12C631DB5D28F0034E8B3 /* SponsorViewController.swift */,
 				D2B12C651DB5DCD60034E8B3 /* CodeOfConductViewController.swift */,
+				0318ACBD1DB7D3CA00E07142 /* PrizesViewController.swift */,
 				0353425D1DB5F37B006339FE /* SendFeedbackController.swift */,
 			);
 			name = Controller;
@@ -491,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				035342641DB61B21006339FE /* MentorRequest.swift in Sources */,
+				0318ACBE1DB7D3CA00E07142 /* PrizesViewController.swift in Sources */,
 				039E68771DA69EFF004FA963 /* MenuCell.swift in Sources */,
 				03484D3D1D9DB9EC0026FBB6 /* NewAnnouncementController.swift in Sources */,
 				D2B806B81DA6DE1B001CF43D /* ScheduleController.swift in Sources */,
