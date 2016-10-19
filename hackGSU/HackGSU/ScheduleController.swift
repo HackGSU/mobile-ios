@@ -153,9 +153,6 @@ class scheduleFeedController: UICollectionViewController, UICollectionViewDelega
             return cell
         }
         
-        
-        
-        
     }
     
     func showViewControllerForSetting(_ setting: Setting){

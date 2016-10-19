@@ -23,6 +23,7 @@ class MentorRequestCell: BaseCell {
             mentorRequestPoster.text = mentorRequest?.name
             timestamp.text = setupTime((mentorRequest?.timestamp?.intValue)!)
             topicLabel.text = mentorRequest?.category
+            statusLabel.text = mentorRequest?.status
             }
     }
     
@@ -100,10 +101,19 @@ class MentorRequestCell: BaseCell {
     lazy var bottomButtonContainer: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor(white: 0.8, alpha: 1)
+        view.backgroundColor = .white
         return view
     }()
     
+    
+    let statusLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 20)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.textAlignment = .center
+        return label
+    }()
 
     let buttonBottomSeparatorView: UIView = {
         let view = UIView()
@@ -147,6 +157,7 @@ class MentorRequestCell: BaseCell {
         mentorRequestInfoContainer.addSubview(timestamp)
         mentorRequestInfoContainer.addSubview(mentorRequestPoster)
         
+        //bottomButtonContainer.addSubview(statusLabel)
         
         mentorRequestInfoContainer.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         mentorRequestInfoContainer.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
@@ -183,13 +194,15 @@ class MentorRequestCell: BaseCell {
         bottomButtonContainer.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         bottomButtonContainer.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         bottomButtonContainer.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        bottomButtonContainer.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        bottomButtonContainer.heightAnchor.constraint(equalToConstant: 5).isActive = true
         
         
         buttonBottomSeparatorView.topAnchor.constraint(equalTo: mentorRequestInfoContainer.bottomAnchor, constant: -8).isActive = true
         buttonBottomSeparatorView.centerXAnchor.constraint(equalTo: bottomButtonContainer.centerXAnchor).isActive = true
         buttonBottomSeparatorView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.94).isActive = true
         buttonBottomSeparatorView.heightAnchor.constraint(equalToConstant: 0.4).isActive = true
+        
+        
         
         bottomSeparatorView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         bottomSeparatorView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true

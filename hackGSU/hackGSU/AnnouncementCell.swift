@@ -71,18 +71,18 @@ class AnnouncementCell: BaseCell {
         return view
     }()
     
-    lazy var moreButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.contentMode = .scaleAspectFit
-        button.setImage(UIImage(named: "mores"), for: .normal)
-        button.addTarget(self, action: #selector(handleMore), for: .touchUpInside)
-        return button
-    }()
-    
-    func handleMore(){
-        print("more")
-    }
+//    lazy var moreButton: UIButton = {
+//        let button = UIButton()
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        button.contentMode = .scaleAspectFit
+//        button.setImage(UIImage(named: "mores"), for: .normal)
+//        button.addTarget(self, action: #selector(handleMore), for: .touchUpInside)
+//        return button
+//    }()
+//    
+//    func handleMore(){
+//        print("more")
+//    }
     
     let timestamp: UILabel = {
         let label = UILabel()
@@ -286,7 +286,7 @@ class AnnouncementCell: BaseCell {
 
         announcementInfoContainer.addSubview(timestamp)
         announcementInfoContainer.addSubview(announcementPoster)
-        announcementInfoContainer.addSubview(moreButton)
+//        announcementInfoContainer.addSubview(moreButton)
         
         bottomButtonContainer.addSubview(likeButtonContainer)
         bottomButtonContainer.addSubview(shareButtonContainer)
@@ -312,10 +312,10 @@ class AnnouncementCell: BaseCell {
         announcementPoster.widthAnchor.constraint(equalToConstant: 150)
         announcementPoster.heightAnchor.constraint(equalToConstant: 30)
         
-        moreButton.rightAnchor.constraint(equalTo: announcementInfoContainer.rightAnchor, constant: -12).isActive = true
-        moreButton.centerYAnchor.constraint(equalTo: announcementPoster.centerYAnchor).isActive = true
-        moreButton.widthAnchor.constraint(equalToConstant: 100)
-        moreButton.heightAnchor.constraint(equalToConstant: 30)
+//        moreButton.rightAnchor.constraint(equalTo: announcementInfoContainer.rightAnchor, constant: -12).isActive = true
+//        moreButton.centerYAnchor.constraint(equalTo: announcementPoster.centerYAnchor).isActive = true
+//        moreButton.widthAnchor.constraint(equalToConstant: 100)
+//        moreButton.heightAnchor.constraint(equalToConstant: 30)
         
         announcementTitle.topAnchor.constraint(equalTo: announcementInfoContainer.bottomAnchor, constant: -12).isActive = true
         announcementTitle.leadingAnchor.constraint(equalTo: self.readableContentGuide.leadingAnchor).isActive = true
