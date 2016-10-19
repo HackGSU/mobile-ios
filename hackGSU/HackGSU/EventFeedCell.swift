@@ -13,6 +13,7 @@ class EventFeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDeleg
     
         var events = [Event]()
     
+        
     
         func observeAnnouncements(){
             

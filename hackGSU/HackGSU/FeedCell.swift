@@ -11,7 +11,7 @@ import Firebase
 
 class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout  {
 
-    
+    var ac = announcementFeedController()
     var firebaseAnnouncements = [Announcement]()
     
     func observeAnnouncements(){
@@ -98,6 +98,8 @@ class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
         
         cell.announcement = firebaseAnnouncements[(indexPath as NSIndexPath).item]
         cell.backgroundColor = .white
+        cell.ac = ac
+        
         
         return cell
     }

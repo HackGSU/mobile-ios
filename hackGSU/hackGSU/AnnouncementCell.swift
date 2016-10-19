@@ -12,8 +12,11 @@ import Firebase
 class AnnouncementCell: BaseCell {
     
     
+    var ac = announcementFeedController()
+    
     var uid: String?
     var likes: Int?
+    var array: [String] = []
     
     var announcement: Announcement?{
         didSet{
@@ -24,6 +27,8 @@ class AnnouncementCell: BaseCell {
             timestamp.text =  setupTime((announcement?.timestamp?.intValue)!)
             uid = announcement?.uid
             likes = announcement?.likes?.intValue
+            array.append((announcement?.title)!)
+            array.append((announcement?.bodyText)!)
         }
     }
     
@@ -175,15 +180,6 @@ class AnnouncementCell: BaseCell {
         return button
     }()
     
-    lazy var secondbutton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Comment", for: .normal)
-        button.setTitleColor(.gray, for: .normal)
-        button.addTarget(self, action: #selector(handleButton), for: .touchUpInside)
-        return button
-    }()
-    
     lazy var thirdbutton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -196,7 +192,6 @@ class AnnouncementCell: BaseCell {
     
     func handleLikeButton(){
         
-        //button.setTitleColor(UIColor(red:0.07, green:0.45, blue:0.91, alpha:1.00), for: .normal)
         self.toggle()
 
         likeButtonContainer.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
@@ -216,13 +211,13 @@ class AnnouncementCell: BaseCell {
     
     
     func toggleLike(_ increment: String){
-        var newLike:Int
+        var newLike:Int = likes!
         
         switch (increment){
         case "Add":
-            newLike = likes! + 1
+            newLike += 1
         case "Minus":
-            newLike = likes! - 1
+            newLike -= 1
         default:
             newLike = likes!
         }
@@ -245,8 +240,9 @@ class AnnouncementCell: BaseCell {
         }
     }
     
+    
     func handleButton(){
-        print(123)
+        ac.prints(array)
     }
     
     let buttonBottomSeparatorView: UIView = {

@@ -200,7 +200,9 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         let index = indexPath.item
         switch (index){
         case 0:
-            return collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! FeedCell
+            cell.ac = self
+            return cell
             
         case 1:
             return collectionView.dequeueReusableCell(withReuseIdentifier: trendingCellId, for: indexPath)
@@ -213,6 +215,25 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         
         }
     }
+    
+    func prints(_ message: [String]){
+        print("yay")
+        
+        let concate = message[0] + " " + message[1]
+        
+        
+        let shareItems:Array = [concate]
+        
+        let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
+        
+        activityViewController.excludedActivityTypes = [UIActivityType.print, UIActivityType.postToWeibo, UIActivityType.addToReadingList, UIActivityType.postToVimeo]
+        
+        self.present(activityViewController, animated: true, completion: nil)
+
+        
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         //tabBar height = 49 + menuBar = 50
         return CGSize(width: view.frame.width, height: view.frame.height - 99)
