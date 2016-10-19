@@ -99,7 +99,7 @@ class LoginCell: UICollectionViewCell {
                         print("User logged in anonymously" + user!.uid)
                     }
                     
-                    topController.navigationController!.popViewController(animated: true)
+                    
 //                    loginController.dismiss()
             })
 

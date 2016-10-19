@@ -114,7 +114,7 @@ class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
             let rectTitle = NSString(string: (firebaseAnnouncements[indexPath.item].bodyText)!).boundingRect(with: CGSize(width: frame.width, height: 1000), options: NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin), attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 16)], context: nil)
             
             
-            return CGSize(width: frame.width, height: rect.height + knownHeight + rectTitle.height)
+            return CGSize(width: frame.width, height: rect.height + knownHeight + rectTitle.height )
         }
         
         return CGSize(width: frame.width, height: 400)

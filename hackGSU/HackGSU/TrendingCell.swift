@@ -39,10 +39,16 @@ class TrendingCell: FeedCell{
                 }
                 
                 if let likes = dictionary["likes"] as! NSNumber?{
-                    if (Int(likes) > 35){
+                    if (Int(likes) > 40){
                         self.firebaseAnnouncements.append(announcement)
                     }
                 }
+                self.firebaseAnnouncements.sort(by: { (message1, message2) -> Bool in
+                    
+                    return (message1.timestamp?.intValue)! > (message2.timestamp?.intValue)!
+                })
+
+                
                 
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
