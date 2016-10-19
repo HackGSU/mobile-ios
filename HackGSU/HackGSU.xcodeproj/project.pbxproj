@@ -52,6 +52,7 @@
 		AA85232C9242D7378DA4511D /* Pods_hackGSU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A866E192359F9C5D42F32FD4 /* Pods_hackGSU.framework */; };
 		D2B12C641DB5D28F0034E8B3 /* SponsorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B12C631DB5D28F0034E8B3 /* SponsorViewController.swift */; };
 		D2B12C661DB5DCD60034E8B3 /* CodeOfConductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B12C651DB5DCD60034E8B3 /* CodeOfConductViewController.swift */; };
+		D2B12C681DB7F4620034E8B3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B12C671DB7F4620034E8B3 /* GameViewController.swift */; };
 		D2B806B61DA6DD11001CF43D /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B806B51DA6DD11001CF43D /* Maps.swift */; };
 		D2B806B81DA6DE1B001CF43D /* ScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B806B71DA6DE1B001CF43D /* ScheduleController.swift */; };
 		D2D7B5661DA6DB4A000FDE81 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D7B5651DA6DB4A000FDE81 /* TabBarViewController.swift */; };
@@ -129,6 +130,7 @@
 		C062AE6C7EEDFB7831AEE1A4 /* Pods-hackGSU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackGSU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackGSU/Pods-hackGSU.debug.xcconfig"; sourceTree = "<group>"; };
 		D2B12C631DB5D28F0034E8B3 /* SponsorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorViewController.swift; sourceTree = "<group>"; };
 		D2B12C651DB5DCD60034E8B3 /* CodeOfConductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeOfConductViewController.swift; sourceTree = "<group>"; };
+		D2B12C671DB7F4620034E8B3 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		D2B806B51DA6DD11001CF43D /* Maps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Maps.swift; sourceTree = "<group>"; };
 		D2B806B71DA6DE1B001CF43D /* ScheduleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleController.swift; sourceTree = "<group>"; };
 		D2D7B5651DA6DB4A000FDE81 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				D2B12C651DB5DCD60034E8B3 /* CodeOfConductViewController.swift */,
 				0318ACBD1DB7D3CA00E07142 /* PrizesViewController.swift */,
 				0353425D1DB5F37B006339FE /* SendFeedbackController.swift */,
+				D2B12C671DB7F4620034E8B3 /* GameViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				03D00A491DB0052D00180999 /* ScheduleMenuLauncher.swift in Sources */,
 				0360232E1DAAA88D00E7F2E9 /* ScheduleMenuCell.swift in Sources */,
 				D2B12C641DB5D28F0034E8B3 /* SponsorViewController.swift in Sources */,
+				D2B12C681DB7F4620034E8B3 /* GameViewController.swift in Sources */,
 				D2B806B61DA6DD11001CF43D /* Maps.swift in Sources */,
 				0305147B1D9ABD0E00CF4863 /* Announcement.swift in Sources */,
 				03D00A471DAFFFE500180999 /* MapCell.swift in Sources */,
