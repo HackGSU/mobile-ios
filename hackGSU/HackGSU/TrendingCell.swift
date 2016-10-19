@@ -36,6 +36,9 @@ class TrendingCell: FeedCell{
                 if let fromId = dictionary["fromId"] as? String!{
                     announcement.fromId = fromId
                 }
+                if let likes = dictionary["likes"] as! NSNumber?{
+                    announcement.likes = likes
+                }
                 announcement.uid = snapshot.key
 
                 

@@ -205,11 +205,17 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
             return cell
             
         case 1:
-            return collectionView.dequeueReusableCell(withReuseIdentifier: trendingCellId, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: trendingCellId, for: indexPath) as! TrendingCell
+            cell.ac = self
+            return cell
         case 2:
-            return collectionView.dequeueReusableCell(withReuseIdentifier: foodCellId, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: foodCellId, for: indexPath) as! FoodCell
+            cell.ac = self
+            return cell
         case 3:
-            return collectionView.dequeueReusableCell(withReuseIdentifier: techCellId, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: techCellId, for: indexPath) as! TechTipCell
+            cell.ac = self
+            return cell
         default:
             return collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
         
@@ -220,7 +226,6 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
         print("yay")
         
         let concate = message[0] + " " + message[1]
-        
         
         let shareItems:Array = [concate]
         
