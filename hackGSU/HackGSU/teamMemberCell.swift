@@ -29,12 +29,14 @@ class teamMemberCell: UICollectionViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "iOS Developer"
+        label.textColor = .lightGray
         return label
     }()
     
     let nameTextLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .lightGray
         label.text = "Alex Mitchell"
         return label
     }()
@@ -57,7 +59,7 @@ class teamMemberCell: UICollectionViewCell {
         teamTextLabel.topAnchor.constraint(equalTo: nameTextLabel.bottomAnchor).isActive = true
         teamTextLabel.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 1).isActive = true
         
-        nameTextLabel.topAnchor.constraint(equalTo: profileImageView.bottomAnchor).isActive = true
+        nameTextLabel.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 20).isActive = true
         nameTextLabel.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0.5).isActive = true
         
         
@@ -66,4 +68,5 @@ class teamMemberCell: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 }

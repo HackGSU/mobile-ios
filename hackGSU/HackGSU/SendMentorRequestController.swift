@@ -10,7 +10,28 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-extension SendMentorRequestController{
+extension SendMentorRequestController: UIPickerViewDelegate, UIPickerViewDataSource{
+    
+    
+    func numberOfComponents(in colorPicker: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+            return menuPickerData.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
+    {
+       return menuPickerData[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 50
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        floorTextView.text = menuPickerData[row]
+        
+        print(menuPickerData[row])
+    }
     
     func setupNavBarAttributes() {
         navigationController?.navigationBar.isTranslucent = false
@@ -53,7 +74,6 @@ extension SendMentorRequestController{
                     childRef.updateChildValues(values)
                     
                     self.navigationController!.popViewController(animated: true)
-                    
                     
                 }else{
                     print("Enter value for Title")

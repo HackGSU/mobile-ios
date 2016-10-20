@@ -101,7 +101,7 @@ class MapController: UICollectionViewController, UICollectionViewDelegateFlowLay
             navigationController?.pushViewController(PrizesViewController(), animated: true)
         case "Code of Conduct":
             navigationController?.pushViewController(CodeOfConductViewController(), animated: true)
-        case "Request a mentor":
+        case "Request A Mentor":
             navigationController?.pushViewController(MentorViewController(collectionViewLayout: UICollectionViewFlowLayout()), animated: true)
         case "Send Feedback":
             navigationController?.pushViewController(SendFeedbackController(), animated: true)

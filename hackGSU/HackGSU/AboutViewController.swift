@@ -60,8 +60,6 @@ class AboutViewController: UICollectionViewController, UICollectionViewDelegateF
         member9.profileImageName = "abhinavPic"
         
         
-        
-        
         return [member1,member2,member3,member4,member5,member6,member7,member8,member9]
     }()
     
@@ -92,7 +90,6 @@ class AboutViewController: UICollectionViewController, UICollectionViewDelegateF
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -100,10 +97,16 @@ class AboutViewController: UICollectionViewController, UICollectionViewDelegateF
     }
     
     
-    let cellHeight:CGFloat = 100
+    let cellHeight:CGFloat = 120
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width/2, height: view.frame.height/3)
+        return CGSize(width: view.frame.width/2, height: view.frame.height/2.5)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.item == 4{
+            navigationController?.pushViewController(GameViewController(), animated: true)
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

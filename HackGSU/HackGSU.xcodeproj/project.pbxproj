@@ -18,6 +18,7 @@
 		0318ACBC1DB7C57600E07142 /* MentorRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0318ACBB1DB7C57600E07142 /* MentorRequestCell.swift */; };
 		0318ACBE1DB7D3CA00E07142 /* PrizesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0318ACBD1DB7D3CA00E07142 /* PrizesViewController.swift */; };
 		0318B0E71D9C33F70077A13C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0318B0E61D9C33F70077A13C /* GoogleService-Info.plist */; };
+		031F54CA1DB82FD60097B86D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F54C91DB82FD60097B86D /* GameViewController.swift */; };
 		034164B81DB7DC54005A0845 /* MapsMenuLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034164B71DB7DC54005A0845 /* MapsMenuLauncher.swift */; };
 		034164BA1DB81BAB005A0845 /* teamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034164B91DB81BAB005A0845 /* teamMember.swift */; };
 		034164BC1DB81BD4005A0845 /* teamMemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034164BB1DB81BD4005A0845 /* teamMemberCell.swift */; };
@@ -89,6 +90,7 @@
 		0318ACBD1DB7D3CA00E07142 /* PrizesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrizesViewController.swift; path = HackGSU/PrizesViewController.swift; sourceTree = SOURCE_ROOT; };
 		0318B0E61D9C33F70077A13C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0318B0E81D9CD0D20077A13C /* hackGSU.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = hackGSU.entitlements; sourceTree = "<group>"; };
+		031F54C91DB82FD60097B86D /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		034164B71DB7DC54005A0845 /* MapsMenuLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsMenuLauncher.swift; sourceTree = "<group>"; };
 		034164B91DB81BAB005A0845 /* teamMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = teamMember.swift; path = HackGSU/teamMember.swift; sourceTree = SOURCE_ROOT; };
 		034164BB1DB81BD4005A0845 /* teamMemberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = teamMemberCell.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				D2B12C631DB5D28F0034E8B3 /* SponsorViewController.swift */,
 				D2B12C651DB5DCD60034E8B3 /* CodeOfConductViewController.swift */,
 				0318ACBD1DB7D3CA00E07142 /* PrizesViewController.swift */,
+				031F54C91DB82FD60097B86D /* GameViewController.swift */,
 				0353425D1DB5F37B006339FE /* SendFeedbackController.swift */,
 				034164BD1DB81C6F005A0845 /* AboutViewController.swift */,
 			);
@@ -522,6 +525,7 @@
 				039E68751DA69960004FA963 /* MenuBar.swift in Sources */,
 				03BE9C481DAD7B7600209739 /* ScheduleCell.swift in Sources */,
 				0360232C1DAA0B4B00E7F2E9 /* ScheduleMenuBar.swift in Sources */,
+				031F54CA1DB82FD60097B86D /* GameViewController.swift in Sources */,
 				030514951D9B585E00CF4863 /* Page.swift in Sources */,
 				03D00A451DAFE19300180999 /* MapController.swift in Sources */,
 				03BE9C461DAC98AF00209739 /* EventFeedCell.swift in Sources */,

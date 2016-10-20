@@ -34,10 +34,27 @@ class SendMentorRequestController: UIViewController{
     let floorContainer: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.borderWidth = 0.5
-        view.layer.borderColor = UIColor.lightGray.cgColor
         return view
     }()
+    
+    let floorLabel: UILabel = {
+       let label = UILabel()
+       label.text = "Floor:"
+       label.translatesAutoresizingMaskIntoConstraints = false
+       return label
+    }()
+    
+    lazy var floorTextView: UITextView = {
+        let tv = UITextView()
+        tv.translatesAutoresizingMaskIntoConstraints = false
+        tv.layer.borderWidth = 0.5
+        tv.layer.borderColor = UIColor.gray.cgColor
+        tv.isEditable = true
+        tv.textAlignment = .center
+        tv.font = UIFont.systemFont(ofSize: 18)
+        return tv
+    }()
+
     
     let locationLabel: UITextField = {
         let tf = UITextField()
@@ -58,17 +75,7 @@ class SendMentorRequestController: UIViewController{
         tf.textAlignment = .center
         return tf
     }()
-    
-    lazy var nameTextView: UITextView = {
-        let tv = UITextView()
-        tv.translatesAutoresizingMaskIntoConstraints = false
-        tv.layer.borderWidth = 0.5
-        tv.layer.borderColor = UIColor.gray.cgColor
-        tv.isEditable = true
-        tv.font = UIFont.systemFont(ofSize: 18)
-        return tv
-    }()
-    
+
     lazy var bodyTextView: UITextView = {
         let tv = UITextView()
         tv.translatesAutoresizingMaskIntoConstraints = false
@@ -99,10 +106,64 @@ class SendMentorRequestController: UIViewController{
         return button
     }()
     
+    lazy var menuPicker: UIPickerView = {
+        let picker = UIPickerView()
+        picker.backgroundColor = UIColor.white
+        picker.translatesAutoresizingMaskIntoConstraints = false
+        picker.delegate = self
+        picker.dataSource = self
+        picker.showsSelectionIndicator = true
+        return picker
+    }()
+    
+    let menuPickerData = ["C", "0", "1", "2", "3"]
+    
+    lazy var doneButton: UIBarButtonItem = {
+        var btn = UIBarButtonItem()
+        btn = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(donePicker))
+        
+        return btn
+    }()
+    
+    let spaceButton: UIBarButtonItem = {
+        var btn = UIBarButtonItem()
+        btn = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        
+        return btn
+    }()
+    
+    lazy var cancelButton: UIBarButtonItem = {
+        var btn = UIBarButtonItem()
+        btn = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.plain, target: self, action: #selector(donePicker))
+        return btn
+    }()
+    
+    func donePicker(){
+        floorTextView.resignFirstResponder()
+    }
+    
+    lazy var toolBar: UIToolbar = {
+        let tb = UIToolbar()
+        tb.barStyle = UIBarStyle.default
+        tb.isTranslucent = true
+        tb.tintColor = UIColor.gray
+        tb.sizeToFit()
+        tb.translatesAutoresizingMaskIntoConstraints = false
+        
+        return tb
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         hideKeyboardWhenTappedAround()
+        
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        floorTextView.inputView = menuPicker
+        floorTextView.inputAccessoryView = toolBar
+
         
         setupNavBarAttributes()
         setupViews()
@@ -112,6 +173,8 @@ class SendMentorRequestController: UIViewController{
         view.addSubview(teamNameLabel)
         view.addSubview(topicLabel)
         view.addSubview(floorContainer)
+        floorContainer.addSubview(floorLabel)
+        floorContainer.addSubview(floorTextView)
         view.addSubview(locationLabel)
         view.addSubview(titleLabel)
         view.addSubview(bodyTextView)
@@ -132,6 +195,17 @@ class SendMentorRequestController: UIViewController{
         floorContainer.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 6).isActive = true
         floorContainer.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5, constant: -12).isActive = true
         floorContainer.heightAnchor.constraint(equalToConstant: 30).isActive = true
+
+        
+        floorLabel.leftAnchor.constraint(equalTo: floorContainer.leftAnchor, constant: 6).isActive = true
+        floorLabel.topAnchor.constraint(equalTo: floorContainer.topAnchor, constant: 2).isActive = true
+        floorLabel.widthAnchor.constraint(equalTo: floorContainer.widthAnchor, multiplier: 0.5, constant: 4).isActive = true
+        floorLabel.heightAnchor.constraint(equalTo: floorContainer.heightAnchor, multiplier: 0.9).isActive = true
+        
+        floorTextView.rightAnchor.constraint(equalTo: floorContainer.rightAnchor, constant: -2).isActive = true
+        floorTextView.topAnchor.constraint(equalTo: floorContainer.topAnchor).isActive = true
+        floorTextView.widthAnchor.constraint(equalTo: floorContainer.widthAnchor, multiplier: 0.3).isActive = true
+        floorTextView.heightAnchor.constraint(equalTo: floorContainer.heightAnchor, multiplier: 1).isActive = true
         
         locationLabel.topAnchor.constraint(equalTo: topicLabel.bottomAnchor, constant: 12).isActive = true
         locationLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -6).isActive = true
