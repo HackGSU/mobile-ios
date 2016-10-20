@@ -114,24 +114,6 @@ class announcementFeedController: UICollectionViewController, UICollectionViewDe
 
     }
     
-    func logOut(){
-        
-        do {
-            try FIRAuth.auth()?.signOut()
-        } catch let logoutError {
-            print(logoutError)
-        }
-        
-        print("Signed out")
-        
-        let vc = LoginViewController()
-        DispatchQueue.main.async(execute: { () -> Void in
-            
-            self.navigationController?.pushViewController(vc, animated: true)
-            //self.present(vc, animated: true, completion: nil)
-        })
-        
-    }
     
     func showViewControllerForSetting(_ setting: Setting){
         let name = setting.name
