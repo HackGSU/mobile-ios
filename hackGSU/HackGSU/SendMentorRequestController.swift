@@ -12,7 +12,7 @@ import FirebaseAuth
 
 extension SendMentorRequestController: UIPickerViewDelegate, UIPickerViewDataSource{
     
-    
+        
     func numberOfComponents(in colorPicker: UIPickerView) -> Int {
         return 1
     }
@@ -44,10 +44,12 @@ extension SendMentorRequestController: UIPickerViewDelegate, UIPickerViewDataSou
     func addAnnouncement(){
         
         if (teamNameLabel.text?.isEmpty)! || (topicLabel.text?.isEmpty)! || (titleLabel.text?.isEmpty)! || bodyTextView.text.isEmpty{
+            print("Empty labels")
             return
         }
         
         guard let uid = FIRAuth.auth()?.currentUser?.uid else {
+            print("Not logged in?")
             return
         }
         
@@ -67,14 +69,16 @@ extension SendMentorRequestController: UIPickerViewDelegate, UIPickerViewDataSou
             }, completion:  {
                 (value: Bool) in
                 
-                if let nameText = self.titleLabel.text{
+                if let titleText = self.titleLabel.text{
                     
-                    let values = ["name": nameText, "bodyText": self.bodyTextView.text, "timestamp" : currentTime, "location": self.LocationTextView.text] as [String : Any]
+                    let pendingString = "Pending"
+                    
+                    let values = ["category": self.topicLabel.text!, "description": self.bodyTextView.text!, "floor" : self.floorTextView.text, "location": self.locationLabel.text!, "status" : pendingString, "teamName": self.teamNameLabel.text!, "timestamp": currentTime, "title": titleText] as [String : Any]
                     
                     childRef.updateChildValues(values)
                     
                     self.navigationController!.popViewController(animated: true)
-                    
+
                 }else{
                     print("Enter value for Title")
                     

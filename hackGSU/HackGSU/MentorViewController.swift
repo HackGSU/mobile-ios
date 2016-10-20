@@ -58,15 +58,10 @@ class MentorViewController: UICollectionViewController, UICollectionViewDelegate
                     requests.title = title
                 }
                 requests.uid = snapshot.key
-                print(snapshot.key)
-                print(FIRAuth.auth()?.currentUser?.uid)
                 
-                self.firebaseRequests.append(requests)
-
-                
-//                if (FIRAuth.auth()?.currentUser?.uid == snapshot.key){
-//                    print(requests)
-//                }
+                if (FIRAuth.auth()?.currentUser?.uid == snapshot.key){
+                    self.firebaseRequests.append(requests)
+                }
                 
                 self.firebaseRequests.sort(by: { (message1, message2) -> Bool in
                     
