@@ -9,17 +9,12 @@
 /* Begin PBXBuildFile section */
 		0305147B1D9ABD0E00CF4863 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0305147A1D9ABD0E00CF4863 /* Announcement.swift */; };
 		0305147D1D9ACA2800CF4863 /* AnnouncementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0305147C1D9ACA2800CF4863 /* AnnouncementCell.swift */; };
-		030514931D9B584E00CF4863 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030514921D9B584E00CF4863 /* PageCell.swift */; };
-		030514951D9B585E00CF4863 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030514941D9B585E00CF4863 /* Page.swift */; };
 		030514971D9B587700CF4863 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030514961D9B587700CF4863 /* Extensions.swift */; };
-		030514991D9B589C00CF4863 /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030514981D9B589C00CF4863 /* LoginCell.swift */; };
-		0305149B1D9B58BE00CF4863 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0305149A1D9B58BE00CF4863 /* LoginController.swift */; };
 		0316E0351D97227200E9160E /* AnnouncementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0316E0341D97227200E9160E /* AnnouncementController.swift */; };
 		0318ACBC1DB7C57600E07142 /* MentorRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0318ACBB1DB7C57600E07142 /* MentorRequestCell.swift */; };
 		0318ACBE1DB7D3CA00E07142 /* PrizesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0318ACBD1DB7D3CA00E07142 /* PrizesViewController.swift */; };
 		0318B0E71D9C33F70077A13C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0318B0E61D9C33F70077A13C /* GoogleService-Info.plist */; };
 		031F54CA1DB82FD60097B86D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F54C91DB82FD60097B86D /* GameViewController.swift */; };
-		034164B81DB7DC54005A0845 /* MapsMenuLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034164B71DB7DC54005A0845 /* MapsMenuLauncher.swift */; };
 		034164BA1DB81BAB005A0845 /* teamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034164B91DB81BAB005A0845 /* teamMember.swift */; };
 		034164BC1DB81BD4005A0845 /* teamMemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034164BB1DB81BD4005A0845 /* teamMemberCell.swift */; };
 		034164BE1DB81C6F005A0845 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034164BD1DB81C6F005A0845 /* AboutViewController.swift */; };
@@ -52,7 +47,6 @@
 		03BE9C481DAD7B7600209739 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE9C471DAD7B7600209739 /* ScheduleCell.swift */; };
 		03D00A451DAFE19300180999 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D00A441DAFE19300180999 /* MapController.swift */; };
 		03D00A471DAFFFE500180999 /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D00A461DAFFFE500180999 /* MapCell.swift */; };
-		03D00A491DB0052D00180999 /* ScheduleMenuLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D00A481DB0052D00180999 /* ScheduleMenuLauncher.swift */; };
 		AA85232C9242D7378DA4511D /* Pods_hackGSU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A866E192359F9C5D42F32FD4 /* Pods_hackGSU.framework */; };
 		D2B12C641DB5D28F0034E8B3 /* SponsorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B12C631DB5D28F0034E8B3 /* SponsorViewController.swift */; };
 		D2B12C661DB5DCD60034E8B3 /* CodeOfConductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B12C651DB5DCD60034E8B3 /* CodeOfConductViewController.swift */; };
@@ -80,18 +74,13 @@
 /* Begin PBXFileReference section */
 		0305147A1D9ABD0E00CF4863 /* Announcement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		0305147C1D9ACA2800CF4863 /* AnnouncementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementCell.swift; sourceTree = "<group>"; };
-		030514921D9B584E00CF4863 /* PageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
-		030514941D9B585E00CF4863 /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		030514961D9B587700CF4863 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		030514981D9B589C00CF4863 /* LoginCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCell.swift; sourceTree = "<group>"; };
-		0305149A1D9B58BE00CF4863 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		0316E0341D97227200E9160E /* AnnouncementController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementController.swift; sourceTree = "<group>"; };
 		0318ACBB1DB7C57600E07142 /* MentorRequestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorRequestCell.swift; sourceTree = "<group>"; };
 		0318ACBD1DB7D3CA00E07142 /* PrizesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrizesViewController.swift; path = HackGSU/PrizesViewController.swift; sourceTree = SOURCE_ROOT; };
 		0318B0E61D9C33F70077A13C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0318B0E81D9CD0D20077A13C /* hackGSU.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = hackGSU.entitlements; sourceTree = "<group>"; };
 		031F54C91DB82FD60097B86D /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		034164B71DB7DC54005A0845 /* MapsMenuLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsMenuLauncher.swift; sourceTree = "<group>"; };
 		034164B91DB81BAB005A0845 /* teamMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = teamMember.swift; path = HackGSU/teamMember.swift; sourceTree = SOURCE_ROOT; };
 		034164BB1DB81BD4005A0845 /* teamMemberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = teamMemberCell.swift; sourceTree = "<group>"; };
 		034164BD1DB81C6F005A0845 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -130,7 +119,6 @@
 		03BE9C471DAD7B7600209739 /* ScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
 		03D00A441DAFE19300180999 /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		03D00A461DAFFFE500180999 /* MapCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
-		03D00A481DB0052D00180999 /* ScheduleMenuLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleMenuLauncher.swift; sourceTree = "<group>"; };
 		85FFF7CAF179A2C43B0A0669 /* Pods-hackGSU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackGSU.release.xcconfig"; path = "Pods/Target Support Files/Pods-hackGSU/Pods-hackGSU.release.xcconfig"; sourceTree = "<group>"; };
 		A866E192359F9C5D42F32FD4 /* Pods_hackGSU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hackGSU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C062AE6C7EEDFB7831AEE1A4 /* Pods-hackGSU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackGSU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hackGSU/Pods-hackGSU.debug.xcconfig"; sourceTree = "<group>"; };
@@ -182,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				0305147A1D9ABD0E00CF4863 /* Announcement.swift */,
-				030514941D9B585E00CF4863 /* Page.swift */,
 				036023291DA9F70F00E7F2E9 /* Event.swift */,
 				034164B91DB81BAB005A0845 /* teamMember.swift */,
 				0353425F1DB604DB006339FE /* Setting.swift */,
@@ -195,14 +182,33 @@
 			isa = PBXGroup;
 			children = (
 				D2D7B5651DA6DB4A000FDE81 /* TabBarViewController.swift */,
-				0305149A1D9B58BE00CF4863 /* LoginController.swift */,
-				0316E0341D97227200E9160E /* AnnouncementController.swift */,
-				0352B6461DAEB63D009B78C3 /* AnnouncementMenuLauncher.swift */,
-				03D00A481DB0052D00180999 /* ScheduleMenuLauncher.swift */,
-				034164B71DB7DC54005A0845 /* MapsMenuLauncher.swift */,
-				D2B806B71DA6DE1B001CF43D /* ScheduleController.swift */,
-				03D00A441DAFE19300180999 /* MapController.swift */,
+				0345841C1DB853E6000EAB7B /* TabBar View Controllers */,
 				03484D3C1D9DB9EC0026FBB6 /* NewAnnouncementController.swift */,
+				0352B6461DAEB63D009B78C3 /* AnnouncementMenuLauncher.swift */,
+				0345841B1DB853B4000EAB7B /* Menu View Controllers */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0305149C1D9B59EA00CF4863 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0318ACBB1DB7C57600E07142 /* MentorRequestCell.swift */,
+				0345841D1DB8541F000EAB7B /* Announcement Cells */,
+				03BE9C451DAC98AF00209739 /* EventFeedCell.swift */,
+				03BE9C471DAD7B7600209739 /* ScheduleCell.swift */,
+				03D00A461DAFFFE500180999 /* MapCell.swift */,
+				039E68761DA69EFF004FA963 /* MenuCell.swift */,
+				034164BB1DB81BD4005A0845 /* teamMemberCell.swift */,
+				0352B6481DAEB6A0009B78C3 /* announcementMenuCell.swift */,
+				0360232D1DAAA88D00E7F2E9 /* ScheduleMenuCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		0345841B1DB853B4000EAB7B /* Menu View Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				035342611DB616C5006339FE /* MentorViewController.swift */,
 				035342671DB620AA006339FE /* SendMentorRequestController.swift */,
 				D2B12C631DB5D28F0034E8B3 /* SponsorViewController.swift */,
@@ -212,29 +218,29 @@
 				0353425D1DB5F37B006339FE /* SendFeedbackController.swift */,
 				034164BD1DB81C6F005A0845 /* AboutViewController.swift */,
 			);
-			name = Controller;
+			name = "Menu View Controllers";
 			sourceTree = "<group>";
 		};
-		0305149C1D9B59EA00CF4863 /* Cells */ = {
+		0345841C1DB853E6000EAB7B /* TabBar View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0316E0341D97227200E9160E /* AnnouncementController.swift */,
+				D2B806B71DA6DE1B001CF43D /* ScheduleController.swift */,
+				03D00A441DAFE19300180999 /* MapController.swift */,
+			);
+			name = "TabBar View Controllers";
+			sourceTree = "<group>";
+		};
+		0345841D1DB8541F000EAB7B /* Announcement Cells */ = {
 			isa = PBXGroup;
 			children = (
 				0305147C1D9ACA2800CF4863 /* AnnouncementCell.swift */,
-				0318ACBB1DB7C57600E07142 /* MentorRequestCell.swift */,
 				036023211DA8CB6900E7F2E9 /* FeedCell.swift */,
 				036023251DA8F2DE00E7F2E9 /* TrendingCell.swift */,
 				035342571DB4A68D006339FE /* FoodCell.swift */,
 				035342591DB4A69B006339FE /* TechTipCell.swift */,
-				03BE9C451DAC98AF00209739 /* EventFeedCell.swift */,
-				03BE9C471DAD7B7600209739 /* ScheduleCell.swift */,
-				03D00A461DAFFFE500180999 /* MapCell.swift */,
-				039E68761DA69EFF004FA963 /* MenuCell.swift */,
-				034164BB1DB81BD4005A0845 /* teamMemberCell.swift */,
-				0352B6481DAEB6A0009B78C3 /* announcementMenuCell.swift */,
-				0360232D1DAAA88D00E7F2E9 /* ScheduleMenuCell.swift */,
-				030514981D9B589C00CF4863 /* LoginCell.swift */,
-				030514921D9B584E00CF4863 /* PageCell.swift */,
 			);
-			name = Cells;
+			name = "Announcement Cells";
 			sourceTree = "<group>";
 		};
 		034D46BC1D9596EC0059266C = {
@@ -517,7 +523,6 @@
 				034D46C91D9596EC0059266C /* AppDelegate.swift in Sources */,
 				0316E0351D97227200E9160E /* AnnouncementController.swift in Sources */,
 				0353425E1DB5F37B006339FE /* SendFeedbackController.swift in Sources */,
-				030514931D9B584E00CF4863 /* PageCell.swift in Sources */,
 				036023261DA8F2DE00E7F2E9 /* TrendingCell.swift in Sources */,
 				0318ACBC1DB7C57600E07142 /* MentorRequestCell.swift in Sources */,
 				030514971D9B587700CF4863 /* Extensions.swift in Sources */,
@@ -526,22 +531,17 @@
 				03BE9C481DAD7B7600209739 /* ScheduleCell.swift in Sources */,
 				0360232C1DAA0B4B00E7F2E9 /* ScheduleMenuBar.swift in Sources */,
 				031F54CA1DB82FD60097B86D /* GameViewController.swift in Sources */,
-				030514951D9B585E00CF4863 /* Page.swift in Sources */,
 				03D00A451DAFE19300180999 /* MapController.swift in Sources */,
 				03BE9C461DAC98AF00209739 /* EventFeedCell.swift in Sources */,
 				D2B12C661DB5DCD60034E8B3 /* CodeOfConductViewController.swift in Sources */,
 				036023221DA8CB6900E7F2E9 /* FeedCell.swift in Sources */,
-				034164B81DB7DC54005A0845 /* MapsMenuLauncher.swift in Sources */,
-				03D00A491DB0052D00180999 /* ScheduleMenuLauncher.swift in Sources */,
 				0360232E1DAAA88D00E7F2E9 /* ScheduleMenuCell.swift in Sources */,
 				D2B12C641DB5D28F0034E8B3 /* SponsorViewController.swift in Sources */,
 				034164BA1DB81BAB005A0845 /* teamMember.swift in Sources */,
 				0305147B1D9ABD0E00CF4863 /* Announcement.swift in Sources */,
 				03D00A471DAFFFE500180999 /* MapCell.swift in Sources */,
 				03484D391D9D9DCB0026FBB6 /* NewAnnouncementView.swift in Sources */,
-				0305149B1D9B58BE00CF4863 /* LoginController.swift in Sources */,
 				D2D7B5661DA6DB4A000FDE81 /* TabBarViewController.swift in Sources */,
-				030514991D9B589C00CF4863 /* LoginCell.swift in Sources */,
 				035342661DB6206F006339FE /* SendMentorRequestView.swift in Sources */,
 				034164BC1DB81BD4005A0845 /* teamMemberCell.swift in Sources */,
 				0360232A1DA9F70F00E7F2E9 /* Event.swift in Sources */,
